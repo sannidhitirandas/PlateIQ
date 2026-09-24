@@ -67,3 +67,10 @@ nav { display:flex; flex-direction:column; gap:24px; }.nav-group { display:flex;
 @media (max-width:420px) { .metrics-grid { gap:8px; }.metric-card { padding:13px; }.metric-value { font-size:20px; }.metric-bottom { flex-direction:column; gap:3px; }.demo-banner { flex-wrap:wrap; }.demo-controls { margin-left:44px; }.surge-stats { gap:6px; }.surge-stats strong { font-size:14px; }.page-heading h1 { font-size:24px; } }
 
 @layer base { * { border-color: var(--line); outline-color: #b7d9bf; } }
+
+:focus-visible { outline:3px solid #8dc89a; outline-offset:3px; }
+button:focus-visible, a:focus-visible, select:focus-visible, input:focus-visible { outline:3px solid #8dc89a; outline-offset:2px; }
+html { scroll-behavior:smooth; overflow-x:hidden; }
+img { max-width:100%; }
+@media (max-width:760px) { .landing-nav { gap:16px; }.landing-nav .primary-button { padding:9px 10px; }.floating-note { max-width:calc(100% - 8px); }.product-preview .preview-window { width:100%; }.notification-panel { position:fixed; right:16px; top:66px; max-width:calc(100vw - 32px); } }
+@media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
