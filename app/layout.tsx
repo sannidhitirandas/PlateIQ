@@ -2,6 +2,10 @@ import { Analytics } from '@vercel/analytics/next'
 import type { Metadata, Viewport } from 'next'
 import './globals.css'
 import { PlateIQProvider } from '@/components/plateiq-state'
+import { Inter, Manrope } from 'next/font/google'
+
+const inter = Inter({ subsets: ['latin'], variable: '--font-inter' })
+const manrope = Manrope({ subsets: ['latin'], variable: '--font-manrope' })
 
 export const metadata: Metadata = {
   title: 'PlateIQ — Kitchen intelligence, in real time',
@@ -40,7 +44,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="antialiased">
+      <body className={`${inter.variable} ${manrope.variable} antialiased`}>
         <PlateIQProvider>{children}</PlateIQProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
