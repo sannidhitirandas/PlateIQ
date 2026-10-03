@@ -237,7 +237,7 @@ export function ChefProfilePage() {
   const { state } = usePlateIQ()
   const metrics = getLiveOperationsMetrics(state)
   const activeBatches = state.batches.filter((batch) => batch.status !== 'Completed').length
-  const stockAlerts = state.inventory.filter((item) => item.status === 'Low Stock' || item.status === 'Critical').length
+  const stockAlerts = state.inventory.filter((item) => item.status === 'Low' || item.status === 'Critical').length
 
   return (
     <PageFrame title="Chef profile & brigade" subtitle="Review the shift lead profile, station readiness, and the current kitchen team's operational context.">
