@@ -13,7 +13,7 @@ export function LiveOperationsPage() {
   const metrics = getLiveOperationsMetrics(state)
   const tickets = state.batches.map((batch, index) => ({
     ...batch,
-    ticket: \`KDS-\${String(index + 1).padStart(3, '0')}\`,
+    ticket: `KDS-${String(index + 1).padStart(3, '0')}`,
     dish: state.dishes.find((dish) => dish.id === batch.dishId),
   })).filter((ticket) => ticket.dish)
 
@@ -31,7 +31,7 @@ export function LiveOperationsPage() {
         <Kpi label="Orders in demo" value={metrics.orders.toLocaleString('en-IN')} detail="simulated shared state" />
         <Kpi label="Order velocity" value={metrics.ordersPerMinute.toFixed(1)} detail="orders per minute · demo" />
         <Kpi label="Projected demand" value={metrics.projectedDemand.toLocaleString('en-IN')} detail="forecast model output" />
-        <Kpi label="Kitchen capacity" value={\`\${metrics.capacity}%\`} detail="station average" />
+        <Kpi label="Kitchen capacity" value={`${metrics.capacity}%`} detail="station average" />
       </div>
 
       <section className="panel kds-board">
@@ -58,7 +58,7 @@ export function LiveOperationsPage() {
               const dish = ticket.dish!
               const completed = ticket.status === 'Completed'
               return (
-                <article className={\`kds-ticket \${ticket.status.toLowerCase().replaceAll(' ', '-')}\`} key={ticket.id}>
+                <article className={`kds-ticket ${ticket.status.toLowerCase().replaceAll(' ', '-')}`} key={ticket.id}>
                   <div className="kds-ticket-top">
                     <span className="kds-ticket-id">{ticket.ticket} · BATCH {ticket.number}</span>
                     <Status>{ticket.status}</Status>
@@ -69,8 +69,8 @@ export function LiveOperationsPage() {
                     <div><span>Quantity</span><strong>{ticket.quantity} plates</strong></div>
                     <div><span>Lead time</span><strong>{dish.leadTimeMinutes} min</strong></div>
                   </div>
-                  <div className="kds-progress-track" aria-label={\`\${progressForStatus(ticket.status)} percent complete\`}>
-                    <span style={{ width: \`\${progressForStatus(ticket.status)}%\` }} />
+                  <div className="kds-progress-track" aria-label={`${progressForStatus(ticket.status)} percent complete`}>
+                    <span style={{ width: `${progressForStatus(ticket.status)}%` }} />
                   </div>
                   <button
                     className={completed ? 'outline-button kds-action' : 'primary-button kds-action'}
@@ -142,19 +142,19 @@ export function KitchenPlannerPage() {
             <span>tasks complete</span>
           </div>
         </div>
-        <div className="brigade-progress-track"><span style={{ width: \`\${completedTasks / shiftTasks.length * 100}%\` }} /></div>
+        <div className="brigade-progress-track"><span style={{ width: `${completedTasks / shiftTasks.length * 100}%` }} /></div>
         <div className="brigade-task-list">
           {shiftTasks.map((task) => {
             const done = completedTaskIds.includes(task.id)
             return (
-              <label className={\`brigade-task \${done ? 'done' : ''}\`} key={task.id}>
+              <label className={`brigade-task ${done ? 'done' : ''}`} key={task.id}>
                 <input
                   type="checkbox"
                   checked={done}
                   onChange={() => setCompletedTaskIds((current) => done ? current.filter((id) => id !== task.id) : [...current, task.id])}
                 />
                 <span className="brigade-task-copy"><strong>{task.title}</strong><small>{task.detail} · {task.owner}</small></span>
-                <span className={\`brigade-priority \${task.priority.toLowerCase()}\`}>{task.priority}</span>
+                <span className={`brigade-priority ${task.priority.toLowerCase()}`}>{task.priority}</span>
               </label>
             )
           })}
@@ -199,13 +199,13 @@ export function KitchenPlannerPage() {
         <div className="timeline-scale">Current batch schedule · derived from demo batch quantities</div>
         {state.batches.map((batch) => {
           const dish = state.dishes.find((item) => item.id === batch.dishId)
-          return <div className="timeline-row" key={batch.id}><strong>{dish?.name || batch.dishId}</strong><span style={{ width: \`\${Math.min(100, Math.max(12, batch.quantity))}%\` }} /></div>
+          return <div className="timeline-row" key={batch.id}><strong>{dish?.name || batch.dishId}</strong><span style={{ width: `${Math.min(100, Math.max(12, batch.quantity))}%` }} /></div>
         })}
       </section>
 
       {selectedBatch && selectedDish && selectedContext && (
         <div className="drawer-backdrop" role="presentation" onClick={() => setSelected(null)}>
-          <aside className="drawer" role="dialog" aria-modal="true" aria-label={\`Batch \${selectedBatch.number} details\`} onClick={(event) => event.stopPropagation()}>
+          <aside className="drawer" role="dialog" aria-modal="true" aria-label={`Batch ${selectedBatch.number} details`} onClick={(event) => event.stopPropagation()}>
             <button className="drawer-close" type="button" onClick={() => setSelected(null)}>Close</button>
             <div className="section-kicker">Batch detail</div>
             <h2>Batch #{selectedBatch.number}</h2>
@@ -213,8 +213,8 @@ export function KitchenPlannerPage() {
             <Status>{selectedBatch.status}</Status>
             <p className="muted-copy">{selectedContext.risk?.recommendedAction}</p>
             <p className="muted-copy">Waste risk: {selectedContext.risk?.level} · Stockout risk: {selectedContext.risk?.stockoutRisk}</p>
-            <p className="muted-copy">Requirements: {Object.entries(selectedContext.batchImpact.requirements).map(([id, amount]) => \`\${id} \${amount}\`).join(' · ')}</p>
-            {selectedContext.batchImpact.shortages.length > 0 && <p className="muted-copy">Blocked by: {selectedContext.batchImpact.shortages.map((item) => \`\${item.name} (\${item.available}/\${item.required})\`).join(', ')}</p>}
+            <p className="muted-copy">Requirements: {Object.entries(selectedContext.batchImpact.requirements).map(([id, amount]) => `${id} ${amount}`).join(' · ')}</p>
+            {selectedContext.batchImpact.shortages.length > 0 && <p className="muted-copy">Blocked by: {selectedContext.batchImpact.shortages.map((item) => `${item.name} (${item.available}/${item.required})`).join(', ')}</p>}
             <div className="drawer-actions">
               <button className="primary-button" type="button" disabled={selectedContext.batchImpact.shortages.length > 0} onClick={() => dispatch({ type: 'batch', batchId: selectedBatch.id })}>
                 {selectedBatch.status === 'Recommended' ? 'Start batch' : selectedBatch.status === 'In Preparation' ? 'Mark ready' : selectedBatch.status === 'Ready' ? 'Complete batch' : 'Completed'} <Check />
