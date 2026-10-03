@@ -7,7 +7,6 @@ import { usePathname } from 'next/navigation'
 import {
   Activity,
   Bell,
-  ChevronDown,
   CloudRain,
   Gauge,
   LayoutDashboard,
@@ -88,14 +87,13 @@ export function AppShell({ children }: { children: ReactNode }) {
           </button>
         </div>
 
-        <button className="restaurant-switch" type="button" aria-label="Current restaurant: Jubilee Hills, Hyderabad">
+        <div className="restaurant-switch" aria-label="Current restaurant: Jubilee Hills, Hyderabad">
           <span className="restaurant-avatar">JH</span>
           <span className="restaurant-switch-copy">
             <strong>Jubilee Hills</strong>
             <small>Hyderabad, India</small>
           </span>
-          <ChevronDown aria-hidden="true" />
-        </button>
+        </div>
 
         <div className="sidebar-section-label">WORKSPACE</div>
         <nav className="primary-navigation" aria-label="Workspace">
