@@ -45,7 +45,7 @@ export function AppShell({ children }: { children: ReactNode }) {
   const [menuOpen, setMenuOpen] = useState(false)
   const [notificationsOpen, setNotificationsOpen] = useState(false)
   const unreadCount = state.notifications.filter((notification) => !notification.read).length
-  const currentItem = [...navItems]
+  const currentItem = [...navItems, ['Chef Profile', '/app/chef-profile'] as const]
     .sort((a, b) => b[1].length - a[1].length)
     .find(([, href]) => isCurrentRoute(pathname, href))
 
@@ -122,10 +122,10 @@ export function AppShell({ children }: { children: ReactNode }) {
 
         <div className="sidebar-bottom">
           <div className="sidebar-status"><span className="status-pulse" /> Kitchen intelligence workspace</div>
-          <div className="profile">
+          <Link href="/app/chef-profile" className={`profile profile-link ${pathname === '/app/chef-profile' ? 'active' : ''}`} onClick={() => setMenuOpen(false)} aria-label="Open chef profile and brigade details">
             <div className="profile-avatar">AM</div>
             <div><strong>Arjun Mehta</strong><small>Restaurant manager</small></div>
-          </div>
+          </Link>
         </div>
       </aside>
 
