@@ -1,0 +1,126 @@
+/* Final navigation and scrolling overrides. Keep this stylesheet last in layout.tsx. */
+.app-shell {
+  min-height: 100vh;
+  min-height: 100dvh;
+  align-items: stretch;
+  overflow: visible;
+}
+
+.app-shell > .sidebar {
+  position: sticky;
+  top: 0;
+  align-self: flex-start;
+  flex: 0 0 252px;
+  width: 252px;
+  height: 100vh;
+  height: 100dvh;
+  min-height: 0;
+  max-height: 100vh;
+  max-height: 100dvh;
+  justify-content: flex-start;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(183, 228, 119, .38) transparent;
+}
+
+.app-shell > .sidebar .brand,
+.app-shell > .sidebar .restaurant-switch,
+.app-shell > .sidebar .sidebar-section-label,
+.app-shell > .sidebar .sidebar-bottom {
+  flex-shrink: 0;
+}
+
+.app-shell > .sidebar .primary-navigation {
+  flex: 0 0 auto;
+  min-height: auto;
+  overflow: visible;
+  overscroll-behavior: auto;
+}
+
+.app-shell > .sidebar .sidebar-bottom {
+  margin-top: auto;
+}
+
+.app-shell > .sidebar::-webkit-scrollbar { width: 5px; }
+.app-shell > .sidebar::-webkit-scrollbar-thumb {
+  background: rgba(183, 228, 119, .38);
+  border-radius: 999px;
+}
+.app-shell > .sidebar::-webkit-scrollbar-track { background: transparent; }
+
+.content {
+  min-width: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow: visible;
+}
+
+.content > .page-body {
+  min-width: 0;
+  overflow: visible;
+}
+
+.notification-wrap { position: relative; }
+.notification-panel { max-height: min(70vh, 520px); overflow-y: auto; }
+.restaurant-switch { width: calc(100% - 4px); text-align: left; color: inherit; }
+.restaurant-switch-copy { display: flex; min-width: 0; flex: 1; flex-direction: column; gap: 3px; }
+.restaurant-switch-copy strong,
+.restaurant-switch-copy small { display: block; }
+.breadcrumb-slash { color: #b7c0b7; }
+
+.sidebar-backdrop { display: none; }
+
+@media (max-width: 900px) {
+  .app-shell > .sidebar {
+    position: fixed;
+    z-index: 130;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: min(292px, 86vw);
+    max-width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    transform: translateX(-105%);
+    transition: transform .22s ease;
+    box-shadow: 16px 0 42px rgba(10, 30, 18, .2);
+  }
+
+  .app-shell > .sidebar.open { transform: translateX(0); }
+
+  .sidebar-backdrop {
+    display: block;
+    position: fixed;
+    inset: 0;
+    z-index: 125;
+    border: 0;
+    padding: 0;
+    background: rgba(10, 24, 15, .38);
+    cursor: default;
+  }
+
+  .content { width: 100%; margin-left: 0; }
+  .mobile-close { display: inline-grid; place-items: center; }
+  .menu-button { display: inline-grid; place-items: center; }
+}
+
+@media (max-width: 560px) {
+  .app-shell > .sidebar { width: min(320px, 88vw); }
+  .notification-panel {
+    position: fixed;
+    top: 66px;
+    right: 12px;
+    left: 12px;
+    width: auto;
+    max-height: calc(100dvh - 86px);
+  }
+  .breadcrumbs { min-width: 0; }
+  .breadcrumbs strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-shell > .sidebar { transition: none; }
+}
