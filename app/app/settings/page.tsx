@@ -12,7 +12,7 @@ function SettingToggle({ checked, onChange, label }: { checked: boolean; onChang
       role="switch"
       aria-checked={checked}
       aria-label={label}
-      className={\`settings-toggle \${checked ? 'on' : ''}\`}
+      className={`settings-toggle ${checked ? 'on' : ''}`}
       onClick={() => onChange(!checked)}
     >
       <span />
