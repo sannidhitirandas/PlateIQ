@@ -6,6 +6,7 @@ import './culinary-intelligence.css'
 import './stitch-screen-adaptation.css'
 import './stitch-overview.css'
 import './stitch-all-pages.css'
+import './navigation-fix.css'
 import { PlateIQProvider } from '@/components/plateiq-state'
 
 export const metadata: Metadata = {
