@@ -36,7 +36,7 @@ const iconByLabel: Record<string, typeof LayoutDashboard> = {
 
 function isCurrentRoute(pathname: string, href: string) {
   if (href === '/app') return pathname === '/app'
-  return pathname === href || pathname.startsWith(\`\${href}/\`)
+  return pathname === href || pathname.startsWith(`${href}/`)
 }
 
 export function AppShell({ children }: { children: ReactNode }) {
@@ -79,7 +79,7 @@ export function AppShell({ children }: { children: ReactNode }) {
         />
       )}
 
-      <aside id="plateiq-navigation" className={\`sidebar \${menuOpen ? 'open' : ''}\`} aria-label="Main navigation">
+      <aside id="plateiq-navigation" className={`sidebar ${menuOpen ? 'open' : ''}`} aria-label="Main navigation">
         <div className="brand">
           <div className="brand-mark"><Leaf aria-hidden="true" /></div>
           <span>Plate<span>IQ</span></span>
@@ -107,7 +107,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               <Link
                 href={href}
                 key={label}
-                className={\`nav-item \${active ? 'active' : ''}\`}
+                className={`nav-item ${active ? 'active' : ''}`}
                 aria-current={active ? 'page' : undefined}
                 onClick={() => setMenuOpen(false)}
               >
@@ -154,7 +154,7 @@ export function AppShell({ children }: { children: ReactNode }) {
               <button
                 className="icon-button"
                 type="button"
-                aria-label={unreadCount ? \`Notifications, \${unreadCount} unread\` : 'Notifications'}
+                aria-label={unreadCount ? `Notifications, ${unreadCount} unread` : 'Notifications'}
                 aria-expanded={notificationsOpen}
                 onClick={() => setNotificationsOpen((open) => !open)}
               >
@@ -175,7 +175,7 @@ export function AppShell({ children }: { children: ReactNode }) {
                       <Link
                         key={notification.id}
                         href={notification.href}
-                        className={\`notification-item \${notification.read ? 'read' : ''}\`}
+                        className={`notification-item ${notification.read ? 'read' : ''}`}
                         onClick={() => {
                           dispatch({ type: 'read-notification', notificationId: notification.id })
                           setNotificationsOpen(false)
