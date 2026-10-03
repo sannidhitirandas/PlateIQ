@@ -245,3 +245,13 @@
   .settings-demo-badge { font-size:8px; }
 }
 @media (prefers-reduced-motion:reduce) { .settings-toggle,.settings-toggle span { transition:none; } }
+
+/* Keep the status label from inheriting the live-indicator dot styles. */
+.system-live .system-live-label {
+  width: auto;
+  height: auto;
+  background: transparent;
+  box-shadow: none;
+  border-radius: 0;
+  color: inherit;
+}
