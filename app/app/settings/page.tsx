@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { Activity, Bell, Check, Cloud, Cpu, Database, RotateCcw, ShieldCheck, SlidersHorizontal, Sparkles, Thermometer } from 'lucide-react'
+import { Activity, Check, Cloud, Database, RotateCcw, ShieldCheck, SlidersHorizontal, Sparkles, Thermometer } from 'lucide-react'
 import { AppShell } from '@/components/app-shell'
 import { usePlateIQ } from '@/components/plateiq-state'
 
