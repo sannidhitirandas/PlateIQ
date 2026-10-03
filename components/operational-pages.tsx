@@ -1,6 +1,7 @@
 'use client'
 import { useMemo, useState } from 'react'
-import { Check, Package, Sparkles, Activity, AlertTriangle } from 'lucide-react'
+import { Check, Package, Sparkles, Activity, AlertTriangle, Users, ShieldCheck, ChefHat, ArrowRight } from 'lucide-react'
+import Link from 'next/link'
 import { usePlateIQ, usePlateIQMetrics } from './plateiq-state'
 import { wasteSummary } from '@/lib/waste-engine'
 import { getAnalyticsMetrics, getDishOperationalContext, getLiveOperationsMetrics, getKitchenMetrics } from '@/lib/selectors'
@@ -230,3 +231,61 @@ export function DemandForecastPage(){const {state}=usePlateIQ();const [dish,setD
 export function InventoryPage(){const {state,dispatch}=usePlateIQ();const [filter,setFilter]=useState('All');const rows=state.inventory.filter(i=>filter==='All'||i.status===filter);const averageDays=state.inventory.length?state.inventory.reduce((a,i)=>a+i.daysLeft,0)/state.inventory.length:0;return <PageFrame title="Inventory intelligence" subtitle="Know what is running low before service is disrupted."><div className="metrics-grid"><Kpi label="Total ingredients" value={state.inventory.length.toString()} detail="tracked today"/><Kpi label="Low stock" value={state.inventory.filter(i=>i.status==='Low').length.toString()} detail="need attention"/><Kpi label="Critical stock" value={state.inventory.filter(i=>i.status==='Critical').length.toString()} detail="requires action"/><Kpi label="Average days left" value={averageDays.toFixed(1)} detail="derived from usage"/><Kpi label="Inventory value" value={`₹${Math.round(state.inventory.reduce((a,i)=>a+i.currentStock*i.unitCost,0)).toLocaleString('en-IN')}`} detail="current stock"/></div><div className="filter-row"><label>Status<select value={filter} onChange={e=>setFilter(e.target.value)}><option>All</option><option>Healthy</option><option>Low</option><option>Critical</option></select></label></div><section className="panel data-panel"><div className="table-wrap"><table><thead><tr><th>Ingredient</th><th>Current stock</th><th>Status</th><th>Days left</th><th>Order state</th><th>Trend</th><th>Action</th></tr></thead><tbody>{rows.map(i=><tr key={i.id}><td>{i.name}</td><td>{i.currentStock.toFixed(1)} {i.unit}</td><td><Status>{i.status}</Status></td><td>{i.daysLeft.toFixed(1)}</td><td>{i.orderStatus}</td><td>{i.trend}</td><td>{i.orderStatus==='Ordered'?<button className="text-button" onClick={()=>dispatch({type:'receive-stock',itemId:i.id,amount:i.reorderPoint})}>Receive</button>:<button className="text-button" onClick={()=>dispatch({type:'mark-ordered',itemId:i.id})}>Mark ordered</button>}</td></tr>)}</tbody></table></div></section></PageFrame>}
 export function WasteIntelligencePage(){const {state,dispatch}=usePlateIQ();const [category,setCategory]=useState('All');const summary=wasteSummary(state.waste);const records=state.waste.filter(w=>category==='All'||w.category===category);const topDishes=Object.entries(summary.byDish).sort((a,b)=>b[1].wasteKg-a[1].wasteKg).slice(0,3);return <PageFrame title="Waste intelligence" subtitle="Turn every avoided plate into measurable savings."><div className="metrics-grid"><Kpi label="Food waste" value={`${summary.wasteKg.toFixed(1)} kg`} detail="from waste records"/><Kpi label="Waste cost" value={`₹${Math.round(summary.wasteCost).toLocaleString('en-IN')}`} detail="derived cost"/><Kpi label="Waste reduction" value={summary.wasteReductionPct===null?'—':`${summary.wasteReductionPct.toFixed(1)}%`} detail={summary.wasteReductionPct===null?'Baseline unavailable':'vs baseline'}/><Kpi label="Potential savings" value={summary.potentialSavings===null?'—':`₹${summary.potentialSavings.toLocaleString('en-IN')}`} detail={summary.potentialSavings===null?'Baseline unavailable':'derived savings'}/></div><div className="dashboard-grid"><section className="panel"><div className="section-kicker">Waste trend</div><h2>{summary.wasteTrend}</h2><p className="muted-copy">A historical baseline is required before reduction can be calculated.</p></section><section className="panel"><div className="section-kicker">Waste by category</div>{Object.entries(summary.byCategory).map(([name,value])=><div className="setting-row" key={name}><span>{name}</span><strong>{value.wasteKg.toFixed(1)} kg · ₹{value.wasteCost.toLocaleString('en-IN')}</strong></div>)}</section></div><section className="panel"><div className="section-kicker">Top wasted dishes</div>{topDishes.map(([dishId,value])=><div className="setting-row" key={dishId}><span>{state.dishes.find(dish=>dish.id===dishId)?.name||dishId}</span><strong>{value.wasteKg.toFixed(1)} kg</strong></div>)}</section><div className="filter-row"><label>Category<select value={category} onChange={e=>setCategory(e.target.value)}><option>All</option><option>Prepared Food</option><option>Spoilage</option><option>Overproduction</option><option>Other</option></select></label></div><section className="panel data-panel"><div className="section-kicker"><AlertTriangle/> Waste records</div><div className="table-wrap"><table><thead><tr><th>Dish</th><th>Category</th><th>Quantity</th><th>Cost</th><th>Date/Time</th><th>Cause</th><th>Action</th></tr></thead><tbody>{records.map(w=><tr key={w.id}><td>{state.dishes.find(d=>d.id===w.dishId)?.name||w.dishId}</td><td>{w.category}</td><td>{w.wasteKg.toFixed(1)} {w.unit}</td><td>₹{w.wasteCost}</td><td>{w.date}</td><td>{w.cause}</td><td><button className="text-button" onClick={()=>dispatch({type:'record-waste',dishId:w.dishId,wasteKg:.5,category:w.category,cause:`Additional event: ${w.cause}`})}>Record 0.5 kg</button></td></tr>)}</tbody></table></div></section></PageFrame>}
 export function AnalyticsPage(){const {state}=usePlateIQ();const metrics=getAnalyticsMetrics(state);return <PageFrame title="Analytics" subtitle="See how operational decisions compound over time."><div className="metrics-grid"><Kpi label="Forecast accuracy" value={`${metrics.forecastAccuracy.toFixed(1)}%`} detail="current forecast confidence"/><Kpi label="Waste reduction" value={metrics.wasteReductionPct===null?'—':`${metrics.wasteReductionPct.toFixed(1)}%`} detail={metrics.wasteReductionPct===null?'Baseline unavailable':'derived baseline comparison'}/><Kpi label="Preparation efficiency" value={`${metrics.preparationEfficiency.toFixed(1)}%`} detail="prepared versus forecast"/><Kpi label="Stockout rate" value={`${metrics.stockoutRate.toFixed(1)}%`} detail="projected stockout items"/><Kpi label="Food cost savings" value={metrics.savings===null?'—':`₹${metrics.savings.toLocaleString('en-IN')}`} detail={metrics.savings===null?'Baseline unavailable':'derived baseline comparison'}/></div><div className="dashboard-grid"><section className="panel"><div className="section-kicker">Current forecast confidence</div><div className="analytics-bars"><span style={{height:`${metrics.forecastAccuracy}%`}}/></div></section><section className="panel"><div className="section-kicker"><Sparkles/> Derived insights</div><div className="setting-row">Prepared quantity <strong>{metrics.preparationEfficiency.toFixed(1)}% of forecast</strong></div><div className="setting-row">Projected stockout rate <strong>{metrics.stockoutRate.toFixed(1)}%</strong></div><div className="setting-row">Waste baseline <strong>{metrics.wasteReductionPct===null?'unavailable':'available'}</strong></div></section></div></PageFrame>}
+
+
+export function ChefProfilePage() {
+  const { state } = usePlateIQ()
+  const metrics = getLiveOperationsMetrics(state)
+  const activeBatches = state.batches.filter((batch) => batch.status !== 'Completed').length
+  const stockAlerts = state.inventory.filter((item) => item.status === 'Low Stock' || item.status === 'Critical').length
+
+  return (
+    <PageFrame title="Chef profile & brigade" subtitle="Review the shift lead profile, station readiness, and the current kitchen team's operational context.">
+      <section className="chef-profile-hero">
+        <div className="chef-profile-avatar" aria-hidden="true">AM</div>
+        <div className="chef-profile-identity">
+          <div className="chef-profile-kicker">WORKSPACE PROFILE · DEMO</div>
+          <h2>Arjun Mehta</h2>
+          <p>Restaurant manager · Jubilee Hills, Hyderabad</p>
+          <div className="chef-profile-tags"><span><ShieldCheck /> Shift coordination</span><span><Users /> Brigade oversight</span><span><Activity /> Kitchen operations</span></div>
+        </div>
+        <div className="chef-shift-card"><span>ACTIVE SERVICE WINDOW</span><strong>Lunch & dinner</strong><small>11:00–15:00 · 17:00–22:00</small><span className="chef-demo-note">Illustrative workspace profile</span></div>
+      </section>
+
+      <div className="metrics-grid chef-profile-metrics">
+        <Kpi label="Orders in demo" value={metrics.orders.toLocaleString('en-IN')} detail="shared simulation state" />
+        <Kpi label="Active prep batches" value={String(activeBatches)} detail="not yet completed" />
+        <Kpi label="Stations tracked" value={String(state.stations.length)} detail="shared kitchen model" />
+        <Kpi label="Stock alerts" value={String(stockAlerts)} detail="derived from demo inventory" />
+      </div>
+
+      <div className="dashboard-grid chef-profile-grid">
+        <section className="panel">
+          <div className="section-kicker"><Users /> Brigade station overview</div>
+          <h2>Station assignments & readiness</h2>
+          <p className="muted-copy">The current model tracks station status and capacity. Individual employee accounts and live assignments are not connected.</p>
+          <div className="chef-station-list">
+            {state.stations.map((station) => (
+              <article className="chef-station-row" key={station.id}>
+                <div className="chef-station-avatar"><ChefHat aria-hidden="true" /></div>
+                <div className="chef-station-copy"><strong>{station.name}</strong><small>{station.status === 'Busy' ? 'Active preparation' : station.status === 'At Risk' ? 'Review capacity before service' : 'Ready for service'}</small></div>
+                <div className="chef-station-capacity"><strong>{station.capacity}%</strong><span>capacity</span></div>
+                <Status>{station.status}</Status>
+              </article>
+            ))}
+          </div>
+        </section>
+
+        <section className="panel chef-profile-actions">
+          <div className="section-kicker"><Sparkles /> Shift control center</div>
+          <h2>Keep the brigade aligned</h2>
+          <p className="muted-copy">Use the existing preparation plan and operational insights to coordinate the next decision.</p>
+          <Link className="chef-profile-link" href="/app/kitchen-planner"><span><strong>Open brigade tasks</strong><small>Checklist and progressive preparation</small></span><ArrowRight /></Link>
+          <Link className="chef-profile-link" href="/app/live-operations"><span><strong>Open kitchen display</strong><small>Review ticket readiness and station status</small></span><ArrowRight /></Link>
+          <Link className="chef-profile-link" href="/app/analytics"><span><strong>Review culinary insights</strong><small>Performance and operational metrics</small></span><ArrowRight /></Link>
+          <div className="chef-profile-disclaimer">This profile is a frontend demo. Staff identity, permissions, and assignments must come from the authentication/backend layer.</div>
+        </section>
+      </div>
+    </PageFrame>
+  )
+}
