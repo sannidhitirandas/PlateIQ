@@ -124,3 +124,44 @@
 @media (prefers-reduced-motion: reduce) {
   .app-shell > .sidebar { transition: none; }
 }
+
+/* Kitchen display / expedite-pass screen */
+.kds-board { margin-top: 18px; }
+.kds-board-heading { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; }
+.kds-board-heading h2 { margin:7px 0 5px; font-size:20px; }
+.kds-board-heading p { margin:0; color:var(--muted); font-size:11px; line-height:1.6; }
+.kds-demo-label { flex:none; padding:7px 9px; border:1px solid #e3ebdc; border-radius:8px; background:#f3f8ef; color:#47744f; font-size:9px; font-weight:800; letter-spacing:.08em; }
+.kds-legend { display:flex; flex-wrap:wrap; gap:14px; margin:20px 0 16px; color:var(--muted); font-size:10px; }
+.kds-legend span { display:inline-flex; align-items:center; gap:7px; }
+.kds-dot { display:inline-block; width:8px; height:8px; border-radius:50%; }
+.kds-dot.recommended { background:#d8942f; }
+.kds-dot.preparing { background:#29845a; }
+.kds-dot.ready { background:#9bb88c; }
+.kds-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:13px; }
+.kds-ticket { min-width:0; padding:16px; border:1px solid var(--line); border-radius:13px; background:#fff; }
+.kds-ticket.in-preparation { border-color:#a8d5b2; box-shadow:inset 0 3px #2c8955; }
+.kds-ticket.recommended { box-shadow:inset 0 3px #d8942f; }
+.kds-ticket.ready,.kds-ticket.completed { box-shadow:inset 0 3px #a9c98c; }
+.kds-ticket-top { display:flex; flex-wrap:wrap; align-items:center; justify-content:space-between; gap:8px; }
+.kds-ticket-id { color:var(--muted); font-size:9px; font-weight:800; letter-spacing:.06em; }
+.kds-ticket h3 { margin:17px 0 7px; color:var(--ink); font-size:17px; line-height:1.3; }
+.kds-station { display:flex; align-items:center; gap:6px; margin:0; color:var(--muted); font-size:10px; }
+.kds-station svg { width:13px; height:13px; }
+.kds-ticket-stats { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin:19px 0 14px; padding:12px 0; border-top:1px solid var(--line); border-bottom:1px solid var(--line); }
+.kds-ticket-stats div { display:flex; flex-direction:column; gap:6px; min-width:0; }
+.kds-ticket-stats span { color:var(--muted); font-size:9px; }
+.kds-ticket-stats strong { color:var(--ink); font-size:12px; }
+.kds-progress-track { height:6px; overflow:hidden; border-radius:999px; background:#edf1e9; }
+.kds-progress-track span { display:block; height:100%; border-radius:inherit; background:linear-gradient(90deg,#80bd83,#b7e477); transition:width .2s ease; }
+.kds-action { display:flex; width:100%; justify-content:center; margin-top:14px; }
+.kds-action:disabled { opacity:.65; cursor:not-allowed; }
+.kds-empty { padding:30px 12px; text-align:center; color:var(--muted); font-size:12px; }
+.kds-support-grid { margin-top:16px; }
+.kds-row-detail { display:block; margin-top:4px; color:var(--muted); font-size:10px; line-height:1.5; }
+@media (max-width:1100px) { .kds-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:650px) {
+  .kds-board-heading { flex-direction:column; }
+  .kds-grid { grid-template-columns:1fr; }
+  .kds-ticket h3 { font-size:16px; }
+}
+@media (prefers-reduced-motion:reduce) { .kds-progress-track span { transition:none; } }
