@@ -7,6 +7,7 @@ import './stitch-screen-adaptation.css'
 import './stitch-overview.css'
 import './stitch-all-pages.css'
 import './navigation-fix.css'
+import './stitch-integrated.css'
 import { PlateIQProvider } from '@/components/plateiq-state'
 
 export const metadata: Metadata = {
@@ -20,7 +21,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#fdfbf7',
+  themeColor: '#effaf0',
 }
 
 export default function RootLayout({
@@ -29,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" data-scroll-behavior="smooth">
       <body className="antialiased">
         <PlateIQProvider>{children}</PlateIQProvider>
         {process.env.NODE_ENV === 'production' && <Analytics />}
