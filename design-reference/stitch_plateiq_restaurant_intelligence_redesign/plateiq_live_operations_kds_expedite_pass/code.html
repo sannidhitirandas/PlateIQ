@@ -1,0 +1,875 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-container":"#174b32","surface-container-lowest":"#ffffff","primary":"#00341e","tertiary-fixed-dim":"#91db2a","on-error-container":"#93000a","on-primary-container":"#86ba9a","tertiary-container":"#2c4a00","surface-bright":"#effdf0","on-primary-fixed-variant":"#1d5036","surface-container-highest":"#d8e6d9","outline":"#717972","background":"#effdf0","on-primary-fixed":"#002112","secondary-container":"#96f3b9","on-secondary":"#ffffff","on-tertiary-fixed":"#102000","tertiary":"#1c3200","tertiary-fixed":"#acf847","on-tertiary":"#ffffff","on-background":"#121e16","surface-dim":"#cfded1","outline-variant":"#c0c9c1","on-surface-variant":"#414943","surface-container-high":"#deecdf","on-error":"#ffffff","error-container":"#ffdad6","on-tertiary-container":"#7bc100","on-tertiary-fixed-variant":"#304f00","inverse-primary":"#9dd3b1","primary-fixed-dim":"#9dd3b1","on-primary":"#ffffff","on-surface":"#121e16","error":"#ba1a1a","secondary-fixed":"#98f6bc","inverse-surface":"#27332b","on-secondary-container":"#007243","secondary":"#006d40","surface-container-low":"#e9f7ea","surface-container":"#e3f2e5","inverse-on-surface":"#e6f4e7","surface-tint":"#36684d","surface":"#effdf0","on-secondary-fixed-variant":"#00522f","secondary-fixed-dim":"#7dd9a1","primary-fixed":"#b8efcc","surface-variant":"#d8e6d9","on-secondary-fixed":"#002110"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"2.375rem","space-xs":"0.25rem","gutter":"1.0625rem","space-lg":"1rem","space-sm":"0.5rem","margin-mobile":"1rem","margin-tablet":"1.5rem","space-xl":"1.5rem","gutter-mobile":"0.75rem","space-md":"0.75rem"},"fontFamily":{"headline-md":["Inter"],"micro-caps":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"label-caps":["Inter"],"stat-lg":["Inter"],"display-xl":["Inter"],"stat-xl":["Inter"],"body-small":["Inter"],"body-bold":["Inter"],"headline-lg-mobile":["Inter"],"body-base":["Inter"],"display-lg":["Inter"]},"fontSize":{"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"-0.02em","fontWeight":"700"}],"micro-caps":["9px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"34px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-caps":["10px",{"lineHeight":"14px","letterSpacing":"0.11em","fontWeight":"700"}],"stat-lg":["24px",{"lineHeight":"30px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-xl":["56px",{"lineHeight":"56px","letterSpacing":"-0.04em","fontWeight":"800"}],"stat-xl":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"800"}],"body-small":["11px",{"lineHeight":"17px","letterSpacing":"0","fontWeight":"400"}],"body-bold":["13px",{"lineHeight":"21px","letterSpacing":"0","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"30px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-base":["13px",{"lineHeight":"21px","letterSpacing":"0","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"44px","letterSpacing":"-0.035em","fontWeight":"800"}]}}}}</script></head><body class="bg-surface font-body-base text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="p-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="PlateIQ Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHFEDk5tqqWmeJa6hRB8MLdfjdAdJrjrWLR_05oDX8ZSnkwh2BlZ-8NKQES-F_KzoVpDUbNhZwjZKZQgbjJPKoZ1RxCu8y3_rJb_iuDNRlcg5mZVvwS3Ft0NJ31LQsNWgvqQAQrbaSZ0zPiu4aXqGUJtnfTzRRtNIvJ4vgdAW0uao9GJv0y26snl17A2hXetvFWquj1dv4xdolQFAAnekWsoYR-ltKM7FnnE0ld2HxJTwMCx6U6JOq"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">PlateIQ</span><span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">AI Kitchen OS</span></div></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase">v4.2</span></div><div class="px-space-lg pb-space-md"><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors"><div class="flex items-center gap-space-sm overflow-hidden"><span class="material-symbols-outlined text-secondary text-headline-sm shrink-0">storefront</span><div class="flex flex-col truncate"><span class="font-body-bold text-body-bold text-on-surface truncate">Atelier Lumière</span><span class="font-micro-caps text-micro-caps text-on-surface-variant truncate">Main Dining (Downtown)</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-headline-sm shrink-0">unfold_more</span></div></div><div class="flex-1 overflow-y-auto px-space-md space-y-space-md"><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-caps text-label-caps uppercase text-on-surface-variant">Core Operations</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-headline-sm">grid_view</span><span class="font-body-base text-body-base">Overview</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="live-operations" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-headline-sm">skillet</span><span class="font-body-base text-body-base">Live Operations</span></div><span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>14 active</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="tasks" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-headline-sm">checklist</span><span class="font-body-base text-body-base">Tasks</span></div><span class="px-space-xs py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-micro-caps text-micro-caps">3 pending</span></a></nav><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-caps text-label-caps uppercase text-on-surface-variant">Intelligence &amp; Planning</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="forecasting" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-headline-sm">trending_up</span><span class="font-body-base text-body-base">Forecasting</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-headline-sm">inventory_2</span><span class="font-body-base text-body-base">Inventory</span></div><span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface font-micro-caps text-micro-caps"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>2 low</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="waste-management" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-headline-sm">delete_sweep</span><span class="font-body-base text-body-base">Waste Management</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="external-factors" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-headline-sm">cloud</span><span class="font-body-base text-body-base">External Factors</span></div></a></nav><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-caps text-label-caps uppercase text-on-surface-variant">AI Assistant &amp; Strategy</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="ai-copilot" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-headline-sm text-secondary">auto_awesome</span><span class="font-body-base text-body-base">AI Copilot</span></div><span class="px-space-xs py-0.5 rounded-full bg-secondary text-on-secondary font-micro-caps text-micro-caps uppercase">Pro</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="insights" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-headline-sm">insights</span><span class="font-body-base text-body-base">Insights</span></div></a></nav><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-caps text-label-caps uppercase text-on-surface-variant">System</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><div class="flex items-center gap-space-sm"><span class="material-symbols-outlined text-headline-sm">settings</span><span class="font-body-base text-body-base">Settings</span></div></a></nav></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-micro-caps text-micro-caps text-on-surface uppercase">Systems Operational</span></div><button class="text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-headline-sm">keyboard_double_arrow_left</span></button></div><div class="mt-1 font-body-small text-body-small text-on-surface-variant">AI Model v4.2 • Sync: 2m ago</div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs p-1 rounded-lg bg-surface-container-low"><button class="px-space-md py-1 rounded font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" type="button">LUNCH SHIFT</button><button class="px-space-md py-1 rounded bg-surface-container-lowest font-label-caps text-label-caps text-primary shadow-sm" type="button">DINNER SERVICE</button></div></div><div class="flex items-center gap-space-sm w-96 px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer"><span class="material-symbols-outlined text-headline-sm text-on-surface-variant">search</span><span class="font-body-small text-body-small text-on-surface-variant flex-1 truncate">Search ingredients, tickets, forecasts...</span><kbd class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-micro-caps text-micro-caps uppercase shadow-xs">⌘K</kbd></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-2 px-space-md py-1.5 rounded-lg bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-headline-sm">timer</span><div class="flex flex-col"><span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Dinner Service Prep</span><span class="font-body-bold text-body-bold text-on-surface tabular-nums">17:42:15</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-micro-caps text-micro-caps text-on-secondary-container uppercase">Live Sync</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-headline-sm">notifications</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-error text-on-error font-micro-caps text-micro-caps flex items-center justify-center">2</span></button></div><div class="flex items-center gap-space-sm pl-space-sm border-l border-outline-variant/30"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-secondary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxZ-iclyJKrgUBIJQnAvDPny4EqeXG_F7S9HK9LH-6LE2RIGHKCBqPtz2DzR84cRHrFRPznbNHQq5Nj8CR1crz2cM_aOYdFZ36IEOpfUVQjmjFvRKaCayjgnKERKkuD3Z7z5AXVrjy0OsOYlJcLtAGV68fz-RVp3PqaZJ9WIY_uXvnP8u4w_fxr2zFG2CMTiEy2tpnD-dcyYodD4RbvBeS3C6wdJtoHKcmuCK_F_qxmyITh9Sxidcv"/><div class="hidden lg:flex flex-col text-left"><span class="font-body-bold text-body-bold text-on-surface leading-tight">Chef Marcus Vance</span><span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Head Culinary Officer</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full text-on-surface">
+<!-- Operational Context Sub-Bar (Sticky Telemetry Band) -->
+<div class="w-full bg-surface-container-lowest shadow-sm px-margin py-space-md flex flex-wrap items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-lg min-w-0">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary tracking-tight">KDS Expedite Pass</span>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            Pass Sync Active
+          </span>
+</div>
+<div class="flex items-center gap-space-sm text-on-surface-variant font-body-small text-body-small">
+<span class="font-body-bold text-body-bold text-on-surface">Dinner Rush</span>
+<span>•</span>
+<span>182 Planned Covers</span>
+<span class="text-outline-variant font-micro-caps">|</span>
+<span class="text-secondary font-body-bold">74 Seated</span>
+<span>•</span>
+<span class="text-primary font-body-bold">42 In-Flight</span>
+<span>•</span>
+<span>66 Upcoming</span>
+</div>
+</div>
+</div>
+<!-- Live Telemetry Spark Metrics -->
+<div class="flex items-center gap-space-xl flex-wrap">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">speed</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Pass Velocity</span>
+<div class="flex items-baseline gap-1">
+<span class="font-stat-lg text-stat-lg text-on-surface tabular-nums">3.4</span>
+<span class="font-micro-caps text-micro-caps text-secondary font-bold">PL/MIN (ON PACE)</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-headline-sm">timer</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Avg Ticket Time</span>
+<div class="flex items-baseline gap-1">
+<span class="font-stat-lg text-stat-lg text-primary tabular-nums">14:12</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant font-bold">TARGET &lt; 16M</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Line Equilibrium</span>
+<div class="flex items-baseline gap-1">
+<span class="font-stat-lg text-stat-lg text-secondary tabular-nums">98.2%</span>
+<span class="font-micro-caps text-micro-caps text-secondary font-bold">0 CHOKEPOINTS</span>
+</div>
+</div>
+</div>
+<!-- Quick Commands -->
+<div class="flex items-center gap-space-xs">
+<button class="flex items-center gap-1.5 px-3 py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-body-bold text-body-bold" id="audio-toggle-btn" onclick="toggleAudioCue()" type="button">
+<span class="material-symbols-outlined text-headline-sm text-secondary" id="audio-icon">volume_up</span>
+<span class="font-micro-caps text-micro-caps uppercase" id="audio-status-label">Cues: ON</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors font-body-bold text-body-bold" onclick="triggerBroadcastModal()" type="button">
+<span class="material-symbols-outlined text-headline-sm text-on-surface-variant">campaign</span>
+<span class="font-micro-caps text-micro-caps uppercase">Broadcast</span>
+</button>
+<button class="flex items-center gap-1 px-3 py-2 rounded-lg bg-primary-container text-on-primary font-body-bold text-body-bold shadow-sm hover:bg-primary transition-all" type="button">
+<span class="material-symbols-outlined text-headline-sm">tune</span>
+<span class="font-micro-caps text-micro-caps uppercase">Expedite Modes</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Main Work Envelope -->
+<div class="px-margin py-space-lg flex flex-col gap-space-lg">
+<!-- AI Pacing Warning Banner (Linear Precision Style) -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-surface-container-lowest via-surface-container-low to-surface-container-lowest p-space-md shadow-sm">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-space-md relative z-10">
+<div class="flex items-start md:items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-primary text-on-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-headline-sm text-secondary-container">auto_awesome</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-micro-caps text-micro-caps text-primary uppercase font-bold tracking-wider">AI Copilot Strategic Pacing Forecast</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps">Real-Time Pacing Lock</span>
+</div>
+<p class="font-body-base text-body-base text-on-surface">
+<strong class="text-primary font-body-bold">Recommendation:</strong> Hold Table 14 Course 2 (Mains) by <span class="tabular-nums font-bold text-primary">02m 45s</span>. Grill &amp; Hearth is absorbing Table 8 Wagyu searing. Firing now creates a 4-minute pass bottleneck.
+            </p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant font-label-caps text-label-caps uppercase hover:bg-surface-container-high transition-colors" onclick="dismissPacingStrip(this)" type="button">
+            Dismiss
+          </button>
+<button class="px-4 py-1.5 rounded-lg bg-primary text-on-primary font-label-caps text-label-caps uppercase hover:bg-primary-container shadow-sm transition-all flex items-center gap-1.5" onclick="autoPaceTrigger()" type="button">
+<span class="material-symbols-outlined text-sm">schedule_send</span>
+            Auto-Time Table 14 Firing
+          </button>
+</div>
+</div>
+</div>
+<!-- Real-Time Station Load Status (The Kitchen Brigade Heatmap) -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-space-md">
+<!-- Sauté Station -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-body-bold text-body-bold text-on-surface truncate">Sauté Rail</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-micro-caps text-micro-caps text-on-surface-variant uppercase">Chef Anya</span>
+</div>
+<div>
+<div class="flex items-baseline justify-between mb-1.5">
+<span class="font-stat-lg text-stat-lg text-on-surface tabular-nums">8 <span class="font-body-small text-body-small text-on-surface-variant">tickets</span></span>
+<span class="font-label-caps text-label-caps font-bold text-secondary">78% CAPACITY</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 78%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-micro-caps text-micro-caps uppercase pt-1">
+<span>Avg: 11m 40s</span>
+<span class="text-secondary font-bold">Flow Optimal</span>
+</div>
+</div>
+<!-- Hearth & Grill Station -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-[#E58514] animate-pulse"></span>
+<span class="font-body-bold text-body-bold text-on-surface truncate">Hearth &amp; Grill</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-micro-caps text-micro-caps text-on-surface-variant uppercase">Chef Laurent</span>
+</div>
+<div>
+<div class="flex items-baseline justify-between mb-1.5">
+<span class="font-stat-lg text-stat-lg text-on-surface tabular-nums">7 <span class="font-body-small text-body-small text-on-surface-variant">tickets</span></span>
+<span class="font-label-caps text-label-caps font-bold text-[#B66B1A]">84% HIGH LOAD</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-[#E58514] rounded-full" style="width: 84%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-micro-caps text-micro-caps uppercase pt-1">
+<span>Avg: 13m 10s</span>
+<span class="text-[#B66B1A] font-bold">Nearing Cap</span>
+</div>
+</div>
+<!-- Garde Manger -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-body-bold text-body-bold text-on-surface truncate">Garde Manger</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-micro-caps text-micro-caps text-on-surface-variant uppercase">Chef Kenji</span>
+</div>
+<div>
+<div class="flex items-baseline justify-between mb-1.5">
+<span class="font-stat-lg text-stat-lg text-on-surface tabular-nums">4 <span class="font-body-small text-body-small text-on-surface-variant">tickets</span></span>
+<span class="font-label-caps text-label-caps font-bold text-secondary">45% CAPACITY</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 45%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-micro-caps text-micro-caps uppercase pt-1">
+<span>Avg: 5m 20s</span>
+<span class="text-secondary font-bold">Stable</span>
+</div>
+</div>
+<!-- Raw & Crudo -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-3">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-body-bold text-body-bold text-on-surface truncate">Raw &amp; Crudo</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-micro-caps text-micro-caps text-on-surface-variant uppercase">Chef Liam</span>
+</div>
+<div>
+<div class="flex items-baseline justify-between mb-1.5">
+<span class="font-stat-lg text-stat-lg text-on-surface tabular-nums">5 <span class="font-body-small text-body-small text-on-surface-variant">tickets</span></span>
+<span class="font-label-caps text-label-caps font-bold text-secondary">52% CAPACITY</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 52%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-micro-caps text-micro-caps uppercase pt-1">
+<span>Avg: 6m 05s</span>
+<span class="text-secondary font-bold">Synchronized</span>
+</div>
+</div>
+<!-- Pastry & Plating -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col justify-between gap-3 col-span-2 sm:col-span-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2 min-w-0">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-body-bold text-body-bold text-on-surface truncate">Pastry / Plating</span>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-micro-caps text-micro-caps text-on-surface-variant uppercase">Chef Maya</span>
+</div>
+<div>
+<div class="flex items-baseline justify-between mb-1.5">
+<span class="font-stat-lg text-stat-lg text-on-surface tabular-nums">3 <span class="font-body-small text-body-small text-on-surface-variant">tickets</span></span>
+<span class="font-label-caps text-label-caps font-bold text-secondary">32% CAPACITY</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 32%"></div>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-micro-caps text-micro-caps uppercase pt-1">
+<span>Avg: 4m 15s</span>
+<span class="text-secondary font-bold">Ready</span>
+</div>
+</div>
+</div>
+<!-- Active Filter Bar & Station Selector -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-sm rounded-xl shadow-sm">
+<div class="flex items-center gap-1 overflow-x-auto pb-1 lg:pb-0">
+<button class="px-3 py-1.5 rounded-lg bg-primary text-on-primary font-label-caps text-label-caps uppercase whitespace-nowrap shadow-xs" type="button">
+          All Stations (8)
+        </button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-caps text-label-caps uppercase whitespace-nowrap" type="button">
+          Sauté Rail (14)
+        </button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-caps text-label-caps uppercase whitespace-nowrap" type="button">
+          Grill &amp; Hearth (11)
+        </button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-caps text-label-caps uppercase whitespace-nowrap" type="button">
+          Garde Manger (9)
+        </button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-caps text-label-caps uppercase whitespace-nowrap" type="button">
+          Raw &amp; Crudo (5)
+        </button>
+<button class="px-3 py-1.5 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container transition-colors font-label-caps text-label-caps uppercase whitespace-nowrap" type="button">
+          Pastry (3)
+        </button>
+</div>
+<div class="flex items-center gap-space-sm self-end lg:self-center">
+<div class="flex items-center gap-1 p-0.5 rounded-lg bg-surface-container">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-primary shadow-xs font-label-caps text-label-caps uppercase flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm">view_kanban</span>
+            Pass View
+          </button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm">grid_view</span>
+            Matrix
+          </button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm">table_restaurant</span>
+            Floor Map
+          </button>
+</div>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-sm">pause_circle</span>
+          Pause Inflow
+        </button>
+</div>
+</div>
+<!-- Primary KDS Ticket Kanban Board -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-md items-start">
+<!-- COLUMN 1: Incoming / Queued -->
+<div class="flex flex-col gap-space-md">
+<!-- Column Header -->
+<div class="flex items-center justify-between px-space-sm py-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-outline"></span>
+<span class="font-headline-sm text-headline-sm text-primary">Queued</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-caps text-label-caps text-on-surface-variant">4 TICKETS</span>
+</div>
+<!-- Ticket #1048 -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-stat-lg text-stat-lg text-on-surface font-bold">T14</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-micro-caps text-micro-caps text-on-surface-variant uppercase">4 COVERS</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Svr: Chloe</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase mt-0.5">Ticket #1048 • Fired 2m ago</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-micro-caps text-micro-caps font-bold text-primary tabular-nums">02:15</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase mt-0.5">Elapsed</span>
+</div>
+</div>
+<!-- Allergy Warning Capsule -->
+<div class="p-2 rounded-lg bg-[#FFEBEA] flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-[#B85047]">warning</span>
+<span class="font-micro-caps text-micro-caps text-[#B85047] uppercase font-bold tracking-wider">Nut Allergy (Guest 2 - Severe)</span>
+</div>
+<!-- Ticket Items -->
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">COURSE 1 • APPETIZERS</span>
+<span class="font-micro-caps text-micro-caps text-secondary font-bold">READY TO FIRE</span>
+</div>
+<div class="flex items-start justify-between py-1 bg-surface-container-low px-2 rounded">
+<div class="flex items-start gap-2">
+<span class="font-body-bold text-body-bold text-primary">2x</span>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Hamachi Crudo</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Raw Bar • Chef Liam • Yuzu Kosho</span>
+</div>
+</div>
+<span class="font-micro-caps text-micro-caps px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">QUEUED</span>
+</div>
+<div class="flex items-start justify-between py-1 bg-surface-container-low px-2 rounded">
+<div class="flex items-start gap-2">
+<span class="font-body-bold text-body-bold text-primary">2x</span>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Roasted Bone Marrow</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Hearth • Chef Laurent • Parsley Salad</span>
+</div>
+</div>
+<span class="font-micro-caps text-micro-caps px-1.5 py-0.5 rounded bg-surface-container text-on-surface-variant">QUEUED</span>
+</div>
+</div>
+<div class="flex items-center gap-2 pt-1">
+<button class="w-full py-2 rounded-lg bg-primary text-on-primary font-label-caps text-label-caps uppercase hover:bg-primary-container shadow-xs transition-colors flex items-center justify-center gap-1.5" onclick="fireTicket(this, '1048')" type="button">
+<span class="material-symbols-outlined text-sm">local_fire_department</span>
+              Acknowledge &amp; Fire C1
+            </button>
+<button class="p-2 rounded-lg bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Ticket Notes" type="button">
+<span class="material-symbols-outlined text-sm">note</span>
+</button>
+</div>
+</div>
+<!-- Ticket #1049 (VIP Tasting Menu) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-stat-lg text-stat-lg text-on-surface font-bold">Chef Table 1</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container font-micro-caps text-micro-caps text-on-secondary-container uppercase font-bold">VIP VIP</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase mt-0.5">Ticket #1049 • 2 Covers • Svr: Julian</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-micro-caps text-micro-caps font-bold text-primary tabular-nums">00:45</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase mt-0.5">Elapsed</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">7-COURSE OMAKASE PAIRING</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">COURSE 1 OF 7</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low text-on-surface font-body-base text-body-base">
+<div class="font-body-bold text-body-bold">Caviar Russe &amp; Smoked Dashi Tartlet (x2)</div>
+<div class="font-micro-caps text-micro-caps text-on-surface-variant">Garde Manger • Chive Emulsion</div>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors flex items-center justify-center gap-1.5" onclick="fireTicket(this, '1049')" type="button">
+<span class="material-symbols-outlined text-sm">play_arrow</span>
+            Start Tasting Course 1
+          </button>
+</div>
+</div>
+<!-- COLUMN 2: Station Working / In Prep -->
+<div class="flex flex-col gap-space-md">
+<!-- Column Header -->
+<div class="flex items-center justify-between px-space-sm py-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span>
+<span class="font-headline-sm text-headline-sm text-primary">Working</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-caps text-label-caps font-bold">6 ACTIVE</span>
+</div>
+<!-- Ticket Card #1045 (Working Mains) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-stat-lg text-stat-lg text-primary font-bold">Table 8</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-micro-caps text-micro-caps text-on-surface-variant uppercase">VIP BOOTH • 2 COV</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Mateo</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase mt-0.5">Ticket #1045 • Mains In-Flight</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container font-micro-caps text-micro-caps font-bold text-on-secondary-container tabular-nums">09:30</span>
+<span class="font-micro-caps text-micro-caps text-secondary uppercase mt-0.5 font-bold">Pacing: Optimal</span>
+</div>
+</div>
+<!-- Synchronized Progress Meter -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex flex-col gap-1.5">
+<div class="flex items-center justify-between text-on-surface font-micro-caps text-micro-caps uppercase">
+<span class="font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-xs text-secondary">sync</span>
+                Plate Synchronization
+              </span>
+<span class="font-bold text-secondary tabular-nums">85% Synced</span>
+</div>
+<div class="w-full h-1.5 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-secondary rounded-full" style="width: 85%"></div>
+</div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Est. Simultaneous Pass Landing: 01m 40s</span>
+</div>
+<!-- Item Details with Multi-Station Status -->
+<div class="flex flex-col gap-2">
+<!-- Item 1 -->
+<div class="flex items-start justify-between p-2 rounded bg-surface-container-low">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-body-bold text-body-bold text-on-surface">1x Wagyu A5 Striploin</span>
+<span class="px-1 py-0.5 rounded bg-primary-container text-on-primary font-micro-caps text-micro-caps uppercase">Med-Rare</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant mt-0.5">Hearth &amp; Grill • Laurent • <strong class="text-secondary">Resting (01:20 left)</strong></span>
+</div>
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+</div>
+<!-- Item 2 -->
+<div class="flex items-start justify-between p-2 rounded bg-surface-container-low">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-body-bold text-body-bold text-on-surface">1x Halibut en Papillote</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant mt-0.5">Sauté Rail • Anya • <strong class="text-primary">Oven Pull in 45s</strong></span>
+</div>
+<span class="material-symbols-outlined text-primary text-sm">skillet</span>
+</div>
+<!-- Item 3 -->
+<div class="flex items-start justify-between p-2 rounded bg-surface-container-low">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-body-bold text-body-bold text-on-surface">1x Black Truffle Risotto</span>
+<span class="px-1 py-0.5 rounded bg-surface-container font-micro-caps text-micro-caps text-on-surface-variant uppercase">Shared</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant mt-0.5">Sauté Rail • Anya • Final Emulsion</span>
+</div>
+<span class="material-symbols-outlined text-secondary text-sm">check_circle</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2 pt-1">
+<button class="py-2 rounded-lg bg-primary text-on-primary font-label-caps text-label-caps uppercase hover:bg-primary-container shadow-xs transition-colors" onclick="bumpToPass(this, '1045')" type="button">
+              Bump To Pass
+            </button>
+<button class="py-2 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high font-label-caps text-label-caps uppercase transition-colors" type="button">
+              Hold +2m
+            </button>
+</div>
+</div>
+<!-- Ticket Card #1046 (Tasting Menu C4) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-stat-lg text-stat-lg text-on-surface font-bold">Counter 3-4</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-micro-caps text-micro-caps text-on-surface-variant uppercase">2 COVERS</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase mt-0.5">Ticket #1046 • Chef Marcus Direct</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container font-micro-caps text-micro-caps font-bold text-on-secondary-container tabular-nums">11:20</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase mt-0.5">Elapsed</span>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex items-center justify-between pb-1">
+<span class="font-label-caps text-label-caps text-primary uppercase font-bold">COURSE 4 OF 7 • POULTRY</span>
+<span class="font-micro-caps text-micro-caps text-secondary font-bold">01:45 REMAINING</span>
+</div>
+<div class="p-2 rounded bg-surface-container-low flex flex-col gap-1">
+<span class="font-body-bold text-body-bold text-on-surface">2x Dry-Aged Duck Breast</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Sauté Rail • Anya • Spiced Honey Glaze &amp; Black Currant Jus</span>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase transition-colors" onclick="bumpToPass(this, '1046')" type="button">
+            Signal Plating Call
+          </button>
+</div>
+</div>
+<!-- COLUMN 3: Plating & Expedite Pass (Under the Lamps) -->
+<div class="flex flex-col gap-space-md">
+<!-- Column Header -->
+<div class="flex items-center justify-between px-space-sm py-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+<span class="font-headline-sm text-headline-sm text-primary">At The Pass</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-caps text-label-caps font-bold">3 LANDED</span>
+</div>
+<!-- Ticket Card #1042 (Ready for Expedite Dispatch) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-md flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-stat-lg text-stat-lg text-primary font-bold">Table 12</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-micro-caps text-micro-caps text-on-surface-variant uppercase">4 COVERS</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Svr: Elena</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-secondary uppercase font-bold mt-0.5">All 4 Plates Landed • QC Passed</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container font-micro-caps text-micro-caps font-bold text-on-secondary-container tabular-nums">14:45</span>
+<span class="font-micro-caps text-micro-caps text-secondary uppercase mt-0.5 font-bold">SLA: On Target</span>
+</div>
+</div>
+<!-- Plated Checklist (Tactile Expedite Buttons) -->
+<div class="flex flex-col gap-1.5">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-micro-caps text-micro-caps">✓</span>
+<span class="font-body-bold text-body-bold text-on-surface">2x Wagyu A5 Filet Mignon</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Station: Grill</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-micro-caps text-micro-caps">✓</span>
+<span class="font-body-bold text-body-bold text-on-surface">1x Roasted Turbot with Fennel</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Station: Sauté</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-low">
+<div class="flex items-center gap-2">
+<span class="w-5 h-5 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-micro-caps text-micro-caps">✓</span>
+<span class="font-body-bold text-body-bold text-on-surface">1x Hand-Rolled Chanterelle Gnocchi</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Station: Pasta</span>
+</div>
+</div>
+<!-- High-Impact Dispatch Action -->
+<div class="flex flex-col gap-2 pt-1">
+<button class="w-full py-3 rounded-lg bg-primary text-on-primary font-body-bold text-body-bold uppercase tracking-wider hover:bg-primary-container shadow-md transition-all flex items-center justify-center gap-2" onclick="dispatchTicket(this, '1042', 'Table 12')" type="button">
+<span class="material-symbols-outlined text-lg">check_circle</span>
+              Clear &amp; Call Runner (David)
+            </button>
+<div class="flex items-center justify-between">
+<button class="text-on-surface-variant hover:text-error font-micro-caps text-micro-caps uppercase flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-xs">report_problem</span>
+                Flag Plating Defect
+              </button>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Heat Lamp 3 Active</span>
+</div>
+</div>
+</div>
+<!-- Ticket Card #1043 (Amber SLA Warning) -->
+<div class="bg-[#FFFDF9] rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-stat-lg text-stat-lg text-[#B66B1A] font-bold">Table 4</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container font-micro-caps text-micro-caps text-on-surface-variant uppercase">PATIO • 2 COV</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-[#B66B1A] uppercase font-bold mt-0.5">SLA Threshold Exceeded (+05s)</span>
+</div>
+<div class="flex flex-col items-end">
+<span class="px-2 py-0.5 rounded-full bg-[#FFF0DC] font-micro-caps text-micro-caps font-bold text-[#B66B1A] tabular-nums">16:05</span>
+<span class="font-micro-caps text-micro-caps text-error uppercase mt-0.5 font-bold">Target: 16:00</span>
+</div>
+</div>
+<div class="p-2 rounded bg-surface-container-lowest flex flex-col gap-1.5">
+<div class="flex items-center justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Halibut Filet &amp; Braised Short Rib</span>
+<span class="font-micro-caps text-micro-caps text-secondary font-bold">Plated</span>
+</div>
+<div class="p-1.5 rounded bg-[#FFF0DC] text-[#B66B1A] font-body-small text-body-small flex items-start gap-1.5">
+<span class="material-symbols-outlined text-sm shrink-0">hourglass_top</span>
+<span>Waiting on Sauce Béarnaise ramekin from Sauté Rail (Anya).</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<button class="py-2 rounded-lg bg-[#FFF0DC] hover:bg-[#FFE5C2] text-[#B66B1A] font-label-caps text-label-caps uppercase transition-colors flex items-center justify-center gap-1" onclick="nudgeStation('Sauté', 'Table 4 Béarnaise')" type="button">
+<span class="material-symbols-outlined text-sm">notifications_active</span>
+              Nudge Sauté
+            </button>
+<button class="py-2 rounded-lg bg-primary text-on-primary font-label-caps text-label-caps uppercase hover:bg-primary-container transition-colors" onclick="dispatchTicket(this, '1043', 'Table 4')" type="button">
+              Force Clear
+            </button>
+</div>
+</div>
+</div>
+<!-- COLUMN 4: Dispatched / Cleared Telemetry Log -->
+<div class="flex flex-col gap-space-md">
+<!-- Column Header -->
+<div class="flex items-center justify-between px-space-sm py-1">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-headline-sm text-headline-sm text-primary">Dispatched</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-caps text-label-caps text-on-surface-variant">PAST 15M (12)</span>
+</div>
+<!-- Live Kitchen Photo Card (Atmospheric Michelin pass view) -->
+<div class="relative rounded-xl overflow-hidden shadow-sm aspect-video w-full bg-surface-container">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of executive chef and sous chef expediting plates under warm brass heat lamps in a three Michelin star kitchen, stainless steel counters with perfectly garnished dishes, cinematic moody culinary lighting, focused expressions, deep emerald aprons" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNqvWraEo8lof8GOwPJj2zMO6SGUWtRHVwBENklrRq6CoDBRTx3sK_nN3MW_MD92k2_g7IBm1BaSs_qh3e_0-qV5UShssrkfrCak21c-9p1DxGrgCDbw1bMIMLOXTNocHjQ-U-t_46lcxBFYqXTSqtQg1-z_yND-WkU0dZVgmEh3lbtYTtFcV-9MUgc51ustVgZNCbGeXBQ91X7TT9aSkSFu0rJgnpAtpBAmELob31r51TG5NFf3g8"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent flex flex-col justify-end p-3 text-white">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-micro-caps text-micro-caps uppercase tracking-wider">Pass Camera 01 (Live Feed)</span>
+</div>
+<span class="font-body-small text-body-small text-white/90">Main Pass Station • Chef Marcus Vance</span>
+</div>
+</div>
+<!-- Recent Dispatched Item 1 -->
+<div class="bg-surface-container-lowest/80 rounded-xl p-3 shadow-xs flex flex-col gap-1.5 opacity-90 hover:opacity-100 transition-opacity">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-body-bold text-body-bold text-on-surface">Table 6</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">4 Covers • Mains</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-secondary font-bold tabular-nums">13m 10s SLA</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-micro-caps text-micro-caps">
+<span>Cleared 4m ago</span>
+<span>Runner: David L.</span>
+</div>
+</div>
+<!-- Recent Dispatched Item 2 -->
+<div class="bg-surface-container-lowest/80 rounded-xl p-3 shadow-xs flex flex-col gap-1.5 opacity-80 hover:opacity-100 transition-opacity">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-body-bold text-body-bold text-on-surface">Table 9</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">2 Covers • Desserts</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-secondary font-bold tabular-nums">12m 45s SLA</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-micro-caps text-micro-caps">
+<span>Cleared 8m ago</span>
+<span>Runner: Sophia K.</span>
+</div>
+</div>
+<!-- Recent Dispatched Item 3 -->
+<div class="bg-surface-container-lowest/80 rounded-xl p-3 shadow-xs flex flex-col gap-1.5 opacity-70 hover:opacity-100 transition-opacity">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="font-body-bold text-body-bold text-on-surface">Table 2</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">6 Covers • Starters</span>
+</div>
+<span class="font-micro-caps text-micro-caps text-secondary font-bold tabular-nums">10m 20s SLA</span>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-micro-caps text-micro-caps">
+<span>Cleared 13m ago</span>
+<span>Runner: David L.</span>
+</div>
+</div>
+<!-- Expedite Efficiency Widget -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-micro-caps text-micro-caps text-primary uppercase font-bold">Shift Runner Efficiency</span>
+<span class="font-micro-caps text-micro-caps text-secondary font-bold">99.4% Delivery SLA</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex-1 bg-surface-container rounded-full h-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 96%"></div>
+</div>
+<span class="font-micro-caps text-micro-caps text-on-surface font-bold tabular-nums">48s Avg Pickup</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Service Flow & Real-Time Course Pipeline Graph -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-primary">Service Throughput &amp; Pacing Heatmap</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Live synchronized plate progression per 15-minute operational wave across service</span>
+</div>
+<div class="flex items-center gap-space-md">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-primary"></span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Mains (Fired)</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-secondary"></span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Starters &amp; Crudo</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-surface-container-high"></span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Forecast Waves</span>
+</div>
+</div>
+</div>
+<!-- Minimal SVG Throughput Wave -->
+<div class="w-full h-32 flex items-end gap-1.5 pt-4">
+<!-- 17:00 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t hover:bg-secondary/40 transition-colors" style="height: 25%"></div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">17:00</span>
+</div>
+<!-- 17:15 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group cursor-pointer">
+<div class="w-full bg-surface-container-high rounded-t hover:bg-secondary/40 transition-colors" style="height: 38%"></div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">17:15</span>
+</div>
+<!-- 17:30 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group cursor-pointer">
+<div class="w-full bg-secondary/70 rounded-t hover:bg-secondary transition-colors" style="height: 52%"></div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">17:30</span>
+</div>
+<!-- 17:45 (Current) -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group cursor-pointer">
+<div class="w-full bg-primary rounded-t relative" style="height: 88%">
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 px-1.5 py-0.5 rounded bg-primary text-on-primary font-micro-caps text-micro-caps uppercase whitespace-nowrap shadow-xs">
+              NOW • 42 PL
+            </div>
+</div>
+<span class="font-micro-caps text-micro-caps text-primary font-bold">17:45</span>
+</div>
+<!-- 18:00 (Peak Projected) -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group cursor-pointer opacity-70">
+<div class="w-full bg-secondary-container rounded-t" style="height: 94%"></div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">18:00</span>
+</div>
+<!-- 18:15 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group cursor-pointer opacity-70">
+<div class="w-full bg-secondary-container rounded-t" style="height: 84%"></div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">18:15</span>
+</div>
+<!-- 18:30 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group cursor-pointer opacity-50">
+<div class="w-full bg-surface-container rounded-t" style="height: 70%"></div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">18:30</span>
+</div>
+<!-- 18:45 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group cursor-pointer opacity-50">
+<div class="w-full bg-surface-container rounded-t" style="height: 60%"></div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">18:45</span>
+</div>
+<!-- 19:00 -->
+<div class="flex-1 flex flex-col items-center gap-1 h-full justify-end group cursor-pointer opacity-30">
+<div class="w-full bg-surface-container rounded-t" style="height: 48%"></div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">19:00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Toast Notification Container for Quick Expedite Actions -->
+<div class="fixed bottom-6 right-6 z-50 flex flex-col gap-2 pointer-events-none" id="toast-container"></div>
+<!-- Client-Side Micro-Interactions Script -->
+<script>
+    // Highlight Left Sidebar Active Navigation Item for Live Operations
+    document.addEventListener("DOMContentLoaded", () => {
+      const liveOpsLink = document.querySelector('aside a[data-path="live-operations"]');
+      if (liveOpsLink) {
+        // Clear existing active items if any
+        document.querySelectorAll('aside a[data-path]').forEach(link => {
+          link.classList.remove('bg-primary-container', 'text-on-primary', 'font-body-bold', 'shadow-sm');
+          link.classList.add('text-on-surface-variant');
+        });
+        // Apply active style
+        liveOpsLink.classList.remove('text-on-surface-variant');
+        liveOpsLink.classList.add('bg-primary-container', 'text-on-primary', 'font-body-bold', 'shadow-sm');
+      }
+    });
+
+    // Sound toggle state
+    let audioEnabled = true;
+    function toggleAudioCue() {
+      audioEnabled = !audioEnabled;
+      const label = document.getElementById('audio-status-label');
+      const icon = document.getElementById('audio-icon');
+      if (audioEnabled) {
+        label.innerText = 'Cues: ON';
+        icon.innerText = 'volume_up';
+        icon.className = 'material-symbols-outlined text-headline-sm text-secondary';
+        showToast('KDS Audio Feedback Enabled', 'info');
+      } else {
+        label.innerText = 'Cues: MUTED';
+        icon.innerText = 'volume_off';
+        icon.className = 'material-symbols-outlined text-headline-sm text-outline';
+        showToast('KDS Chimes Silenced', 'info');
+      }
+    }
+
+    // Dismiss AI strategic banner
+    function dismissPacingStrip(btn) {
+      const banner = btn.closest('.bg-gradient-to-r');
+      if (banner) {
+        banner.style.transition = 'all 0.3s ease';
+        banner.style.opacity = '0';
+        banner.style.transform = 'translateY(-10px)';
+        setTimeout(() => banner.remove(), 300);
+      }
+    }
+
+    // Auto pace action trigger
+    function autoPaceTrigger() {
+      showToast('AI Pacing Applied: Table 14 C2 delayed 02:45 to line equilibrium', 'success');
+      const banner = document.querySelector('.bg-gradient-to-r');
+      if (banner) dismissPacingStrip(banner.querySelector('button'));
+    }
+
+    // Acknowledge ticket
+    function fireTicket(btn, ticketId) {
+      btn.innerText = 'Fired To Stations';
+      btn.disabled = true;
+      btn.classList.add('opacity-75', 'bg-secondary');
+      showToast(`Ticket #${ticketId} fired to Sauté & Hearth stations`, 'success');
+    }
+
+    // Bump to pass
+    function bumpToPass(btn, ticketId) {
+      showToast(`Ticket #${ticketId} transferred to Pass QC station`, 'info');
+      const card = btn.closest('.rounded-xl');
+      if (card) {
+        card.style.transform = 'scale(0.98)';
+        setTimeout(() => {
+          card.style.transform = '';
+        }, 150);
+      }
+    }
+
+    // Dispatch runner
+    function dispatchTicket(btn, ticketId, tableNum) {
+      showToast(`Runner Dispatched to ${tableNum}! Ticket #${ticketId} cleared.`, 'success');
+      const card = btn.closest('.rounded-xl');
+      if (card) {
+        card.style.transition = 'all 0.35s cubic-bezier(0.4, 0, 0.2, 1)';
+        card.style.opacity = '0';
+        card.style.transform = 'scale(0.92) translateX(30px)';
+        setTimeout(() => card.remove(), 350);
+      }
+    }
+
+    // Station nudge
+    function nudgeStation(station, item) {
+      showToast(`Expedite Ping sent to ${station}: Priority on ${item}`, 'warning');
+    }
+
+    // Broadcast modal trigger
+    function triggerBroadcastModal() {
+      showToast('Kitchen Audio Alert Broadcast: "Expedite calling all stations - Check line sync"', 'info');
+    }
+
+    // Toast notification engine
+    function showToast(message, type = 'info') {
+      const container = document.getElementById('toast-container');
+      const toast = document.createElement('div');
+      
+      let bg = 'bg-primary text-on-primary';
+      let icon = 'info';
+      if (type === 'success') {
+        bg = 'bg-primary-container text-on-primary';
+        icon = 'check_circle';
+      } else if (type === 'warning') {
+        bg = 'bg-[#B66B1A] text-white';
+        icon = 'warning';
+      }
+
+      toast.className = `${bg} px-4 py-2.5 rounded-lg shadow-lg flex items-center gap-2 pointer-events-auto transition-all duration-300 transform translate-y-4 opacity-0 font-body-bold text-body-bold text-sm`;
+      toast.innerHTML = `<span class="material-symbols-outlined text-sm">${icon}</span><span>${message}</span>`;
+      
+      container.appendChild(toast);
+      
+      requestAnimationFrame(() => {
+        toast.classList.remove('translate-y-4', 'opacity-0');
+      });
+
+      setTimeout(() => {
+        toast.classList.add('translate-y-2', 'opacity-0');
+        setTimeout(() => toast.remove(), 300);
+      }, 3500);
+    }
+  </script>
+</div></main></div></body></html>

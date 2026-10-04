@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-container":"#174b32","surface-container-lowest":"#ffffff","primary":"#00341e","tertiary-fixed-dim":"#91db2a","on-error-container":"#93000a","on-primary-container":"#86ba9a","tertiary-container":"#2c4a00","surface-bright":"#effdf0","on-primary-fixed-variant":"#1d5036","surface-container-highest":"#d8e6d9","outline":"#717972","background":"#effdf0","on-primary-fixed":"#002112","secondary-container":"#96f3b9","on-secondary":"#ffffff","on-tertiary-fixed":"#102000","tertiary":"#1c3200","tertiary-fixed":"#acf847","on-tertiary":"#ffffff","on-background":"#121e16","surface-dim":"#cfded1","outline-variant":"#c0c9c1","on-surface-variant":"#414943","surface-container-high":"#deecdf","on-error":"#ffffff","error-container":"#ffdad6","on-tertiary-container":"#7bc100","on-tertiary-fixed-variant":"#304f00","inverse-primary":"#9dd3b1","primary-fixed-dim":"#9dd3b1","on-primary":"#ffffff","on-surface":"#121e16","error":"#ba1a1a","secondary-fixed":"#98f6bc","inverse-surface":"#27332b","on-secondary-container":"#007243","secondary":"#006d40","surface-container-low":"#e9f7ea","surface-container":"#e3f2e5","inverse-on-surface":"#e6f4e7","surface-tint":"#36684d","surface":"#effdf0","on-secondary-fixed-variant":"#00522f","secondary-fixed-dim":"#7dd9a1","primary-fixed":"#b8efcc","surface-variant":"#d8e6d9","on-secondary-fixed":"#002110"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"2.375rem","space-xs":"0.25rem","gutter":"1.0625rem","space-lg":"1rem","space-sm":"0.5rem","margin-mobile":"1rem","margin-tablet":"1.5rem","space-xl":"1.5rem","gutter-mobile":"0.75rem","space-md":"0.75rem"},"fontFamily":{"headline-md":["Inter"],"micro-caps":["Inter"],"headline-lg":["Inter"],"headline-sm":["Inter"],"label-caps":["Inter"],"stat-lg":["Inter"],"display-xl":["Inter"],"stat-xl":["Inter"],"body-small":["Inter"],"body-bold":["Inter"],"headline-lg-mobile":["Inter"],"body-base":["Inter"],"display-lg":["Inter"]},"fontSize":{"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"-0.02em","fontWeight":"700"}],"micro-caps":["9px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"34px","letterSpacing":"-0.03em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"-0.015em","fontWeight":"700"}],"label-caps":["10px",{"lineHeight":"14px","letterSpacing":"0.11em","fontWeight":"700"}],"stat-lg":["24px",{"lineHeight":"30px","letterSpacing":"-0.02em","fontWeight":"700"}],"display-xl":["56px",{"lineHeight":"56px","letterSpacing":"-0.04em","fontWeight":"800"}],"stat-xl":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"800"}],"body-small":["11px",{"lineHeight":"17px","letterSpacing":"0","fontWeight":"400"}],"body-bold":["13px",{"lineHeight":"21px","letterSpacing":"0","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"30px","letterSpacing":"-0.025em","fontWeight":"700"}],"body-base":["13px",{"lineHeight":"21px","letterSpacing":"0","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"44px","letterSpacing":"-0.035em","fontWeight":"800"}]}}}}</script></head><body class="bg-surface font-body-base text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="p-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="PlateIQ Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHFEDk5tqqWmeJa6hRB8MLdfjdAdJrjrWLR_05oDX8ZSnkwh2BlZ-8NKQES-F_KzoVpDUbNhZwjZKZQgbjJPKoZ1RxCu8y3_rJb_iuDNRlcg5mZVvwS3Ft0NJ31LQsNWgvqQAQrbaSZ0zPiu4aXqGUJtnfTzRRtNIvJ4vgdAW0uao9GJv0y26snl17A2hXetvFWquj1dv4xdolQFAAnekWsoYR-ltKM7FnnE0ld2HxJTwMCx6U6JOq"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">PlateIQ</span><span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">AI Kitchen OS</span></div></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase">v4.2</span></div><div class="px-space-lg pb-space-md"><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors"><div class="flex items-center gap-space-sm overflow-hidden"><span class="material-symbols-outlined text-secondary text-headline-sm shrink-0">storefront</span><div class="flex flex-col truncate"><span class="font-body-bold text-body-bold text-on-surface truncate">Atelier Lumière</span><span class="font-micro-caps text-micro-caps text-on-surface-variant truncate">Main Dining (Downtown)</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-headline-sm shrink-0">unfold_more</span></div></div><div class="flex-1 overflow-y-auto px-space-md space-y-space-md"><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-caps text-label-caps uppercase text-on-surface-variant">Core Operations</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#"><span class="font-body-base text-body-base">Overview</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="live-operations" href="#"><span class="font-body-base text-body-base">Live Operations</span><span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>14 active</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="tasks" href="#"><span class="font-body-base text-body-base">Tasks</span><span class="px-space-xs py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-micro-caps text-micro-caps">3 pending</span></a></nav><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-caps text-label-caps uppercase text-on-surface-variant">Intelligence &amp; Planning</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="forecasting" href="#"><span class="font-body-base text-body-base">Forecasting</span></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 transition-all bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm" data-path="inventory" href="#"><span class="font-body-base text-body-base">Inventory</span><span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-micro-caps text-micro-caps"><span class="w-1.5 h-1.5 rounded-full bg-error"></span>2 low</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="waste-management" href="#"><span class="font-body-base text-body-base">Waste Management</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="external-factors" href="#"><span class="font-body-base text-body-base">External Factors</span></a></nav><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-caps text-label-caps uppercase text-on-surface-variant">AI Assistant &amp; Strategy</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="ai-copilot" href="#"><span class="font-body-base text-body-base">AI Copilot</span><span class="px-space-xs py-0.5 rounded-full bg-secondary text-on-secondary font-micro-caps text-micro-caps uppercase">Pro</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="insights" href="#"><span class="font-body-base text-body-base">Insights</span></a></nav><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-caps text-label-caps uppercase text-on-surface-variant">System</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="font-body-base text-body-base">Settings</span></a></nav></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-micro-caps text-micro-caps text-on-surface uppercase">Systems Operational</span></div><button class="text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-headline-sm">keyboard_double_arrow_left</span></button></div><div class="mt-1 font-body-small text-body-small text-on-surface-variant">AI Model v4.2 • Sync: 2m ago</div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs p-1 rounded-lg bg-surface-container-low"><button class="px-space-md py-1 rounded font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" type="button">LUNCH SHIFT</button><button class="px-space-md py-1 rounded bg-surface-container-lowest font-label-caps text-label-caps text-primary shadow-sm" type="button">DINNER SERVICE</button></div></div><div class="flex items-center gap-space-sm w-96 px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer"><span class="material-symbols-outlined text-headline-sm text-on-surface-variant">search</span><span class="font-body-small text-body-small text-on-surface-variant flex-1 truncate">Search ingredients, tickets, forecasts...</span><kbd class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-micro-caps text-micro-caps uppercase shadow-xs">⌘K</kbd></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-2 px-space-md py-1.5 rounded-lg bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-headline-sm">timer</span><div class="flex flex-col"><span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Dinner Service Prep</span><span class="font-body-bold text-body-bold text-on-surface tabular-nums">17:42:15</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-micro-caps text-micro-caps text-on-secondary-container uppercase">Live Sync</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-headline-sm">notifications</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-error text-on-error font-micro-caps text-micro-caps flex items-center justify-center">2</span></button></div><div class="flex items-center gap-space-sm pl-space-sm border-l border-outline-variant/30"><img alt="Profile" class="w-8 h-8 rounded-full object-cover ring-1 ring-secondary/20" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxZ-iclyJKrgUBIJQnAvDPny4EqeXG_F7S9HK9LH-6LE2RIGHKCBqPtz2DzR84cRHrFRPznbNHQq5Nj8CR1crz2cM_aOYdFZ36IEOpfUVQjmjFvRKaCayjgnKERKkuD3Z7z5AXVrjy0OsOYlJcLtAGV68fz-RVp3PqaZJ9WIY_uXvnP8u4w_fxr2zFG2CMTiEy2tpnD-dcyYodD4RbvBeS3C6wdJtoHKcmuCK_F_qxmyITh9Sxidcv"/><div class="hidden lg:flex flex-col text-left"><span class="font-body-bold text-body-bold text-on-surface leading-tight">Chef Marcus Vance</span><span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Head Culinary Officer</span></div></div></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Interactive Inventory Context Hub -->
+<div class="px-margin pt-space-lg pb-space-xl flex flex-col gap-space-lg">
+<!-- Screen Title & Executive Action Bar -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md bg-surface-container-lowest p-space-lg rounded-xl shadow-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight">Inventory Intelligence &amp; Smart Depletion</h1>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase tracking-wider">Telemetry Live</span>
+</div>
+<p class="font-body-small text-body-small text-on-surface-variant flex items-center gap-2">
+<span>Live Stock Monitoring</span>
+<span>•</span>
+<span>Predictive Depletion Curves</span>
+<span>•</span>
+<span>Automated Supplier POs &amp; HACCP Lot Traceability</span>
+</p>
+</div>
+<!-- Action Suite -->
+<div class="flex flex-wrap items-center gap-space-sm">
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-bold text-body-bold transition-all shadow-xs" type="button">
+<span class="material-symbols-outlined text-headline-sm text-secondary">qr_code_scanner</span>
+<span>Scan Invoice OCR</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-body-bold text-body-bold transition-all shadow-xs" type="button">
+<span class="material-symbols-outlined text-headline-sm text-on-surface-variant">sync_alt</span>
+<span>ERP / CSV Export</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-high hover:bg-surface-container-highest text-primary font-body-bold text-body-bold transition-all shadow-xs" type="button">
+<span class="material-symbols-outlined text-headline-sm">add_task</span>
+<span>+ Quick Audit / Tare</span>
+</button>
+<button class="flex items-center gap-2 px-space-md py-2 rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-body-bold text-body-bold transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-headline-sm">shopping_cart_checkout</span>
+<span>Generate POs</span>
+<span class="px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps">2 Ready</span>
+</button>
+</div>
+</div>
+<!-- Category Scopes & Filter Rail -->
+<div class="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-space-sm bg-surface-container-lowest p-2 rounded-xl shadow-xs">
+<!-- Tabs -->
+<div class="flex items-center gap-1 overflow-x-auto no-scrollbar py-1">
+<button class="px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase whitespace-nowrap shadow-xs" type="button">
+          All Categories (152)
+        </button>
+<button class="px-space-md py-1.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase whitespace-nowrap transition-colors" type="button">
+          Proteins &amp; Primals (28)
+        </button>
+<button class="px-space-md py-1.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase whitespace-nowrap transition-colors" type="button">
+          Seafood &amp; Shellfish (19)
+        </button>
+<button class="px-space-md py-1.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase whitespace-nowrap transition-colors" type="button">
+          Produce &amp; Herbs (44)
+        </button>
+<button class="px-space-md py-1.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase whitespace-nowrap transition-colors" type="button">
+          Dairy &amp; Pantry (36)
+        </button>
+<button class="px-space-md py-1.5 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface font-label-caps text-label-caps uppercase whitespace-nowrap transition-colors" type="button">
+          Cellar &amp; Specialty (25)
+        </button>
+</div>
+<!-- Quick Alert State Filter Badges -->
+<div class="flex items-center gap-1.5 shrink-0 pl-space-sm border-t md:border-t-0 md:border-l border-outline-variant/30 pt-1 md:pt-0">
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-error-container text-on-error-container font-micro-caps text-micro-caps uppercase hover:brightness-95 transition-all" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span>Critical Low (2)</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-micro-caps text-micro-caps uppercase hover:bg-surface-container-highest transition-all" type="button">
+<span class="material-symbols-outlined text-[12px] text-on-surface-variant">schedule</span>
+<span>Expiring 48h (4)</span>
+</button>
+<button class="flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase hover:brightness-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[12px]">inventory_2</span>
+<span>Surplus (3)</span>
+</button>
+</div>
+</div>
+<!-- Top Executive KPI Suite: 4 Dense Precision Cards -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-gutter">
+<!-- KPI 1: Total Stock Valuation & Velocity -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Total Stock Valuation</span>
+<span class="font-stat-xl text-stat-xl text-on-surface tabular-nums mt-1">$42,850.40</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-headline-sm">account_balance_wallet</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/20 flex flex-col gap-1">
+<div class="flex items-center justify-between font-body-small text-body-small">
+<span class="text-on-surface-variant">Cap Utilization</span>
+<span class="font-body-bold text-body-bold text-secondary tabular-nums">95.2% ($45k max)</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 95.2%;"></div>
+</div>
+<p class="font-micro-caps text-micro-caps text-on-surface-variant mt-0.5">6.8 days shelf turnover • Optimal for Atelier</p>
+</div>
+</div>
+<!-- KPI 2: Depletion Velocity Risk & Stockouts -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow relative overflow-hidden">
+<div class="absolute -right-6 -bottom-6 w-24 h-24 rounded-full bg-error-container/30 pointer-events-none blur-xl"></div>
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-error uppercase tracking-wider flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+              Imminent Service Risk
+            </span>
+<span class="font-stat-xl text-stat-xl text-error tabular-nums mt-1">2 Items at Zero Par</span>
+</div>
+<div class="p-2 rounded-lg bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-headline-sm">chevron_left</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/20 flex flex-col gap-1">
+<p class="font-body-small text-body-small text-on-surface line-clamp-1 font-body-bold">
+            A5 Miyazaki Wagyu <span class="text-error">(0.8 covers)</span> • Heavy Cream
+          </p>
+<div class="flex items-center justify-between font-micro-caps text-micro-caps">
+<span class="text-on-surface-variant">Vendor PO Drafts Prepared</span>
+<span class="font-body-bold text-secondary">POs #892, #893</span>
+</div>
+</div>
+</div>
+<!-- KPI 3: Theoretical vs Actual Recipe Depletion Precision -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">AI Depletion Precision</span>
+<span class="font-stat-xl text-stat-xl text-on-surface tabular-nums mt-1">98.4% Match</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-headline-sm">precision_manufacturing</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/20 flex flex-col gap-1">
+<div class="flex items-center justify-between font-body-small text-body-small">
+<span class="text-on-surface-variant">POS Scale Variance</span>
+<span class="font-body-bold text-body-bold text-secondary tabular-nums">-0.6% trim/loss</span>
+</div>
+<p class="font-micro-caps text-micro-caps text-on-surface-variant">182 Covers booked tonight • 42 Entrées fired</p>
+</div>
+</div>
+<!-- KPI 4: Supplier SLA & Spot Price Index -->
+<div class="flex flex-col justify-between p-space-lg rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Supplier Delivery SLA</span>
+<span class="font-stat-xl text-stat-xl text-on-surface tabular-nums mt-1">99.1% On-Time</span>
+</div>
+<div class="p-2 rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-headline-sm">local_shipping</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm border-t border-outline-variant/20 flex flex-col gap-1">
+<div class="flex items-center justify-between font-body-small text-body-small">
+<span class="text-on-surface-variant">3 Inbounds 06:00-08:30</span>
+<span class="text-on-surface-variant font-micro-caps text-micro-caps">Turbot: <span class="text-error font-body-bold">+8.4%</span></span>
+</div>
+<p class="font-micro-caps text-micro-caps text-on-surface-variant">Truffle butter index favorable (-3.2%)</p>
+</div>
+</div>
+</div>
+<!-- Storage Telemetry Micro-Climate Strip -->
+<div class="bg-surface-container-low p-space-md rounded-xl flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-space-md shadow-xs">
+<div class="flex items-center gap-space-sm shrink-0">
+<span class="material-symbols-outlined text-headline-sm text-secondary">thermostat</span>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-primary">Walk-In &amp; Storage Sensor Telemetry</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">HACCP Automated Constant Monitor</span>
+</div>
+</div>
+<!-- Sensor nodes -->
+<div class="grid grid-cols-2 sm:grid-cols-5 gap-space-sm flex-1">
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest">
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Walk-in 01 (Meat)</span>
+<span class="font-body-bold text-body-bold text-on-surface tabular-nums text-right">34.2°F <span class="text-secondary text-[10px]">✓</span></span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest">
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Walk-in 02 (Veg)</span>
+<span class="font-body-bold text-body-bold text-on-surface tabular-nums text-right">37.8°F <span class="text-secondary text-[10px]">✓</span></span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest">
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Fish Chill Box</span>
+<span class="font-body-bold text-body-bold text-on-surface tabular-nums text-right">32.1°F <span class="text-secondary text-[10px]">✓</span></span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest">
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Dry Ager Locker</span>
+<span class="font-body-bold text-body-bold text-on-surface tabular-nums text-right">33.8°F / 82%</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded bg-surface-container-lowest">
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Wine Cellar</span>
+<span class="font-body-bold text-body-bold text-on-surface tabular-nums text-right">55.4°F <span class="text-secondary text-[10px]">✓</span></span>
+</div>
+</div>
+<!-- IoT scale status -->
+<div class="flex items-center gap-2 pl-space-md border-t lg:border-t-0 lg:border-l border-outline-variant/30 shrink-0">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">IoT Tare Mesh: 8/8 Online</span>
+</div>
+</div>
+<!-- Main Asymmetric Workspace (Left 65% / Right 35%) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- LEFT COLUMN: Primary Ledger & Live Depletion Tracking (Col Span 8) -->
+<div class="lg:col-span-8 flex flex-col gap-space-lg">
+<!-- Table Management Shell -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Table Control Bar -->
+<div class="p-space-md flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-space-sm bg-surface-container-lowest border-b border-outline-variant/20">
+<div class="flex items-center gap-space-xs flex-1 max-w-md bg-surface-container-low px-space-md py-1.5 rounded-lg">
+<span class="material-symbols-outlined text-headline-sm text-on-surface-variant">search</span>
+<input class="w-full bg-transparent border-0 text-on-surface font-body-base text-body-base placeholder-on-surface-variant/70 focus:outline-none" placeholder="Filter by ingredient, SKU, bin location, vendor..." type="text"/>
+</div>
+<div class="flex items-center gap-space-xs">
+<!-- Location select -->
+<select class="bg-surface-container-low text-on-surface font-body-small text-body-small py-1.5 px-space-sm rounded-lg border-0 focus:outline-none cursor-pointer">
+<option>All Walk-ins &amp; Storage</option>
+<option>Walk-in 01 (Meat &amp; Primal)</option>
+<option>Fish Deep Chill</option>
+<option>Produce Reach-in</option>
+<option>Pastry Dry Storage</option>
+</select>
+<!-- Sort select -->
+<select class="bg-surface-container-low text-on-surface font-body-small text-body-small py-1.5 px-space-sm rounded-lg border-0 focus:outline-none cursor-pointer">
+<option>Sort: Par Deficit First</option>
+<option>Sort: Value ($ High to Low)</option>
+<option>Sort: Depletion Burn Velocity</option>
+<option>Sort: Expiry Time</option>
+</select>
+<button class="p-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface-variant hover:text-on-surface transition-colors" title="Customize Columns" type="button">
+<span class="material-symbols-outlined text-headline-sm">view_column</span>
+</button>
+</div>
+</div>
+<!-- Table Component -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-caps text-label-caps uppercase border-b border-outline-variant/20">
+<th class="py-3 px-space-md">Ingredient &amp; Spec</th>
+<th class="py-3 px-space-sm">Location / SKU</th>
+<th class="py-3 px-space-sm">On-Hand vs Par</th>
+<th class="py-3 px-space-sm">Depletion Burn</th>
+<th class="py-3 px-space-sm">Status / Risk</th>
+<th class="py-3 px-space-md text-right">Quick Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 text-on-surface font-body-base text-body-base">
+<!-- ROW 1: Wagyu (Critical Low) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container overflow-hidden shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Close up cut of raw A5 Miyazaki Wagyu beef striploin with dense marbling, professional culinary studio lighting, neutral dark slate background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCdUkE-Mt0rz3b2IXsdU94PxxJjwWXZKjubRNC4s3x7a8Fgqd5kDKvrI7PqJ1NV6U-PUGRQb5z-h0gbxiQmZfh_I38rjoO89_nQY-uedHJDsYz2O0BB5lOKPgIk0F54CfqT8jvKVBFueMjWW549Q1DIs6RG2dnFxWWWkCjABbTXHuqOoPMK9gNEXTe1V7-aWUXxn6artsSL7WnE4BtKuTMUf_RE7bK9R4uFUn2SWvLNMXOqLcixbz_"/>
+</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-primary group-hover:text-secondary transition-colors">A5 Miyazaki Wagyu Striploin Primal</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Primal Proteins • Certified Miyazaki Lot #982</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-small text-body-small">Meat Walk-in 01</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Shelf B2 • SKU PR-8821</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-body-bold text-body-bold text-error tabular-nums">3.2 lbs</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant tabular-nums">/ 18.0 Par</span>
+</div>
+<div class="w-24 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 17.7%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-small text-body-small text-on-surface tabular-nums">1.4 lbs / hr</span>
+<span class="font-micro-caps text-micro-caps text-error font-body-bold">Est Zero: 20:15 rush</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-error-container text-on-error-container font-micro-caps text-micro-caps uppercase whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span>
+                      Critical Low (0.8 cvrs)
+                    </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-error-container hover:bg-error text-on-error-container hover:text-on-error font-micro-caps text-micro-caps uppercase transition-colors" type="button">
+                      Rush Reserve Thaw
+                    </button>
+</td>
+</tr>
+<!-- ROW 2: Maine Scallops (Expiring 36H) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container overflow-hidden shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Plump raw fresh Maine diver scallops on crushed ice bed, studio gastro photography, emerald tint ambient tone" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDmCEY6S6rHnJBANHvh0YU269NuBuB855m35jUeoO5v6voKr6NTNJNhhKyBdXrauRPoX1M9nyn0AyWfGvqh9TR-rV0kX5cTv4Y3SGbL0Beyk6UTJ0ckdAjUYCJyXc7h_F4e_wsKHXfdPMG1ex8GC7RyxPj2jf6xHjUjZMA5_Z1TtaKEgBlFpc9g4HRqIKMt0mJi88GF-fg9tnZBJriCyEoBGfN8wXlxL6yRUiz7V2lhqzpmEprRwFEL"/>
+</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-primary group-hover:text-secondary transition-colors">Fresh Maine Diver Scallops (U-10)</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Seafood • Harvest Tag #9921 Attached</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-small text-body-small">Fish Ice Bed 32.5°F</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Box 03 • SKU SF-1049</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-body-bold text-body-bold text-on-surface tabular-nums">14.5 lbs</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant tabular-nums">/ 16.0 Par</span>
+</div>
+<div class="w-24 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 90.6%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-small text-body-small text-on-surface tabular-nums">2.8 lbs / hr</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Day 2 of 4 shelf life</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase whitespace-nowrap">
+<span class="material-symbols-outlined text-[12px]">schedule</span>
+                      Expiring in 36h
+                    </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-micro-caps text-micro-caps uppercase transition-colors" type="button">
+                      Log Scale Tare
+                    </button>
+</td>
+</tr>
+<!-- ROW 3: Black Winter Truffles (Optimal) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container overflow-hidden shrink-0 flex items-center justify-center">
+<img class="w-full h-full object-cover" data-alt="Whole black Norcia winter truffles nestled in arborio rice in a wooden box, fine dining kitchen prep mise en place" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4dNQrENVVvbqzyNPfzDagJTamLY8LJPBWprQdeveKQWREufvV6lG51DYXMurodlP5HwUj_rvg3vVlZxC0nGuE2zs8LScJI3mtuvdP7CCP2oinexJ4KVQccpYO6W4nKMnQv-yRyTyy6WqteRd8xW8gKtw7oxtRNr5SlRl9XOB3djottmC2g1O4gnzt3rwPNqqX2vF-X3dpernZxvPJ-tqfzrqg9EjKj-z3Py-yZbM6AFu4Kas5q3ry"/>
+</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-primary group-hover:text-secondary transition-colors">Wild Black Winter Truffles (Norcia)</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Specialty • Direct Import • $1.85/g</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-small text-body-small">Truffle Humidor</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Bin T-1 • SKU SP-3301</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-body-bold text-body-bold text-on-surface tabular-nums">420 g</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant tabular-nums">/ 500g Par</span>
+</div>
+<div class="w-24 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 84%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-small text-body-small text-on-surface tabular-nums">35 g / svc</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Total: $777.00 val</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container-high text-primary font-micro-caps text-micro-caps uppercase whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                      Optimal Par
+                    </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-micro-caps text-micro-caps uppercase transition-colors" type="button">
+                      Precision Audit
+                    </button>
+</td>
+</tr>
+<!-- ROW 4: Organic Chervil & Microgreens (Low Stock) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container overflow-hidden shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">eco</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-primary group-hover:text-secondary transition-colors">Organic French Chervil &amp; Herb Punnet</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Produce • Green Valley Organics</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-small text-body-small">Produce Reach-In</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Shelf 4A • SKU PRD-092</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-body-bold text-body-bold text-tertiary-container tabular-nums">6 punnets</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant tabular-nums">/ 16 Par</span>
+</div>
+<div class="w-24 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-tertiary-fixed-dim h-full rounded-full" style="width: 37.5%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-small text-body-small text-on-surface tabular-nums">1.8 punnet/hr</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Garnish rush heavy</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface font-micro-caps text-micro-caps uppercase whitespace-nowrap">
+<span class="material-symbols-outlined text-[12px] text-tertiary">warning</span>
+                      Low (Late Outage)
+                    </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-secondary-container hover:bg-secondary text-on-secondary-container hover:text-on-secondary font-micro-caps text-micro-caps uppercase transition-colors" type="button">
+                      + Add to PO #893
+                    </button>
+</td>
+</tr>
+<!-- ROW 5: Valrhona Chocolate (Surplus) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container overflow-hidden shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-on-surface-variant">cookie</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-primary group-hover:text-secondary transition-colors">Valrhona Guanaja 70% Dark Callets</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Pastry Dry Store • Batch V-841</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-small text-body-small">Pastry Dry Store</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Rack 01 • SKU PAS-554</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-body-bold text-body-bold text-on-surface tabular-nums">22.0 kg</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant tabular-nums">/ 15.0 Par</span>
+</div>
+<div class="w-24 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full" style="width: 100%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-small text-body-small text-on-surface tabular-nums">0.6 kg / svc</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Surplus buffer +46%</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-micro-caps text-micro-caps uppercase whitespace-nowrap">
+                      Surplus / Hold PO
+                    </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface-variant font-micro-caps text-micro-caps uppercase transition-colors" type="button">
+                      Adjust Pars
+                    </button>
+</td>
+</tr>
+<!-- ROW 6: Halibut Portioned Filets (Prep in Progress) -->
+<tr class="hover:bg-surface-container-low/50 transition-colors group">
+<td class="py-3 px-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container overflow-hidden shrink-0 flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">restaurant</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-primary group-hover:text-secondary transition-colors">Seared Halibut Filets (8oz Cut)</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Prepared Line Item • Station: Sauté</span>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-small text-body-small">Sauté Prep Cart</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Drawer 2 • SKU PR-HLB-8</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col gap-1">
+<div class="flex items-baseline gap-1">
+<span class="font-body-bold text-body-bold text-on-surface tabular-nums">24 portions</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant tabular-nums">/ 34 Req</span>
+</div>
+<div class="w-24 bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 70.5%;"></div>
+</div>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<div class="flex flex-col">
+<span class="font-body-small text-body-small text-on-surface tabular-nums">34 covers exp</span>
+<span class="font-micro-caps text-micro-caps text-secondary font-body-bold">Chef Anya prep batch</span>
+</div>
+</td>
+<td class="py-3 px-space-sm">
+<span class="inline-flex items-center gap-1 px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase whitespace-nowrap">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+                      Prep In Progress
+                    </span>
+</td>
+<td class="py-3 px-space-md text-right">
+<button class="px-space-sm py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface font-micro-caps text-micro-caps uppercase transition-colors" type="button">
+                      View Prep Sheet
+                    </button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination / Context -->
+<div class="p-space-md flex flex-col sm:flex-row items-center justify-between gap-space-sm bg-surface-container-lowest border-t border-outline-variant/20 font-body-small text-body-small text-on-surface-variant">
+<span>Showing 6 of 152 verified lot items • Last IoT auto-tare sync 48s ago</span>
+<div class="flex items-center gap-1">
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" type="button">Previous</button>
+<button class="px-2 py-1 rounded bg-primary-container text-on-primary-container font-body-bold" type="button">1</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" type="button">2</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" type="button">3</button>
+<button class="px-2 py-1 rounded bg-surface-container hover:bg-surface-container-high text-on-surface transition-colors" type="button">Next</button>
+</div>
+</div>
+</div>
+<!-- Real-Time Dinner Rush Depletion Burn Curve Visualizer -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-headline-sm">monitoring</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Live Service Depletion Burn Curve</h3>
+</div>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Model v4.2 Projected POS Depletion vs Active Kitchen Pulls</span>
+</div>
+<div class="flex items-center gap-space-md font-micro-caps text-micro-caps uppercase">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-primary rounded"></span>
+<span>A5 Wagyu Primal</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-secondary rounded"></span>
+<span>Halibut Filets</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-1 bg-tertiary-fixed-dim rounded"></span>
+<span>Dry Aged Duck</span>
+</div>
+</div>
+</div>
+<!-- Depletion Sparkline/Curve SVG Canvas -->
+<div class="w-full h-48 bg-surface-container-low rounded-lg p-space-md flex flex-col justify-between relative overflow-hidden">
+<!-- Critical Threshold Overlay Guide -->
+<div class="absolute left-0 right-0 top-1/2 border-b border-dashed border-error/40 flex items-center justify-between px-space-md pointer-events-none">
+<span class="font-micro-caps text-micro-caps text-error bg-surface-container-lowest/80 px-1 rounded uppercase">Critical Reserve Par Threshold</span>
+<span class="font-micro-caps text-micro-caps text-error bg-surface-container-lowest/80 px-1 rounded">20:15 Est Reorder Deficit</span>
+</div>
+<!-- SVG Curves -->
+<svg class="w-full h-32 overflow-visible" preserveaspectratio="none" viewbox="0 0 700 120">
+<!-- Grid lines -->
+<line class="text-outline-variant/20" stroke="currentColor" stroke-width="1" x1="0" x2="700" y1="0" y2="0"></line>
+<line class="text-outline-variant/20" stroke="currentColor" stroke-width="1" x1="0" x2="700" y1="40" y2="40"></line>
+<line class="text-outline-variant/20" stroke="currentColor" stroke-width="1" x1="0" x2="700" y1="80" y2="80"></line>
+<line class="text-outline-variant/20" stroke="currentColor" stroke-width="1" x1="0" x2="700" y1="120" y2="120"></line>
+<!-- Wagyu Burn (Steepest descent, crosses danger at x=450) -->
+<path d="M 0,10 C 150,15 300,45 450,75 C 550,95 650,115 700,118" fill="none" stroke="#ba1a1a" stroke-linecap="round" stroke-width="3"></path>
+<circle class="animate-ping" cx="450" cy="75" fill="#ba1a1a" r="5"></circle>
+<circle cx="450" cy="75" fill="#ba1a1a" r="4"></circle>
+<!-- Halibut Burn (Controlled steady rate) -->
+<path d="M 0,20 C 180,30 350,50 500,65 C 600,75 660,82 700,88" fill="none" stroke="#006d40" stroke-linecap="round" stroke-width="2.5"></path>
+<!-- Duck Breast (Smooth safe par) -->
+<path d="M 0,35 C 200,40 400,48 550,55 C 620,60 670,64 700,68" fill="none" stroke="#7bc100" stroke-dasharray="4 3" stroke-linecap="round" stroke-width="2"></path>
+</svg>
+<!-- Time markers -->
+<div class="flex items-center justify-between text-on-surface-variant font-micro-caps text-micro-caps uppercase pt-1 border-t border-outline-variant/20">
+<span>17:00 Doors</span>
+<span>18:00 First Seating</span>
+<span>19:30 Peak Rush</span>
+<span class="text-error font-body-bold">20:15 Par Crossover</span>
+<span>21:30 Late Service</span>
+<span>22:30 Kitchen Closes</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-secondary">tips_and_updates</span>
+<span class="font-body-small text-body-small text-on-surface">
+<strong>Autonomous Rebalance Alert:</strong> Suggest shifting 8 tasting menu orders from Miyazaki Wagyu to Seared Duck Breast to balance station prep time and prevent full depletion before Table 14 arrives.
+              </span>
+</div>
+<button class="shrink-0 px-space-md py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase hover:bg-primary transition-colors" type="button">
+              Apply Spec Shift
+            </button>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Autonomous PO Generation & Lot Compliance Hub (Col Span 4) -->
+<div class="lg:col-span-4 flex flex-col gap-space-lg">
+<!-- AI Purchase Order Recommendation Hub -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm p-space-lg gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-headline-sm">precision_manufacturing</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Automated PO Hub</h2>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase">
+              2 Drafts Ready
+            </span>
+</div>
+<p class="font-body-small text-body-small text-on-surface-variant">
+            Algorithmic pars calculated from 182 tonight covers + 248 weekend surge bookings.
+          </p>
+<!-- PO Card 1: SeaBreeze Fisheries -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm hover:shadow-xs transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-primary">SeaBreeze Fisheries Ltd</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">PO #892 • EDI Vendor #041</span>
+</div>
+<span class="font-stat-lg text-stat-lg text-primary tabular-nums">$984.50</span>
+</div>
+<!-- Line item summary -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-1 text-on-surface font-body-small text-body-small">
+<div class="flex justify-between items-center">
+<span>15 lbs Wild Halibut Filets</span>
+<span class="font-body-bold text-body-bold tabular-nums">$465.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span>12 lbs Maine Diver Scallops (U-10)</span>
+<span class="font-body-bold text-body-bold tabular-nums">$384.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span>4 kg Hamachi Collar (Yellowtail)</span>
+<span class="font-body-bold text-body-bold tabular-nums">$135.50</span>
+</div>
+</div>
+<div class="flex items-center justify-between font-micro-caps text-micro-caps text-on-surface-variant">
+<span>Delivery: Tomorrow 06:30 AM</span>
+<span class="text-secondary font-body-bold">Direct Dock Fresh</span>
+</div>
+<!-- Action buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="py-2 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase text-center transition-colors" type="button">
+                Review Items
+              </button>
+<button class="py-2 px-space-sm rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-caps text-label-caps uppercase text-center transition-colors shadow-xs" type="button">
+                Approve &amp; Send EDI
+              </button>
+</div>
+</div>
+<!-- PO Card 2: Green Valley Organic Farms -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm hover:shadow-xs transition-shadow">
+<div class="flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-primary">Green Valley Organic Farms</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">PO #893 • Farm Route #12</span>
+</div>
+<span class="font-stat-lg text-stat-lg text-primary tabular-nums">$165.20</span>
+</div>
+<!-- Line item summary -->
+<div class="bg-surface-container-lowest p-space-sm rounded-lg flex flex-col gap-1 text-on-surface font-body-small text-body-small">
+<div class="flex justify-between items-center">
+<span>10 Punnets French Micro Chervil</span>
+<span class="font-body-bold text-body-bold tabular-nums">$62.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span>8 Bunches Heirloom Baby Carrots</span>
+<span class="font-body-bold text-body-bold tabular-nums">$48.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span>500g Fine Chives</span>
+<span class="font-body-bold text-body-bold tabular-nums">$55.20</span>
+</div>
+</div>
+<div class="flex items-center justify-between font-micro-caps text-micro-caps text-on-surface-variant">
+<span>Delivery: Tomorrow 07:15 AM</span>
+<span class="text-secondary font-body-bold">Harvested Today</span>
+</div>
+<!-- Action buttons -->
+<div class="grid grid-cols-2 gap-space-sm pt-1">
+<button class="py-2 px-space-sm rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase text-center transition-colors" type="button">
+                Edit Quantities
+              </button>
+<button class="py-2 px-space-sm rounded-lg bg-primary-container text-on-primary-container hover:bg-primary font-label-caps text-label-caps uppercase text-center transition-colors shadow-xs" type="button">
+                Approve &amp; Send
+              </button>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-headline-sm">add_circle</span>
+<span>Create Custom Supplier PO</span>
+</button>
+</div>
+<!-- FDA & HACCP Digital Compliance & Lot Audit -->
+<div class="flex flex-col bg-surface-container-lowest rounded-xl shadow-sm p-space-lg gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-headline-sm">verified_user</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Lot Traceability &amp; HACCP</h3>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase">
+              CCP Compliant
+            </span>
+</div>
+<!-- Scanner Simulation Card -->
+<div class="p-space-md rounded-xl bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Active Harvest Tag Log</span>
+<span class="font-micro-caps text-micro-caps text-secondary font-body-bold">Verified Digital Signature</span>
+</div>
+<div class="bg-surface-container-lowest p-space-md rounded-lg flex flex-col gap-2">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-primary">Shellfish Harvest Tag #9921</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Maine Diver Scallops (Placopecten magellanicus)</span>
+</div>
+<span class="material-symbols-outlined text-secondary">verified</span>
+</div>
+<div class="grid grid-cols-2 gap-2 text-on-surface-variant font-micro-caps text-micro-caps pt-1 border-t border-outline-variant/20">
+<div>
+<span class="block uppercase">Harvest Zone:</span>
+<span class="font-body-bold text-on-surface text-body-small">MA-12 Casco Bay</span>
+</div>
+<div>
+<span class="block uppercase">Harvester License:</span>
+<span class="font-body-bold text-on-surface text-body-small">ME-COM-4482</span>
+</div>
+<div>
+<span class="block uppercase">Date of Harvest:</span>
+<span class="font-body-bold text-on-surface text-body-small">Oct 23, 2024</span>
+</div>
+<div>
+<span class="block uppercase">Temp at Receiving:</span>
+<span class="font-body-bold text-secondary text-body-small">33.2°F (Compliant)</span>
+</div>
+</div>
+</div>
+<button class="w-full py-1.5 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-caps text-label-caps uppercase flex items-center justify-center gap-1.5 transition-colors" type="button">
+<span class="material-symbols-outlined text-headline-sm">document_scanner</span>
+<span>Scan Next Shellfish Tag</span>
+</button>
+</div>
+<!-- Receiving Audit History -->
+<div class="flex flex-col gap-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Recent Receiving Invoices</span>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-headline-sm">receipt_long</span>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Invoice #SB-2041</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">SeaBreeze • $1,240.00 • 3 items</span>
+</div>
+</div>
+<span class="font-micro-caps text-micro-caps text-secondary font-body-bold">Matched 100%</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-headline-sm">receipt_long</span>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Invoice #GV-9012</span>
+<span class="font-micro-caps text-micro-caps text-on-surface-variant">Green Valley • $312.40 • 8 items</span>
+</div>
+</div>
+<span class="font-micro-caps text-micro-caps text-secondary font-body-bold">Matched 100%</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

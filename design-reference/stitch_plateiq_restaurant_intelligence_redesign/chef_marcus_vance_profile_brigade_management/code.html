@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&amp;family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"outline":"#717972","error-container":"#ffdad6","surface-bright":"#effdf0","on-secondary-fixed":"#002110","tertiary-fixed":"#acf847","on-secondary-container":"#007243","on-error-container":"#93000a","background":"#effdf0","secondary":"#006d40","on-surface-variant":"#414943","surface-container-high":"#deecdf","surface-dim":"#cfded1","on-primary-fixed":"#002112","on-surface":"#121e16","on-background":"#121e16","error":"#ba1a1a","surface-container-highest":"#d8e6d9","on-primary-container":"#86ba9a","primary-fixed-dim":"#9dd3b1","surface-container":"#e3f2e5","inverse-surface":"#27332b","inverse-primary":"#9dd3b1","surface-tint":"#36684d","surface-container-low":"#e9f7ea","secondary-fixed-dim":"#7dd9a1","on-error":"#ffffff","on-tertiary":"#ffffff","on-tertiary-fixed-variant":"#304f00","on-tertiary-fixed":"#102000","primary":"#00341e","tertiary-container":"#2c4a00","secondary-fixed":"#98f6bc","surface-variant":"#d8e6d9","on-primary-fixed-variant":"#1d5036","surface":"#effdf0","primary-fixed":"#b8efcc","tertiary":"#1c3200","on-primary":"#ffffff","outline-variant":"#c0c9c1","tertiary-fixed-dim":"#91db2a","on-secondary-fixed-variant":"#00522f","on-tertiary-container":"#7bc100","secondary-container":"#96f3b9","surface-container-lowest":"#ffffff","on-secondary":"#ffffff","inverse-on-surface":"#e6f4e7","primary-container":"#174b32"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"space-sm":"0.5rem","margin-tablet":"1.5rem","space-xl":"1.5rem","space-xs":"0.25rem","margin":"2.375rem","gutter-mobile":"0.75rem","space-md":"0.75rem","margin-mobile":"1rem","space-lg":"1rem","gutter":"1.0625rem"},"fontFamily":{"headline-lg":["Inter"],"label-caps":["Inter"],"headline-sm":["Inter"],"body-base":["Inter"],"display-lg":["Inter"],"headline-md":["Inter"],"stat-xl":["Inter"],"display-xl":["Inter"],"body-bold":["Inter"],"headline-lg-mobile":["Inter"],"stat-lg":["Inter"],"body-small":["Inter"],"micro-caps":["Inter"]},"fontSize":{"headline-lg":["28px",{"lineHeight":"34px","letterSpacing":"-0.03em","fontWeight":"700"}],"label-caps":["10px",{"lineHeight":"14px","letterSpacing":"0.11em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"-0.015em","fontWeight":"700"}],"body-base":["13px",{"lineHeight":"21px","letterSpacing":"0","fontWeight":"400"}],"display-lg":["40px",{"lineHeight":"44px","letterSpacing":"-0.035em","fontWeight":"800"}],"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"-0.02em","fontWeight":"700"}],"stat-xl":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"800"}],"display-xl":["56px",{"lineHeight":"56px","letterSpacing":"-0.04em","fontWeight":"800"}],"body-bold":["13px",{"lineHeight":"21px","letterSpacing":"0","fontWeight":"600"}],"headline-lg-mobile":["24px",{"lineHeight":"30px","letterSpacing":"-0.025em","fontWeight":"700"}],"stat-lg":["24px",{"lineHeight":"30px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-small":["11px",{"lineHeight":"17px","letterSpacing":"0","fontWeight":"400"}],"micro-caps":["9px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-base text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-72 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between select-none"><div class="flex flex-col h-full"><div class="p-space-lg flex items-center justify-between"><div class="flex items-center gap-space-sm"><img alt="PlateIQ Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHFEDk5tqqWmeJa6hRB8MLdfjdAdJrjrWLR_05oDX8ZSnkwh2BlZ-8NKQES-F_KzoVpDUbNhZwjZKZQgbjJPKoZ1RxCu8y3_rJb_iuDNRlcg5mZVvwS3Ft0NJ31LQsNWgvqQAQrbaSZ0zPiu4aXqGUJtnfTzRRtNIvJ4vgdAW0uao9GJv0y26snl17A2hXetvFWquj1dv4xdolQFAAnekWsoYR-ltKM7FnnE0ld2HxJTwMCx6U6JOq"/><div class="flex flex-col"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">PlateIQ</span><span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">AI Kitchen OS</span></div></div><span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase">v4.2</span></div><div class="px-space-lg pb-space-md"><div class="flex items-center justify-between p-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container cursor-pointer transition-colors"><div class="flex items-center gap-space-sm overflow-hidden"><span class="material-symbols-outlined text-secondary text-headline-sm shrink-0">storefront</span><div class="flex flex-col truncate"><span class="font-body-bold text-body-bold text-on-surface truncate">Atelier Lumière</span><span class="font-micro-caps text-micro-caps text-on-surface-variant truncate">Downtown Dining Room</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-headline-sm shrink-0">unfold_more</span></div></div><div class="flex-1 overflow-y-auto px-space-md space-y-space-md"><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-caps text-label-caps uppercase text-on-surface-variant">Core Operations</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="overview" href="#"><span class="font-body-base text-body-base">Overview</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="live-operations" href="#"><span class="font-body-base text-body-base">Live Operations</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="tasks" href="#"><span class="font-body-base text-body-base">Tasks</span></a></nav><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-caps text-label-caps uppercase text-on-surface-variant">Intelligence &amp; Planning</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="forecasting" href="#"><span class="font-body-base text-body-base">Forecasting</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="inventory" href="#"><span class="font-body-base text-body-base">Inventory</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="waste-management" href="#"><span class="font-body-base text-body-base">Waste Management</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="external-factors" href="#"><span class="font-body-base text-body-base">External Factors</span></a></nav><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-caps text-label-caps uppercase text-on-surface-variant">AI Assistant &amp; Strategy</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="ai-copilot" href="#"><span class="font-body-base text-body-base">AI Copilot</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="insights" href="#"><span class="font-body-base text-body-base">Insights</span></a></nav><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-caps text-label-caps uppercase text-on-surface-variant">Brigade &amp; Account</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="user-profile" href="#"><span class="font-body-base text-body-base">Chef Marcus Vance</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="brigade-access" href="#"><span class="font-body-base text-body-base">Brigade Access</span></a></nav><nav class="flex flex-col gap-0.5" data-active-classes="bg-primary-container text-on-primary-container font-body-bold rounded-lg shadow-sm"><div class="px-space-sm pt-space-xs pb-1 font-label-caps text-label-caps uppercase text-on-surface-variant">System</div><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-all" data-path="settings" href="#"><span class="font-body-base text-body-base">Settings</span></a></nav></div><div class="p-space-md m-space-md rounded-xl bg-surface-container-low shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="flex items-center justify-between"><div class="flex items-center gap-2"><span class="w-2 h-2 rounded-full bg-secondary animate-pulse"></span><span class="font-micro-caps text-micro-caps text-on-surface uppercase">Systems Operational</span></div><button class="text-on-surface-variant hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-headline-sm">keyboard_double_arrow_left</span></button></div><div class="mt-1 font-body-small text-body-small text-on-surface-variant">AI Model v4.2 • Sync: 2m ago</div></div></div></aside><div class="pl-72"><header class="fixed top-0 left-72 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 flex items-center justify-between px-space-xl"><div class="flex items-center gap-space-md"><div class="flex items-center gap-space-xs p-1 rounded-lg bg-surface-container-low"><button class="px-space-md py-1 rounded font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high transition-all" type="button">LUNCH SHIFT</button><button class="px-space-md py-1 rounded bg-surface-container-lowest font-label-caps text-label-caps text-primary shadow-sm" type="button">DINNER SERVICE</button></div></div><div class="flex items-center gap-space-sm w-96 px-space-md py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors cursor-pointer"><span class="material-symbols-outlined text-headline-sm text-on-surface-variant">search</span><span class="font-body-small text-body-small text-on-surface-variant flex-1 truncate">Search ingredients, tickets, forecasts...</span><kbd class="px-space-xs py-0.5 rounded bg-surface-container-highest text-on-surface-variant font-micro-caps text-micro-caps uppercase shadow-xs">⌘K</kbd></div><div class="flex items-center gap-space-lg"><div class="hidden xl:flex items-center gap-2 px-space-md py-1.5 rounded-lg bg-surface-container-low"><span class="material-symbols-outlined text-secondary text-headline-sm">timer</span><div class="flex flex-col"><span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Dinner Service Prep</span><span class="font-body-bold text-body-bold text-on-surface tabular-nums">17:42:15</span></div></div><div class="flex items-center gap-space-sm"><div class="hidden md:flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container"><span class="w-1.5 h-1.5 rounded-full bg-secondary"></span><span class="font-micro-caps text-micro-caps text-on-secondary-container uppercase">Live Sync</span></div><button class="relative p-2 rounded-lg text-on-surface-variant hover:bg-surface-container-low hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-headline-sm">notifications</span><span class="absolute top-1 right-1 w-4 h-4 rounded-full bg-error text-on-error font-micro-caps text-micro-caps flex items-center justify-center">2</span></button></div><a class="flex items-center gap-space-sm pl-space-sm py-1 px-2 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer border-l border-outline-variant/30" data-path="user-profile" href="#"><img alt="Chef Marcus Vance" class="w-8 h-8 rounded-full object-cover ring-2 ring-secondary/40 shadow-xs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxZ-iclyJKrgUBIJQnAvDPny4EqeXG_F7S9HK9LH-6LE2RIGHKCBqPtz2DzR84cRHrFRPznbNHQq5Nj8CR1crz2cM_aOYdFZ36IEOpfUVQjmjFvRKaCayjgnKERKkuD3Z7z5AXVrjy0OsOYlJcLtAGV68fz-RVp3PqaZJ9WIY_uXvnP8u4w_fxr2zFG2CMTiEy2tpnD-dcyYodD4RbvBeS3C6wdJtoHKcmuCK_F_qxmyITh9Sxidcv"/><div class="hidden lg:flex flex-col text-left"><span class="font-body-bold text-body-bold text-on-surface leading-tight hover:text-primary transition-colors">Chef Marcus Vance</span><span class="font-micro-caps text-micro-caps text-on-surface-variant uppercase">Head Culinary Officer</span></div><span class="material-symbols-outlined text-on-surface-variant text-body-base ml-0.5">expand_more</span></a></div></header><main class="w-full pt-16 bg-surface"><div class="flex flex-col w-full">
+<!-- Content Canvas Container -->
+<div class="p-space-lg md:p-space-xl lg:p-margin space-y-space-xl max-w-[1440px] mx-auto w-full">
+<!-- Top Breadcrumb & Executive Meta Header -->
+<div class="flex flex-col lg:flex-row lg:items-center justify-between gap-space-md">
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-space-xs font-label-caps text-label-caps tracking-widest text-on-surface-variant uppercase">
+<span class="hover:text-primary transition-colors cursor-pointer">Account &amp; Brigade Security</span>
+<span class="text-outline-variant">/</span>
+<span class="text-primary font-body-bold">Chef Marcus Vance</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface text-micro-caps font-micro-caps tracking-wider">ID: #MV-0841</span>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap mt-0.5">
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase font-bold tracking-wider">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+            Active Service Leader
+          </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container text-primary font-micro-caps text-micro-caps uppercase tracking-wider">
+<span class="material-symbols-outlined text-headline-sm text-secondary">verified_user</span>
+            Full System &amp; Copilot Autonomy
+          </span>
+<span class="inline-flex items-center gap-1.5 px-space-sm py-1 rounded-full bg-surface-container-high text-on-surface font-micro-caps text-micro-caps uppercase tracking-wider">
+<span class="material-symbols-outlined text-headline-sm text-tertiary-container">stars</span>
+            Michelin 2-Star Brigade
+          </span>
+</div>
+</div>
+<!-- Quick Action Bar -->
+<div class="flex items-center gap-space-xs md:gap-space-sm flex-wrap shrink-0">
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-caps text-label-caps uppercase tracking-wider hover:bg-surface-container transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-headline-sm text-secondary">tune</span>
+          Delegate Shift Authority
+        </button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-caps text-label-caps uppercase tracking-wider hover:bg-surface-container transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-headline-sm text-primary">nfc</span>
+          Manage NFC Apron Tag
+        </button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-surface-container-lowest text-on-surface font-label-caps text-label-caps uppercase tracking-wider hover:bg-surface-container transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-headline-sm text-primary">download</span>
+          HACCP Dossier
+        </button>
+<button class="inline-flex items-center gap-1.5 px-space-md py-2 rounded-lg bg-primary text-on-primary font-label-caps text-label-caps uppercase tracking-wider hover:bg-primary-container transition-all shadow-md" type="button">
+<span class="material-symbols-outlined text-headline-sm">edit</span>
+          Edit Profile
+        </button>
+</div>
+</div>
+<!-- Master Culinary Credentials Hero Card -->
+<div class="relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-md">
+<!-- Ambient Michelin Plating Line Background Banner -->
+<div class="relative h-44 sm:h-52 w-full bg-cover bg-center overflow-hidden" style="background-image: url('https://lh3.googleusercontent.com/aida/AEtjO1VQ18qP5fLmxI2Fk_HkeDDWgHgpv5uGD-YVSz4f8i97v3jhMdWYXG_PqEDI2qHO7QlhKY2YXRS2Wlhek8q4KlXiTS3W7sgWtcMq_pJ19fynDcWILlvN930VbXAZnK1p8c-1sGzaynqq9kERPmVTBIx07YAKFfiJ7PH63KtOVklluwcuZMCrd3XhqSZ-exmZYSOBI-_MMfJv7fdVodfmWG1V-naIP9q_c7UprB1BNjy2xIoj2iLwOwodi1A');">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-primary/50 to-primary/80"></div>
+<div class="absolute top-4 right-6 flex items-center gap-3">
+<div class="flex items-center gap-2 px-space-md py-1 rounded-full bg-surface-container-lowest/80 backdrop-blur-md shadow-sm">
+<img alt="PlateIQ Seal" class="w-4 h-4 object-contain rounded-xs" src="https://lh3.googleusercontent.com/aida/AEtjO1Xb-5C-RCACJZjXzuADnBWBrXxGRWuP5xR1eDoY5Vn9S4PbBwExo2ezcstWbfRlWEoi09VskFmvK3yeITq52NaAhrtX8txU6XUHUvCOpD-Cd2tGHxTWfT4DXP0BvqdIHm3l11SreoMU5OchP1vHuYPFNSmSCNoW83gC1hOjLV_TV3iHzWpt2El2nOzQklBnhhh1ShCKhJtaJUicQg_cuJV9MXU-ruJ3Q3qgzLLfb-cp-guQB3lMmL9KfJU"/>
+<span class="font-micro-caps text-micro-caps uppercase tracking-wider text-primary">Executive Tier-4 Security Certified</span>
+</div>
+<div class="px-space-md py-1 rounded-full bg-secondary-container/90 backdrop-blur-md text-on-secondary-container font-micro-caps text-micro-caps uppercase font-bold tracking-wider">
+            Pass Station #1 Online
+          </div>
+</div>
+</div>
+<!-- Hero Profile Body with Overlapping Avatar -->
+<div class="px-space-lg md:px-space-xl pb-space-xl pt-0 relative">
+<div class="flex flex-col lg:flex-row lg:items-end justify-between gap-space-lg -mt-16 sm:-mt-20">
+<!-- Avatar + Main Identity Info -->
+<div class="flex flex-col sm:flex-row items-start sm:items-end gap-space-lg">
+<div class="relative shrink-0">
+<div class="w-28 h-28 sm:w-36 sm:h-36 rounded-xl overflow-hidden bg-surface-container-lowest p-1 shadow-xl">
+<img alt="Chef Marcus Vance Headshot" class="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida/AEtjO1UO-_4oVTBghuO7z9BjHwxqyNyoMo49hjTj1LxMBQnmgjv6MzT-df_0E8_aj_UfwCYcMB9mTgXidtl_nHWCIr36rUspYuTInjtamiiy3wOPs6vnbPn0amRuiDvIWXjyfPKKOyvUrKXEkKBRBWEoBlLzAkHCogUnKYaAiuEeVdpqCYADU7k9mVUr47pznvfXAc2pX2BElTrN7MAiXKBhwJ2CZNMEi8VEOChXMgu3_uGVKkPhVHSYjb0Sf58"/>
+</div>
+<div class="absolute -bottom-1 -right-1 w-7 h-7 rounded-full bg-secondary flex items-center justify-center text-on-secondary shadow-md" title="PlateIQ Master Identity Verified">
+<span class="material-symbols-outlined text-headline-sm">check</span>
+</div>
+<span class="absolute top-2 left-2 flex h-3.5 w-3.5">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary-fixed opacity-75"></span>
+<span class="relative inline-flex rounded-full h-3.5 w-3.5 bg-secondary"></span>
+</span>
+</div>
+<div class="flex flex-col gap-1 pb-1">
+<div class="flex items-center gap-space-sm flex-wrap">
+<h1 class="font-headline-lg text-headline-lg text-on-surface tracking-tight">Chef Marcus Vance</h1>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-secondary font-label-caps text-label-caps uppercase">Co-Owner</span>
+<span class="px-space-xs py-0.5 rounded bg-primary text-on-primary font-label-caps text-label-caps uppercase">Brigade Master</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-secondary">Head Culinary Officer &amp; Executive Chef — Atelier Lumière Group</p>
+<!-- Culinary Accolades Pill Row -->
+<div class="flex items-center gap-space-xs md:gap-space-sm flex-wrap mt-1 text-on-surface-variant font-body-small text-body-small">
+<span class="flex items-center gap-1 font-body-bold text-on-surface">
+<span class="material-symbols-outlined text-headline-sm text-secondary">hotel_class</span> 2 Michelin Stars
+                </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-headline-sm text-tertiary-container">workspace_premium</span> Bocuse d'Or Nominee
+                </span>
+<span>•</span>
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-headline-sm text-primary">military_tech</span> James Beard Awardee
+                </span>
+<span>•</span>
+<span>18 Yrs Culinary Mastery</span>
+</div>
+</div>
+</div>
+<!-- Contact & Secure Channels Quick Strip -->
+<div class="flex flex-col sm:flex-row lg:flex-col items-start lg:items-end gap-space-xs text-on-surface-variant font-body-small text-body-small">
+<div class="flex items-center gap-2 px-space-md py-1.5 rounded-lg bg-surface-container-low">
+<span class="material-symbols-outlined text-headline-sm text-secondary">alternate_email</span>
+<span class="font-body-bold text-on-surface">marcus.vance@atelierlumiere.com</span>
+</div>
+<div class="flex items-center gap-space-sm">
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-headline-sm text-primary">cell_tower</span>
+<span class="font-micro-caps text-micro-caps uppercase tracking-wider text-on-surface">Signal Mesh: #MV-ENC-PASS</span>
+</div>
+<div class="flex items-center gap-1.5 px-space-sm py-1 rounded bg-surface-container-low">
+<span class="material-symbols-outlined text-headline-sm text-secondary">radio</span>
+<span class="font-micro-caps text-micro-caps uppercase tracking-wider text-on-surface">Kitchen Radio CH-01</span>
+</div>
+</div>
+</div>
+</div>
+<!-- 4-Stat High-Density Actuarial Telemetry Row -->
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md mt-space-xl pt-space-lg bg-surface-container-low/70 rounded-xl p-space-lg">
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Career Service Shifts
+            </span>
+<div class="flex items-baseline gap-2">
+<span class="font-stat-xl text-stat-xl text-on-surface tabular-nums">1,420</span>
+<span class="font-micro-caps text-micro-caps uppercase text-secondary font-bold">100% On-Time</span>
+</div>
+<span class="font-body-small text-body-small text-on-surface-variant">Continuous ledger since 2018</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              HACCP Safety Pass Rate
+            </span>
+<div class="flex items-baseline gap-2">
+<span class="font-stat-xl text-stat-xl text-on-surface tabular-nums">99.8%</span>
+<span class="font-micro-caps text-micro-caps uppercase text-secondary font-bold">Zero Violations</span>
+</div>
+<span class="font-body-small text-body-small text-on-surface-variant">3,890 automated probe logs</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Prime Cost Benchmark
+            </span>
+<div class="flex items-baseline gap-2">
+<span class="font-stat-xl text-stat-xl text-on-surface tabular-nums">54.2%</span>
+<span class="font-micro-caps text-micro-caps uppercase text-secondary-container bg-primary px-1.5 py-0.5 rounded font-bold">Top 1% Decile</span>
+</div>
+<span class="font-body-small text-body-small text-on-surface-variant">Food 26.1% • Labor 28.1%</span>
+</div>
+<div class="flex flex-col gap-1">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              AI Savings Recaptured
+            </span>
+<div class="flex items-baseline gap-2">
+<span class="font-stat-xl text-stat-xl text-primary tabular-nums">$38,410</span>
+<span class="font-micro-caps text-micro-caps uppercase text-secondary font-bold">+18.4% YoY</span>
+</div>
+<span class="font-body-small text-body-small text-on-surface-variant">Trim yield &amp; dynamic batching</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Asymmetric Split Two-Column Workspace -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg lg:gap-space-xl items-start">
+<!-- LEFT COLUMN: Operational Authority, Autopilot Delegation & Sign-offs (7 cols) -->
+<div class="lg:col-span-7 flex flex-col gap-space-lg">
+<!-- SECTION 1: Autonomous AI Copilot Authority & Risk Overrides -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">smart_toy</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Autonomous AI Copilot Authority &amp; Risk Overrides</h2>
+<span class="font-micro-caps text-micro-caps uppercase tracking-wider text-on-surface-variant">Protocol Level: Uncapped / Tier-4 Autopilot Override</span>
+</div>
+</div>
+<span class="px-space-sm py-1 rounded bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase font-bold tracking-wider">
+              Autonomous Sync ON
+            </span>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-headline-sm text-primary">payments</span>
+<span class="font-body-bold text-body-bold text-on-surface">Purchase Order Auto-Authorization Limit</span>
+</div>
+<span class="font-stat-lg text-stat-lg text-primary tabular-nums">$15,000<span class="text-body-small font-normal text-on-surface-variant">/PO</span></span>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 78%;"></div>
+</div>
+<div class="flex items-center justify-between font-micro-caps text-micro-caps text-on-surface-variant uppercase">
+<span>Threshold without GM co-sign</span>
+<span class="text-primary font-bold">Self-Approval Granted</span>
+</div>
+</div>
+<!-- Feature Grid of Delegated Authorities -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-sm">
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex items-start justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Dynamic QR Menu Elasticity</span>
+<span class="material-symbols-outlined text-headline-sm text-secondary">currency_exchange</span>
+</div>
+<p class="font-body-small text-body-small text-on-surface-variant">Real-time yield algorithm price swing tolerance threshold.</p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Limit Range</span>
+<span class="font-body-bold text-body-bold text-on-surface">±$6.00 / plate</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex items-start justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Commis Station Re-allocation</span>
+<span class="material-symbols-outlined text-headline-sm text-secondary">transfer_within_a_station</span>
+</div>
+<p class="font-body-small text-body-small text-on-surface-variant">Rebalance brigade lines during peak 19:30 rush autonomously.</p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Status</span>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase font-bold">Full Grant Active</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex items-start justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Commodity Hedging &amp; Fish Forward</span>
+<span class="material-symbols-outlined text-headline-sm text-secondary">analytics</span>
+</div>
+<p class="font-body-small text-body-small text-on-surface-variant">Skrei Cod &amp; Halibut forward spot purchases from Lofoten fleets.</p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Authorization</span>
+<span class="font-body-bold text-body-bold text-primary">Single-Tap Exec</span>
+</div>
+</div>
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col justify-between gap-space-sm">
+<div class="flex items-start justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Recipe Formula Override</span>
+<span class="material-symbols-outlined text-headline-sm text-secondary">menu_book</span>
+</div>
+<p class="font-body-small text-body-small text-on-surface-variant">Emergency substitution of butter emulsions &amp; jus seasoning.</p>
+<div class="flex items-center justify-between pt-1">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Privilege</span>
+<span class="font-body-bold text-body-bold text-primary">Immediate Broadcast</span>
+</div>
+</div>
+</div>
+</div>
+<!-- SECTION 2: Shift Delegation & Chain of Command -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">account_tree</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Shift Delegation &amp; Chain of Command</h2>
+<span class="font-micro-caps text-micro-caps uppercase tracking-wider text-on-surface-variant">Automatic Fallback Protocols</span>
+</div>
+</div>
+<button class="text-secondary font-label-caps text-label-caps uppercase tracking-wider hover:text-primary transition-colors" type="button">
+              Configure Fallback
+            </button>
+</div>
+<div class="space-y-space-sm">
+<!-- Deputy 1 -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-body-bold text-body-bold">
+                  AC
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-body-bold text-body-bold text-on-surface">Sous Chef Anya Chen</span>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase">Primary Deputy</span>
+</div>
+<span class="font-body-small text-body-small text-on-surface-variant">Hot Line Expedite Authority • HACCP &amp; Temp Log Verified</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-micro-caps text-micro-caps uppercase text-secondary font-bold">100% Synced</span>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-headline-sm">swap_horiz</span>
+</button>
+</div>
+</div>
+<!-- Deputy 2 -->
+<div class="flex items-center justify-between p-space-md rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-on-surface flex items-center justify-center font-body-bold text-body-bold">
+                  LM
+                </div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-body-bold text-body-bold text-on-surface">Chef Leo Martin</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-micro-caps text-micro-caps uppercase">Garde Manger &amp; Pastry</span>
+</div>
+<span class="font-body-small text-body-small text-on-surface-variant">Pastry Atelier Lead • Secondary Expedite Backup</span>
+</div>
+</div>
+<div class="flex items-center gap-space-sm">
+<span class="font-micro-caps text-micro-caps uppercase text-on-surface-variant">Standby</span>
+<button class="p-1.5 rounded-lg bg-surface-container text-on-surface hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-headline-sm">swap_horiz</span>
+</button>
+</div>
+</div>
+<!-- Handover Automation Rule -->
+<div class="p-space-md rounded-lg bg-surface-container-low/60 flex items-center justify-between gap-space-md">
+<div class="flex items-center gap-space-sm">
+<span class="material-symbols-outlined text-headline-sm text-secondary">timer_pause</span>
+<span class="font-body-small text-body-small text-on-surface">Auto-transfer expedite pass bumping rights if Chef Vance is off-premises for &gt; 45 mins</span>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-micro-caps text-micro-caps uppercase font-bold">Enabled</span>
+</div>
+</div>
+</div>
+<!-- SECTION 3: Recent Executive Sign-offs & Audit Trail -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">history_edu</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Recent Executive Sign-offs &amp; Audit Trail</h2>
+<span class="font-micro-caps text-micro-caps uppercase tracking-wider text-on-surface-variant">Cryptographic Shift Ledger (SHA-256 Verified)</span>
+</div>
+</div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Today's Service</span>
+</div>
+<div class="space-y-space-xs">
+<div class="flex items-start justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-space-sm">
+<span class="font-label-caps text-label-caps uppercase font-bold text-secondary tabular-nums mt-0.5">17:21:40</span>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Approved Norwegian Skrei Cod recipe margin substitution</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Replaced Brittany Turbot batch • Recaptured +$2,420 net dinner service margin</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase">Auto-Priced</span>
+</div>
+<div class="flex items-start justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-space-sm">
+<span class="font-label-caps text-label-caps uppercase font-bold text-on-surface-variant tabular-nums mt-0.5">16:50:12</span>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Calibrated Polyscience Duck Sous-Vide bath &amp; verified HACCP log</span>
+<span class="font-body-small text-body-small text-on-surface-variant">12 portions magret de canard core temp certified 57.2°C at station 03</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-primary font-micro-caps text-micro-caps uppercase">Probe Sync</span>
+</div>
+<div class="flex items-start justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-space-sm">
+<span class="font-label-caps text-label-caps uppercase font-bold text-on-surface-variant tabular-nums mt-0.5">14:15:00</span>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Authorized SeaBreeze Fisheries PO #892 ($984.50) via NFC Apron Touch</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Direct dock intake: 14kg Day-boat sea scallops &amp; live Maine lobsters</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-micro-caps text-micro-caps uppercase">Biometric PO</span>
+</div>
+<div class="flex items-start justify-between p-space-sm rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-start gap-space-sm">
+<span class="font-label-caps text-label-caps uppercase font-bold text-on-surface-variant tabular-nums mt-0.5">11:30:22</span>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Signed off USDA organic certified wild winter truffle invoice</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Périgord black truffles 1,200g scale calibrated • Lot #FR-889</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface font-micro-caps text-micro-caps uppercase">Verified</span>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: Kitchen Hardware Security, Brigade Roster & Venue Privileges (5 cols) -->
+<div class="lg:col-span-5 flex flex-col gap-space-lg">
+<!-- SECTION 4: Hardware & Biometric Kitchen Authentication -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">fingerprint</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Hardware &amp; Biometric Auth</h2>
+<span class="font-micro-caps text-micro-caps uppercase tracking-wider text-on-surface-variant">Active Mesh Tokens</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase font-bold">4 Devices</span>
+</div>
+<div class="space-y-space-sm">
+<!-- BLE Smart Apron Tag -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">dry_cleaning</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-body-bold text-body-bold text-on-surface">Smart Apron Tag #MV-TAG-99</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<span class="font-body-small text-body-small text-on-surface-variant">Connected to Expedite KDS Pass</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-body-bold text-body-bold text-secondary tabular-nums">94% Batt</span>
+<span class="font-micro-caps text-micro-caps uppercase text-on-surface-variant">BLE 5.3 Active</span>
+</div>
+</div>
+<!-- Apple Watch / IoT Pacing Haptics -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">watch</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Ultra-Wideband Pacing Haptics</span>
+<span class="font-body-small text-body-small text-on-surface-variant">VIP drops alert 5m prior</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase">Synced</span>
+</div>
+<!-- Biometric Passkey / Touch ID -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">lock_open</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">KDS Passkey &amp; Station TouchID</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Master chef bypass protocol</span>
+</div>
+</div>
+<span class="font-micro-caps text-micro-caps uppercase text-secondary font-bold">Enabled</span>
+</div>
+<!-- Walk-in Master NFC Key -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">wine_bar</span>
+</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Dry Ager &amp; Grand Cru Cellar</span>
+<span class="font-body-small text-body-small text-on-surface-variant">High-security dual-factor NFC</span>
+</div>
+</div>
+<span class="px-space-xs py-0.5 rounded bg-surface-container-high text-on-surface font-micro-caps text-micro-caps uppercase">2FA Guarded</span>
+</div>
+</div>
+</div>
+<!-- SECTION 5: Assigned Brigade & Direct Reports (Active Shift) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">groups</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Assigned Brigade &amp; Direct Reports</h2>
+<span class="font-micro-caps text-micro-caps uppercase tracking-wider text-on-surface-variant">Dinner Shift: 14 Line Chefs Active</span>
+</div>
+</div>
+<button class="p-1 rounded hover:bg-surface-container transition-colors" type="button">
+<span class="material-symbols-outlined text-headline-sm text-on-surface-variant">more_vert</span>
+</button>
+</div>
+<div class="space-y-space-sm">
+<!-- Anya Chen -->
+<div class="p-space-sm rounded-lg hover:bg-surface-container-low flex items-center justify-between transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-container text-on-secondary-container flex items-center justify-center font-body-bold text-body-small">AC</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Anya Chen</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Sous Chef • Garde Manger / Hot Line</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase">Active</span>
+<button class="px-space-xs py-1 rounded bg-surface-container text-on-surface font-micro-caps text-micro-caps uppercase hover:bg-surface-container-high transition-colors" type="button">Ping</button>
+</div>
+</div>
+<!-- Carlos Mendez -->
+<div class="p-space-sm rounded-lg hover:bg-surface-container-low flex items-center justify-between transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-body-bold text-body-small">CM</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Carlos Mendez</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Chef de Partie • Sauté Station (100% HACCP)</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase">Active</span>
+<button class="px-space-xs py-1 rounded bg-surface-container text-on-surface font-micro-caps text-micro-caps uppercase hover:bg-surface-container-high transition-colors" type="button">Ping</button>
+</div>
+</div>
+<!-- Leo Martin -->
+<div class="p-space-sm rounded-lg hover:bg-surface-container-low flex items-center justify-between transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-body-bold text-body-small">LM</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Leo Martin</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Hearth &amp; Grill Lead • Pars Synced</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase">Active</span>
+<button class="px-space-xs py-1 rounded bg-surface-container text-on-surface font-micro-caps text-micro-caps uppercase hover:bg-surface-container-high transition-colors" type="button">Ping</button>
+</div>
+</div>
+<!-- Elena Rostova -->
+<div class="p-space-sm rounded-lg hover:bg-surface-container-low flex items-center justify-between transition-colors">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container text-on-surface flex items-center justify-center font-body-bold text-body-small">ER</div>
+<div class="flex flex-col">
+<span class="font-body-bold text-body-bold text-on-surface">Elena Rostova</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Sommelier &amp; Cellar Director</span>
+</div>
+</div>
+<div class="flex items-center gap-space-xs">
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase">Active</span>
+<button class="px-space-xs py-1 rounded bg-surface-container text-on-surface font-micro-caps text-micro-caps uppercase hover:bg-surface-container-high transition-colors" type="button">Ping</button>
+</div>
+</div>
+</div>
+<div class="pt-2 flex items-center gap-space-xs">
+<button class="flex-1 py-1.5 rounded-lg bg-surface-container text-on-surface font-label-caps text-label-caps uppercase hover:bg-surface-container-high transition-colors text-center" type="button">
+              Station Performance
+            </button>
+<button class="flex-1 py-1.5 rounded-lg bg-primary-container text-on-primary-container font-label-caps text-label-caps uppercase hover:bg-primary transition-colors text-center" type="button">
+              Re-assign Commis
+            </button>
+</div>
+</div>
+<!-- SECTION 6: Multi-Venue Culinary Oversight -->
+<div class="bg-surface-container-lowest rounded-xl p-space-xl shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-sm">
+<div class="w-8 h-8 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-headline-sm">domain</span>
+</div>
+<div class="flex flex-col">
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Multi-Venue Culinary Oversight</h2>
+<span class="font-micro-caps text-micro-caps uppercase tracking-wider text-on-surface-variant">Lumière Restaurant Hospitality Group</span>
+</div>
+</div>
+<span class="font-micro-caps text-micro-caps uppercase text-secondary font-bold">3 Properties</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Downtown Atelier -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Atelier Lumière (Flagship Downtown)</span>
+<span class="px-space-xs py-0.5 rounded bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase font-bold">Primary</span>
+</div>
+<div class="flex items-center justify-between font-body-small text-body-small text-on-surface-variant">
+<span>Tonight: 182 Covers booked</span>
+<span class="text-secondary font-bold">Chef Vance On-Site</span>
+</div>
+</div>
+<!-- West End Bistro -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Bistro Lumière (West End)</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-micro-caps text-micro-caps uppercase">Remote Sync</span>
+</div>
+<div class="flex items-center justify-between font-body-small text-body-small text-on-surface-variant">
+<span>Tonight: 220 Covers booked</span>
+<span class="text-on-surface font-bold">Telemetry Live</span>
+</div>
+</div>
+<!-- Wine Bar & Pâtisserie -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-1">
+<div class="flex items-center justify-between">
+<span class="font-body-bold text-body-bold text-on-surface">Lumière Wine Bar &amp; Pâtisserie</span>
+<span class="px-space-xs py-0.5 rounded bg-surface-container text-on-surface-variant font-micro-caps text-micro-caps uppercase">R&amp;D Station</span>
+</div>
+<div class="flex items-center justify-between font-body-small text-body-small text-on-surface-variant">
+<span>Seasonal Menu Testing</span>
+<span class="text-primary font-bold">Recipe Lab v4</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>

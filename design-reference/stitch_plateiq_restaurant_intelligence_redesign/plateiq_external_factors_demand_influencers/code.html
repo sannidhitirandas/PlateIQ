@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={"darkMode":"class","theme":{"extend":{"colors":{"primary-fixed-dim":"#9dd3b1","on-primary-container":"#86ba9a","surface-tint":"#36684d","secondary-fixed-dim":"#7dd9a1","tertiary-fixed":"#acf847","tertiary":"#1c3200","surface-container-lowest":"#ffffff","outline-variant":"#c0c9c1","inverse-on-surface":"#e6f4e7","on-tertiary-fixed":"#102000","on-secondary-fixed-variant":"#00522f","on-background":"#121e16","on-secondary-container":"#007243","primary-fixed":"#b8efcc","inverse-primary":"#9dd3b1","surface-container-low":"#e9f7ea","on-secondary-fixed":"#002110","on-error-container":"#93000a","primary":"#00341e","on-primary":"#ffffff","primary-container":"#174b32","error-container":"#ffdad6","surface":"#effdf0","background":"#effdf0","on-surface-variant":"#414943","error":"#ba1a1a","on-primary-fixed-variant":"#1d5036","on-error":"#ffffff","secondary-container":"#96f3b9","secondary-fixed":"#98f6bc","surface-container-highest":"#d8e6d9","on-tertiary-fixed-variant":"#304f00","surface-dim":"#cfded1","surface-bright":"#effdf0","outline":"#717972","inverse-surface":"#27332b","surface-variant":"#d8e6d9","surface-container":"#e3f2e5","on-tertiary-container":"#7bc100","on-secondary":"#ffffff","on-primary-fixed":"#002112","tertiary-container":"#2c4a00","on-surface":"#121e16","secondary":"#006d40","surface-container-high":"#deecdf","tertiary-fixed-dim":"#91db2a"},"borderRadius":{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},"spacing":{"margin":"2.375rem","gutter-mobile":"0.75rem","space-xs":"0.25rem","space-lg":"1rem","margin-mobile":"1rem","gutter":"1.0625rem","space-xl":"1.5rem","space-md":"0.75rem","margin-tablet":"1.5rem","space-sm":"0.5rem"},"fontFamily":{"display-lg":["Inter"],"headline-md":["Inter"],"micro-caps":["Inter"],"headline-lg":["Inter"],"stat-xl":["Inter"],"body-small":["Inter"],"label-caps":["Inter"],"headline-lg-mobile":["Inter"],"headline-sm":["Inter"],"display-xl":["Inter"],"body-bold":["Inter"],"body-base":["Inter"],"stat-lg":["Inter"]},"fontSize":{"display-lg":["40px",{"lineHeight":"44px","letterSpacing":"-0.035em","fontWeight":"800"}],"headline-md":["20px",{"lineHeight":"26px","letterSpacing":"-0.02em","fontWeight":"700"}],"micro-caps":["9px",{"lineHeight":"12px","letterSpacing":"0.08em","fontWeight":"700"}],"headline-lg":["28px",{"lineHeight":"34px","letterSpacing":"-0.03em","fontWeight":"700"}],"stat-xl":["32px",{"lineHeight":"36px","letterSpacing":"-0.03em","fontWeight":"800"}],"body-small":["11px",{"lineHeight":"17px","letterSpacing":"0","fontWeight":"400"}],"label-caps":["10px",{"lineHeight":"14px","letterSpacing":"0.11em","fontWeight":"700"}],"headline-lg-mobile":["24px",{"lineHeight":"30px","letterSpacing":"-0.025em","fontWeight":"700"}],"headline-sm":["16px",{"lineHeight":"22px","letterSpacing":"-0.015em","fontWeight":"700"}],"display-xl":["56px",{"lineHeight":"56px","letterSpacing":"-0.04em","fontWeight":"800"}],"body-bold":["13px",{"lineHeight":"21px","letterSpacing":"0","fontWeight":"600"}],"body-base":["13px",{"lineHeight":"21px","letterSpacing":"0","fontWeight":"400"}],"stat-lg":["24px",{"lineHeight":"30px","letterSpacing":"-0.2em","fontWeight":"700"}]}}}}</script></head><body class="bg-surface font-body-base text-body-base text-on-surface selection:bg-secondary-container selection:text-on-secondary-fixed"><aside class="fixed left-0 top-0 h-screen w-64 bg-surface-container-lowest flex flex-col z-50 shadow-[0_1px_8px_rgba(27,47,30,0.04)]"><div class="h-16 px-space-lg flex items-center justify-between bg-surface-container-lowest"><div class="flex items-center gap-space-sm"><img alt="Minimal modern geometric logo for PlateIQ: an elegant minimalist restaurant cloche / plate combined with an intelligent circuit dot or spark in deep forest green and vibrant lime accent, clean vector icon mark, modern tech SaaS brand mark. Design context: - Primary color: #174b32
+- Font: inter
+- Mode: light
+- Roundness: rounded-md
+. The logo should be visually consistent with these brand tokens." class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1Xb-5C-RCACJZjXzuADnBWBrXxGRWuP5xR1eDoY5Vn9S4PbBwExo2ezcstWbfRlWEoi09VskFmvK3yeITq52NaAhrtX8txU6XUHUvCOpD-Cd2tGHxTWfT4DXP0BvqdIHm3l11SreoMU5OchP1vHuYPFNSmSCNoW83gC1hOjLV_TV3iHzWpt2El2nOzQklBnhhh1ShCKhJtaJUicQg_cuJV9MXU-ruJ3Q3qgzLLfb-cp-guQB3lMmL9KfJU"/><div class="flex flex-col"><div class="flex items-center gap-1.5"><span class="font-headline-sm text-headline-sm text-primary tracking-tight">PlateIQ</span><span class="font-micro-caps text-micro-caps uppercase px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-bold">v4.2</span></div><span class="font-body-small text-body-small text-on-surface-variant">Kitchen Intelligence</span></div></div></div><div class="px-space-md py-space-sm"><div class="flex items-center justify-between px-space-sm py-1.5 rounded-lg bg-surface-container-low text-on-surface"><div class="flex items-center gap-2 overflow-hidden"><span class="material-symbols-outlined text-secondary text-base">storefront</span><div class="flex flex-col truncate"><span class="font-body-bold text-body-bold leading-tight truncate text-primary">Atelier Lumière</span><span class="font-body-small text-body-small leading-none truncate text-on-surface-variant">Downtown Dining Room</span></div></div><span class="material-symbols-outlined text-on-surface-variant text-sm">unfold_more</span></div></div><div class="flex-1 overflow-y-auto px-space-sm py-space-xs space-y-space-md"><section><div class="px-space-sm pb-1.5"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-bold">Core Operations</span></div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary font-body-bold rounded-lg shadow-sm"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="overview" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-lg">dashboard</span><span class="font-body-base text-body-base">Overview</span></div></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="live-operations" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-lg">outdoor_grill</span><span class="font-body-base text-body-base">Live Operations</span></div><span class="font-micro-caps text-micro-caps px-1.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-bold">14 active</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="tasks" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-lg">checklist</span><span class="font-body-base text-body-base">Tasks</span></div><span class="font-micro-caps text-micro-caps px-1.5 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-bold">3 pending</span></a></nav></section><section><div class="px-space-sm pb-1.5"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-bold">Intelligence & Planning</span></div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary font-body-bold rounded-lg shadow-sm"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="forecasting" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-lg">trending_up</span><span class="font-body-base text-body-base">Forecasting</span></div><span class="font-micro-caps text-micro-caps px-1.5 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-bold">Live AI</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="inventory" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-lg">inventory_2</span><span class="font-body-base text-body-base">Inventory</span></div><span class="font-micro-caps text-micro-caps px-1.5 py-0.5 rounded-full bg-error-container text-on-error-container font-bold">2 low</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="waste-management" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-lg">delete_sweep</span><span class="font-body-base text-body-base">Waste Management</span></div></a><a aria-current="page" class="flex items-center justify-between px-space-sm py-2 transition-colors bg-primary-container text-on-primary font-body-bold rounded-lg shadow-sm" data-path="external-factors" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-lg">cloud_sync</span><span class="font-body-base text-body-base">External Factors</span></div><span class="w-2 h-2 rounded-full bg-secondary"></span></a></nav></section><section><div class="px-space-sm pb-1.5"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-bold">AI Assistant & Strategy</span></div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary font-body-bold rounded-lg shadow-sm"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="ai-copilot" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-lg">smart_toy</span><span class="font-body-base text-body-base">AI Copilot</span></div><span class="font-micro-caps text-micro-caps px-1.5 py-0.5 rounded bg-primary text-on-primary font-bold tracking-widest">PRO</span></a><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="insights" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-lg">psychology</span><span class="font-body-base text-body-base">Insights</span></div></a></nav></section><section><div class="px-space-sm pb-1.5"><span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider font-bold">System</span></div><nav class="space-y-0.5" data-active-classes="bg-primary-container text-on-primary font-body-bold rounded-lg shadow-sm"><a class="flex items-center justify-between px-space-sm py-2 rounded-lg text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" data-path="settings" href="#"><div class="flex items-center gap-2.5"><span class="material-symbols-outlined text-lg">tune</span><span class="font-body-base text-body-base">Settings</span></div></a></nav></section></div><div class="p-space-md bg-surface-container-low mx-space-sm mb-space-sm rounded-lg flex flex-col gap-1"><div class="flex items-center justify-between"><span class="font-micro-caps text-micro-caps uppercase text-on-surface-variant font-bold tracking-wider">System Status</span><span class="inline-flex items-center gap-1 font-micro-caps text-micro-caps text-secondary font-bold"><span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>Operational</span></div><div class="flex items-center justify-between text-on-surface-variant"><span class="font-body-small text-body-small">AI Engine v4.2</span><span class="font-body-small text-body-small">Sync: 2m ago</span></div></div></aside><div class="pl-64 flex flex-col min-h-screen"><header class="fixed top-0 left-64 right-0 h-16 bg-surface-container-lowest/90 backdrop-blur-md z-40 px-gutter flex items-center justify-between shadow-[0_1px_8px_rgba(27,47,30,0.03)]"><div class="flex items-center gap-space-lg"><div class="inline-flex p-0.5 bg-surface-container-low rounded-lg"><button class="px-space-md py-1 rounded text-on-surface-variant font-body-bold text-body-small hover:text-on-surface transition-colors" type="button">Lunch Shift</button><button class="px-space-md py-1 rounded bg-surface-container-lowest text-primary font-body-bold text-body-small shadow-sm" type="button">Dinner Service</button></div><div class="relative w-80"><span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-lg">search</span><input class="w-full pl-9 pr-12 py-1.5 bg-surface-container-low rounded-lg text-on-surface placeholder:text-outline font-body-base text-body-base focus:outline-none focus:ring-1 focus:ring-secondary transition-all" placeholder="Search ingredients, tickets, forecasts..." type="text"/><span class="absolute right-2.5 top-1/2 -translate-y-1/2 font-micro-caps text-micro-caps px-1 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-bold">⌘K</span></div></div><div class="flex items-center gap-space-lg"><div class="flex items-center gap-space-md px-space-md py-1.5 rounded-lg bg-surface-container-low"><div class="flex items-center gap-1.5"><span class="material-symbols-outlined text-secondary text-base">timer</span><span class="font-micro-caps text-micro-caps uppercase tracking-wider text-on-surface-variant font-bold">Dinner Service Prep</span></div><span class="font-body-bold text-body-bold text-primary font-mono">17:42:15</span></div><div class="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-container text-on-secondary-container"><span class="w-2 h-2 rounded-full bg-secondary animate-ping"></span><span class="font-micro-caps text-micro-caps font-bold tracking-wider uppercase">Live Sync</span></div><button class="relative p-1.5 text-on-surface-variant hover:text-on-surface hover:bg-surface-container rounded-lg transition-colors" type="button"><span class="material-symbols-outlined text-xl">notifications</span><span class="absolute top-1 right-1 w-2 h-2 bg-error rounded-full"></span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="text-right hidden xl:block"><div class="font-body-bold text-body-bold leading-tight text-primary">Chef Marcus Vance</div><div class="font-body-small text-body-small text-on-surface-variant leading-none">Head Culinary Officer</div></div><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida/AEtjO1UO-_4oVTBghuO7z9BjHwxqyNyoMo49hjTj1LxMBQnmgjv6MzT-df_0E8_aj_UfwCYcMB9mTgXidtl_nHWCIr36rUspYuTInjtamiiy3wOPs6vnbPn0amRuiDvIWXjyfPKKOyvUrKXEkKBRBWEoBlLzAkHCogUnKYaAiuEeVdpqCYADU7k9mVUr47pznvfXAc2pX2BElTrN7MAiXKBhwJ2CZNMEi8VEOChXMgu3_uGVKkPhVHSYjb0Sf58"/></div></div></header><main class="w-full pt-16 px-gutter flex-1 bg-surface"><div class="flex flex-col w-full pb-12">
+<!-- Top Breadcrumb & Status Ribbon -->
+<div class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-sm mb-space-md">
+<div class="flex flex-wrap items-center gap-2">
+<span class="font-micro-caps text-micro-caps uppercase tracking-wider text-on-surface-variant font-bold">PlateIQ Macro-Telemetry</span>
+<span class="text-on-surface-variant">/</span>
+<span class="font-micro-caps text-micro-caps uppercase tracking-wider text-primary font-bold">Downtown Zone 01 · Atelier Lumière</span>
+<span class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps uppercase font-bold ml-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+        External Telemetry Live
+      </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-primary font-micro-caps text-micro-caps uppercase font-bold">
+<span class="material-symbols-outlined text-[13px] text-secondary">sensors</span>
+        4 Active Streams
+      </span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-micro-caps text-micro-caps uppercase font-bold">
+<span class="material-symbols-outlined text-[13px] text-secondary">verified</span>
+        97.4% Signal Fidelity
+      </span>
+</div>
+<!-- Quick Global Actions -->
+<div class="flex items-center gap-2">
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container font-body-bold text-body-small flex items-center gap-1.5 shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-sm">tune</span>
+        Simulate Impact
+      </button>
+<button class="px-3 py-1.5 rounded-lg bg-surface-container-lowest text-primary hover:bg-surface-container font-body-bold text-body-small flex items-center gap-1.5 shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-sm">download</span>
+        Correlation Matrix
+      </button>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-body-bold text-body-small flex items-center gap-1.5 shadow-sm transition-all" type="button">
+<span class="material-symbols-outlined text-sm">add</span>
+        Connect Source
+      </button>
+</div>
+</div>
+<!-- Header Banner -->
+<div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-space-lg mb-space-xl p-space-xl rounded-xl bg-surface-container-lowest shadow-[0_4px_18px_rgba(27,47,30,0.035)]">
+<div class="max-w-3xl">
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-secondary text-xl">cloud_sync</span>
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant font-bold">Actuarial Operations Signal Engine</span>
+</div>
+<h1 class="font-headline-lg text-headline-lg text-primary tracking-tight mb-2">External Factors & Macro Demand Signals</h1>
+<p class="font-body-base text-body-base text-on-surface-variant leading-relaxed">
+        Hyper-local meteorology, civic events, performing arts schedules, transit patterns, and wholesale commodity volatility correlated with real-time cover pacing and prep demand at Atelier Lumière.
+      </p>
+</div>
+<!-- Time Horizon Tabs -->
+<div class="inline-flex p-1 bg-surface-container-low rounded-lg shrink-0 overflow-x-auto max-w-full">
+<button class="px-3 py-1.5 rounded-md bg-surface-container-lowest text-primary font-body-bold text-body-small shadow-sm whitespace-nowrap" type="button">Next 48 Hours (Tactical)</button>
+<button class="px-3 py-1.5 rounded-md text-on-surface-variant hover:text-on-surface font-body-bold text-body-small transition-colors whitespace-nowrap" type="button">7-Day Outlook</button>
+<button class="px-3 py-1.5 rounded-md text-on-surface-variant hover:text-on-surface font-body-bold text-body-small transition-colors whitespace-nowrap" type="button">14-Day Planning</button>
+<button class="px-3 py-1.5 rounded-md text-on-surface-variant hover:text-on-surface font-body-bold text-body-small transition-colors whitespace-nowrap" type="button">30-Day Seasonal</button>
+</div>
+</div>
+<!-- Top KPI Ribbon: 4 High-Density Cards -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-xl">
+<!-- Card 1 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-[0_4px_18px_rgba(27,47,30,0.035)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant font-bold">Net Demand Shift</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps font-bold uppercase tracking-wider">Strong Positive Bias</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-stat-xl text-stat-xl text-primary font-bold">+18.4%</span>
+<span class="font-body-small text-body-small text-secondary font-bold font-mono">+42 Covers Tonight</span>
+</div>
+</div>
+<div class="pt-3 mt-2 flex items-center justify-between text-on-surface-variant">
+<span class="font-body-small text-body-small truncate">Weather + Gala Confluence</span>
+<span class="font-micro-caps text-micro-caps font-mono font-bold text-primary">+284 / 7-Day</span>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-[0_4px_18px_rgba(27,47,30,0.035)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant font-bold">Active External Drivers</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-micro-caps text-micro-caps font-bold uppercase tracking-wider">Live Feeds</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-stat-xl text-stat-xl text-primary font-bold">4 Macro</span>
+<span class="font-body-small text-body-small text-on-surface-variant">High Impact</span>
+</div>
+</div>
+<div class="pt-3 mt-2 flex items-center gap-1.5 text-on-surface-variant">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="font-body-small text-body-small truncate">1 Weather · 2 Civic · 1 Supply Shock</span>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-[0_4px_18px_rgba(27,47,30,0.035)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant font-bold">Margin Volatility Index</span>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-micro-caps text-micro-caps font-bold uppercase tracking-wider">Low-Med Risk</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-stat-xl text-stat-xl text-primary font-bold">3.2%</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Commodity Gap</span>
+</div>
+</div>
+<div class="pt-3 mt-2 flex items-center justify-between text-on-surface-variant">
+<span class="font-body-small text-body-small truncate">Seafood +6.5% / Dairy -2.1%</span>
+<span class="material-symbols-outlined text-sm text-secondary">trending_down</span>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-[0_4px_18px_rgba(27,47,30,0.035)] flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between mb-2">
+<span class="font-label-caps text-label-caps uppercase tracking-wider text-on-surface-variant font-bold">Pacing Disruption Likelihood</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps font-bold uppercase tracking-wider">Optimal</span>
+</div>
+<div class="flex items-baseline gap-2 mb-1">
+<span class="font-stat-xl text-stat-xl text-secondary font-bold">8.5%</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Turn Friction</span>
+</div>
+</div>
+<div class="pt-3 mt-2 flex items-center gap-1.5 text-on-surface-variant">
+<span class="material-symbols-outlined text-sm text-secondary">schedule</span>
+<span class="font-body-small text-body-small truncate">Transit buffer auto-staged</span>
+</div>
+</div>
+</div>
+<!-- Autonomous Action Banner -->
+<div class="mb-space-xl p-space-lg rounded-xl bg-gradient-to-r from-surface-container-low via-surface-container-lowest to-surface-container-lowest shadow-[0_4px_18px_rgba(27,47,30,0.035)] flex flex-col md:flex-row md:items-center justify-between gap-space-md">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-xl">auto_fix_high</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-body-bold text-body-bold text-primary">Autonomous Tactical Prep Package Available</span>
+<span class="font-micro-caps text-micro-caps px-1.5 py-0.5 rounded bg-tertiary-fixed text-on-tertiary-fixed font-bold">4 MITIGATIONS READY</span>
+</div>
+<p class="font-body-small text-body-small text-on-surface-variant">Pacing compression for 64 Symphony covers pre-staged · Braised Short Rib par adjusted (+8kg) · Halibut spot pricing substitute suggested.</p>
+</div>
+</div>
+<div class="flex items-center gap-2 self-end md:self-auto shrink-0">
+<button class="px-3.5 py-1.5 rounded-lg bg-surface-container-high text-primary hover:bg-surface-variant font-body-bold text-body-small transition-all" type="button">Inspect Rules</button>
+<button class="px-4 py-1.5 rounded-lg bg-primary text-on-primary hover:bg-primary-container font-body-bold text-body-small shadow-sm transition-all flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">bolt</span>
+        Deploy All Mitigations
+      </button>
+</div>
+</div>
+<!-- Main Asymmetric Workspace Layout (8 cols left / 4 cols right) -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter">
+<!-- LEFT COLUMN: 8 Columns -->
+<div class="lg:col-span-8 flex flex-col gap-gutter">
+<!-- Section 1: Active Macro Telemetry Matrix -->
+<div class="rounded-xl bg-surface-container-lowest shadow-[0_4px_18px_rgba(27,47,30,0.035)] p-space-lg flex flex-col gap-space-lg">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2 pb-space-sm">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-primary">Real-Time Environmental & Civic Factor Matrix</h2>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps font-bold">LIVE TELEMETRY</span>
+</div>
+<p class="font-body-small text-body-small text-on-surface-variant">High-fidelity district telemetry influencing cover velocity, line balance, and guest culinary preference.</p>
+</div>
+<div class="flex items-center gap-2">
+<span class="font-micro-caps text-micro-caps uppercase text-on-surface-variant font-bold">SORT BY</span>
+<select class="bg-surface-container-low text-primary font-body-bold text-body-small rounded-lg px-2.5 py-1 focus:outline-none">
+<option>Highest Impact</option>
+<option>Chronological</option>
+<option>Station Friction</option>
+</select>
+</div>
+</div>
+<!-- Signal Card 1: Symphony Hall Gala -->
+<div class="p-space-lg rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-all">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-2xl text-secondary">theater_comedy</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Symphony Hall Opening Gala & Pre-Theater Rush</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps font-bold uppercase">Rule Deployed</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-small text-body-small mt-0.5">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">distance</span> 0.3 miles away</span>
+<span>·</span>
+<span class="flex items-center gap-1 text-primary font-bold"><span class="material-symbols-outlined text-sm">schedule</span> Tonight 17:30 – 19:15 Arrival Peak</span>
+<span>·</span>
+<span>2,400 ticket holders · <strong>64 confirmed covers</strong></span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-micro-caps text-micro-caps uppercase text-on-surface-variant font-bold block">Pacing Impact</span>
+<span class="font-body-bold text-body-bold text-error">-18 min duration</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md my-space-md p-space-md rounded-lg bg-surface-container-lowest shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold block mb-1">Direct Operational Shifts</span>
+<ul class="font-body-small text-body-small text-on-surface space-y-1">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span><strong>+34% demand</strong> for 3-Course Express Pacing Tasting</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span><strong>+22% Champagne & Sparkling</strong> pairing velocity</span>
+</li>
+</ul>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold block mb-1">AI Kitchen Prescription</span>
+<p class="font-body-small text-body-small text-on-surface-variant">
+                "Activate 58-minute express service pacing rule. Pre-stage 45 Caviar Russe tartlets at Garde Manger by 17:15. Stagger cold apps."
+              </p>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-small text-body-small pt-1">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Resy reservations auto-tagged: [Symphony 19:30 Curtain]
+            </span>
+<button class="font-body-bold text-body-small text-secondary hover:text-primary transition-colors flex items-center gap-1" type="button">
+              View Pacing Rulebook <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Signal Card 2: Cold Front & Precipitation -->
+<div class="p-space-lg rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-all">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-2xl text-secondary">rainy</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Cold Front & Heavy Precipitation Influx</h3>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps font-bold uppercase">Auto-Rebalanced</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-small text-body-small mt-0.5">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">thermostat</span> 68°F → 52°F (Drop -16°)</span>
+<span>·</span>
+<span class="flex items-center gap-1 text-primary font-bold"><span class="material-symbols-outlined text-sm">calendar_today</span> Friday 16:00 – Saturday 02:00</span>
+<span>·</span>
+<span>85% Rain Probability</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-micro-caps text-micro-caps uppercase text-on-surface-variant font-bold block">Walk-in Traffic</span>
+<span class="font-body-bold text-body-bold text-error">-12% (Walk-in) / 98% Res Retention</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md my-space-md p-space-md rounded-lg bg-surface-container-lowest shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold block mb-1">Direct Operational Shifts</span>
+<ul class="font-body-small text-body-small text-on-surface space-y-1">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span><strong>+38% Braised & Hearth cuts</strong> (Short Ribs, Truffle Risotto)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span>
+<span><strong>-24% Crudo & Chilled Seafood</strong> order volume</span>
+</li>
+</ul>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold block mb-1">AI Kitchen Prescription</span>
+<p class="font-body-small text-body-small text-on-surface-variant">
+                "Boost Braised Short Ribs par by +8kg; reduce Diver Scallop pull by -3.5 lbs; increase mulled spiced cocktail prep."
+              </p>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-small text-body-small pt-1">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+              Inventory pull tickets re-routed to Hearth & Sauté leads
+            </span>
+<button class="font-body-bold text-body-small text-secondary hover:text-primary transition-colors flex items-center gap-1" type="button">
+              Adjust Par Levels <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Signal Card 3: Downtown Biotech World Congress -->
+<div class="p-space-lg rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-all">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-2xl text-secondary">corporate_fare</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Downtown Biotech World Congress (Day 2)</h3>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-highest text-primary font-micro-caps text-micro-caps font-bold uppercase">Active Monitoring</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-small text-body-small mt-0.5">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">pin_drop</span> Convention Center (0.8 mi)</span>
+<span>·</span>
+<span class="flex items-center gap-1 text-primary font-bold"><span class="material-symbols-outlined text-sm">groups</span> 8,500 Delegates</span>
+<span>·</span>
+<span>High Corporate Expense Density</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-micro-caps text-micro-caps uppercase text-on-surface-variant font-bold block">Spend Index</span>
+<span class="font-body-bold text-body-bold text-secondary font-mono">+$36.50 / cover</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md my-space-md p-space-md rounded-lg bg-surface-container-lowest shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold block mb-1">Direct Operational Shifts</span>
+<ul class="font-body-small text-body-small text-on-surface space-y-1">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span><strong>+28% Reserve Wine List</strong> bottle commitments</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span><strong>+45% A5 Wagyu striploin</strong> supplement additions</span>
+</li>
+</ul>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold block mb-1">AI Kitchen Prescription</span>
+<p class="font-body-small text-body-small text-on-surface-variant">
+                "Prep extra 15 A5 Miyazaki prime cuts; alert Sommelier for Grand Cru Bordeaux/Burgundy cellar staging; prep PDR 1 & 2 for tasting menus."
+              </p>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-small text-body-small pt-1">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-primary"></span>
+              9 corporate parties of 6+ booked across 19:00 - 21:15
+            </span>
+<button class="font-body-bold text-body-small text-secondary hover:text-primary transition-colors flex items-center gap-1" type="button">
+              Cellar Allocation <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Signal Card 4: Light Rail Track Maintenance -->
+<div class="p-space-lg rounded-xl bg-surface-container-low/60 hover:bg-surface-container-low transition-all">
+<div class="flex flex-col sm:flex-row sm:items-start justify-between gap-space-sm mb-space-sm">
+<div class="flex items-start gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest text-primary flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-2xl text-on-surface-variant">commute</span>
+</div>
+<div>
+<div class="flex flex-wrap items-center gap-2">
+<h3 class="font-headline-sm text-headline-sm text-primary">Market Street Light Rail Track Maintenance</h3>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-micro-caps text-micro-caps font-bold uppercase">Pacing Mitigation Ready</span>
+</div>
+<div class="flex items-center gap-3 text-on-surface-variant font-body-small text-body-small mt-0.5">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-sm">alt_route</span> Market & 4th Corridor</span>
+<span>·</span>
+<span class="flex items-center gap-1 text-primary font-bold"><span class="material-symbols-outlined text-sm">schedule</span> Saturday 14:00 – Sunday 23:00</span>
+<span>·</span>
+<span>Valet & Rideshare Concurrency</span>
+</div>
+</div>
+</div>
+<div class="text-right shrink-0">
+<span class="font-micro-caps text-micro-caps uppercase text-on-surface-variant font-bold block">Arrival Variance</span>
+<span class="font-body-bold text-body-bold text-primary font-mono">+10 to +15 min</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md my-space-md p-space-md rounded-lg bg-surface-container-lowest shadow-sm">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold block mb-1">Direct Operational Shifts</span>
+<ul class="font-body-small text-body-small text-on-surface space-y-1">
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Staggered table seating arrivals (high standard deviation)</span>
+</li>
+<li class="flex items-center gap-2">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+<span>Bar waiting area dwell time +14 minutes</span>
+</li>
+</ul>
+</div>
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold block mb-1">AI Kitchen Prescription</span>
+<p class="font-body-small text-body-small text-on-surface-variant">
+                "Buffer table turn intervals by 10 minutes in reservation engine; prepare amuse-bouche tray for standing bar guests to preserve pace."
+              </p>
+</div>
+</div>
+<div class="flex items-center justify-between text-on-surface-variant font-body-small text-body-small pt-1">
+<span class="flex items-center gap-1.5">
+<span class="w-2 h-2 rounded-full bg-on-surface-variant"></span>
+              GTFS Feed alert verified by Municipal Transit API
+            </span>
+<button class="font-body-bold text-body-small text-secondary hover:text-primary transition-colors flex items-center gap-1" type="button">
+              Apply Turn Buffer <span class="material-symbols-outlined text-xs">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Section 2: External Factor Correlation & Demand Shift Curve (Next 7 Days) -->
+<div class="rounded-xl bg-surface-container-lowest shadow-[0_4px_18px_rgba(27,47,30,0.035)] p-space-lg flex flex-col gap-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-space-sm pb-2">
+<div>
+<div class="flex items-center gap-2">
+<h2 class="font-headline-md text-headline-md text-primary">Demand Shift Wave & Station Correlation</h2>
+<span class="font-micro-caps text-micro-caps px-2 py-0.5 rounded bg-surface-container-high text-primary font-bold">NEXT 7 DAYS</span>
+</div>
+<p class="font-body-small text-body-small text-on-surface-variant">Baseline historical cover volume overlaid against weather, convention, and arts demand bias.</p>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-low p-1 rounded-lg">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-primary font-body-bold text-body-small shadow-sm" type="button">All Stations</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-body-bold text-body-small transition-colors" type="button">Cover Volume</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface font-body-bold text-body-small transition-colors" type="button">Menu Mix</button>
+</div>
+</div>
+<!-- Interactive SVG Chart Area -->
+<div class="p-space-md rounded-xl bg-surface-container-low/40">
+<div class="flex items-center justify-between text-on-surface-variant font-micro-caps text-micro-caps uppercase tracking-wider mb-2">
+<div class="flex items-center gap-4">
+<span class="flex items-center gap-1.5"><span class="w-3 h-0.5 bg-outline"></span> Historical Baseline</span>
+<span class="flex items-center gap-1.5"><span class="w-3 h-1 bg-secondary rounded-full"></span> AI External Adjusted Wave</span>
+<span class="flex items-center gap-1.5"><span class="w-2 h-2 rounded bg-tertiary-fixed"></span> Peak Event Confluence</span>
+</div>
+<span>Units: Projected Covers / Shift</span>
+</div>
+<!-- The SVG Chart -->
+<div class="relative w-full h-56">
+<svg class="w-full h-full" fill="none" preserveaspectratio="none" viewbox="0 0 700 200">
+<!-- Grid lines -->
+<line opacity="0.4" stroke="#c0c9c1" stroke-dasharray="3 3" stroke-width="0.5" x1="0" x2="700" y1="40" y2="40"></line>
+<line opacity="0.4" stroke="#c0c9c1" stroke-dasharray="3 3" stroke-width="0.5" x1="0" x2="700" y1="90" y2="90"></line>
+<line opacity="0.4" stroke="#c0c9c1" stroke-dasharray="3 3" stroke-width="0.5" x1="0" x2="700" y1="140" y2="140"></line>
+<!-- Baseline Area (Subtle) -->
+<path d="M 20 130 C 120 120, 220 110, 320 100 C 420 70, 520 80, 620 110 L 680 125 L 680 180 L 20 180 Z" fill="#e3f2e5" opacity="0.4"></path>
+<!-- Baseline Curve -->
+<path d="M 20 130 C 120 120, 220 110, 320 100 C 420 70, 520 80, 620 110 L 680 125" stroke="#717972" stroke-dasharray="4 4" stroke-width="1.5"></path>
+<!-- Weather / Event Boost Fill -->
+<path d="M 20 125 C 120 110, 220 70, 320 52 C 420 30, 520 45, 620 95 L 680 118 L 680 180 L 20 180 Z" fill="url(#aiGradient)" opacity="0.25"></path>
+<!-- AI Adjusted Forecast Wave -->
+<path d="M 20 125 C 120 110, 220 70, 320 52 C 420 30, 520 45, 620 95 L 680 118" stroke="#006d40" stroke-width="2.5"></path>
+<!-- Marker Points -->
+<circle cx="20" cy="125" fill="#006d40" r="4"></circle>
+<circle cx="120" cy="110" fill="#006d40" r="4"></circle>
+<!-- Peak Friday Rain & Biotech -->
+<circle cx="220" cy="70" fill="#006d40" r="5"></circle>
+<!-- Peak Saturday Gala & Confluence -->
+<circle cx="320" cy="52" fill="#00341e" r="6"></circle>
+<circle class="animate-pulse" cx="420" cy="30" fill="#1c8050" r="7"></circle>
+<circle cx="520" cy="45" fill="#006d40" r="5"></circle>
+<circle cx="620" cy="95" fill="#006d40" r="4"></circle>
+<!-- Gradients Definition -->
+<defs>
+<lineargradient id="aiGradient" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#acf847" stop-opacity="0.6"></stop>
+<stop offset="100%" stop-color="#effdf0" stop-opacity="0.0"></stop>
+</lineargradient>
+</defs>
+</svg>
+<!-- Overlay Badges on Key Days -->
+<div class="absolute left-[29%] top-6 bg-surface-container-lowest px-2 py-1 rounded-md shadow-sm pointer-events-none hidden sm:block">
+<span class="font-micro-caps text-micro-caps text-secondary font-bold block">FRI RAIN UPLIFT</span>
+<span class="font-body-bold text-body-small text-primary">+18% Covers</span>
+</div>
+<div class="absolute left-[56%] top-1 bg-primary text-on-primary px-2.5 py-1 rounded-md shadow-md pointer-events-none hidden sm:block">
+<span class="font-micro-caps text-micro-caps text-secondary-container font-bold block uppercase">SAT CONFLUENCE PEAK</span>
+<span class="font-body-bold text-body-small text-white">+24% / 218 Covers</span>
+</div>
+</div>
+<!-- Timeline X-Axis Labels -->
+<div class="grid grid-cols-7 text-center font-micro-caps text-micro-caps uppercase tracking-wider text-on-surface-variant pt-2">
+<div>
+<span class="font-bold text-primary block">Thu Today</span>
+<span>142 Covers</span>
+</div>
+<div>
+<span class="font-bold text-primary block">Fri</span>
+<span class="text-secondary font-bold">186 Covers</span>
+</div>
+<div>
+<span class="font-bold text-primary block">Sat</span>
+<span class="text-secondary font-bold">218 Covers</span>
+</div>
+<div>
+<span class="font-bold text-primary block">Sun</span>
+<span>174 Covers</span>
+</div>
+<div>
+<span class="font-bold text-primary block">Mon</span>
+<span>96 Covers</span>
+</div>
+<div>
+<span class="font-bold text-primary block">Tue</span>
+<span>112 Covers</span>
+</div>
+<div>
+<span class="font-bold text-primary block">Wed</span>
+<span>130 Covers</span>
+</div>
+</div>
+</div>
+<!-- Station-Specific Impact Breakdown -->
+<div class="pt-2">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant font-bold block mb-3">Kitchen Station Workload Impact Matrix (Friday - Saturday Rush)</span>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-space-md">
+<!-- Station 1 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-1">
+<span class="font-body-bold text-body-small text-primary">Hearth Station</span>
+<span class="font-micro-caps text-micro-caps px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-bold">+32%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden mb-1">
+<div class="h-full bg-secondary rounded-full" style="width: 82%;"></div>
+</div>
+<span class="font-body-small text-[10px] text-on-surface-variant">Heavy short rib & duck confit shift</span>
+</div>
+<!-- Station 2 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-1">
+<span class="font-body-bold text-body-small text-primary">Sauté & Sauces</span>
+<span class="font-micro-caps text-micro-caps px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-bold">+14%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden mb-1">
+<div class="h-full bg-secondary rounded-full" style="width: 64%;"></div>
+</div>
+<span class="font-body-small text-[10px] text-on-surface-variant">Truffle risotto & reductions up</span>
+</div>
+<!-- Station 3 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-1">
+<span class="font-body-bold text-body-small text-primary">Garde Manger</span>
+<span class="font-micro-caps text-micro-caps px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-bold">-8%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden mb-1">
+<div class="h-full bg-outline rounded-full" style="width: 42%;"></div>
+</div>
+<span class="font-body-small text-[10px] text-on-surface-variant">Crudo down; Tartlet pre-rush high</span>
+</div>
+<!-- Station 4 -->
+<div class="p-space-sm rounded-lg bg-surface-container-low">
+<div class="flex items-center justify-between mb-1">
+<span class="font-body-bold text-body-small text-primary">Pastry & Dessert</span>
+<span class="font-micro-caps text-micro-caps px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container font-bold">+5%</span>
+</div>
+<div class="w-full h-1.5 bg-surface-container-highest rounded-full overflow-hidden mb-1">
+<div class="h-full bg-secondary rounded-full" style="width: 55%;"></div>
+</div>
+<span class="font-body-small text-[10px] text-on-surface-variant">Warm soufflés preferred</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- RIGHT COLUMN: 4 Columns -->
+<div class="lg:col-span-4 flex flex-col gap-gutter">
+<!-- Panel 1: Wholesale Supply Chain & Commodity Shock Index -->
+<div class="rounded-xl bg-surface-container-lowest shadow-[0_4px_18px_rgba(27,47,30,0.035)] p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">stacked_line_chart</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Wholesale Commodity Shocks</h2>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed font-micro-caps text-micro-caps font-bold">SPOT TELEMETRY</span>
+</div>
+<p class="font-body-small text-body-small text-on-surface-variant">Real-time dock and distributor pricing variances correlated with current prep costs.</p>
+<!-- Commodity List -->
+<div class="space-y-space-sm">
+<!-- Commodity 1: Halibut -->
+<div class="p-space-md rounded-lg bg-error-container/40">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-body-bold text-body-small text-primary block">Wild Atlantic Halibut</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Gulf of Maine storm; 2 boats docked</span>
+</div>
+<div class="text-right">
+<span class="font-body-bold text-body-bold text-error font-mono">$24.50/lb</span>
+<span class="font-micro-caps text-micro-caps text-error font-bold block">+6.5% WoW</span>
+</div>
+</div>
+<div class="mt-2 pt-2 flex items-center justify-between text-body-small">
+<span class="text-primary font-body-bold text-[11px]">Copilot: Substitute Skrei Cod</span>
+<button class="text-secondary font-body-bold text-[11px] hover:underline" type="button">Apply Sub</button>
+</div>
+</div>
+<!-- Commodity 2: Black Truffles -->
+<div class="p-space-md rounded-lg bg-surface-container-low">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-body-bold text-body-small text-primary block">Norcia Black Truffles</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Umbria shipment cleared customs today</span>
+</div>
+<div class="text-right">
+<span class="font-body-bold text-body-bold text-primary font-mono">$1.85/g</span>
+<span class="font-micro-caps text-micro-caps text-secondary font-bold block">Stable (-1.2%)</span>
+</div>
+</div>
+<div class="mt-2 pt-2 flex items-center justify-between text-body-small">
+<span class="text-on-surface-variant text-[11px]">Yield rating: 98% Prime</span>
+<span class="text-secondary font-body-bold text-[11px]">Normal Par</span>
+</div>
+</div>
+<!-- Commodity 3: Microgreens -->
+<div class="p-space-md rounded-lg bg-surface-container-low">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-body-bold text-body-small text-primary block">Hydroponic Herbs & Petite Greens</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Local urban greenhouse facility</span>
+</div>
+<div class="text-right">
+<span class="font-body-bold text-body-bold text-primary font-mono">100% SLA</span>
+<span class="font-micro-caps text-micro-caps text-secondary font-bold block">Zero Disruption</span>
+</div>
+</div>
+</div>
+<!-- Commodity 4: Butter & Dairy -->
+<div class="p-space-md rounded-lg bg-secondary-container/20">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-body-bold text-body-small text-primary block">Grass-Fed French Cultured Butter</span>
+<span class="font-body-small text-body-small text-on-surface-variant">Normandy wholesale export index drop</span>
+</div>
+<div class="text-right">
+<span class="font-body-bold text-body-bold text-secondary font-mono">-3.8%</span>
+<span class="font-micro-caps text-micro-caps text-secondary font-bold block">Margin Boost</span>
+</div>
+</div>
+</div>
+</div>
+<button class="w-full py-2 rounded-lg bg-surface-container-high hover:bg-surface-variant text-primary font-body-bold text-body-small transition-colors flex items-center justify-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base">calculate</span>
+          Review Recipe Costing Impacts
+        </button>
+</div>
+<!-- Panel 2: Autonomous Mitigations & Workflow Triggers -->
+<div class="rounded-xl bg-surface-container-lowest shadow-[0_4px_18px_rgba(27,47,30,0.035)] p-space-lg flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">smart_toy</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Autonomous Action Triggers</h2>
+</div>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+<div class="space-y-space-md">
+<!-- Action 1 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">Dynamic Weather Menu Switch</span>
+<span class="material-symbols-outlined text-base text-secondary">cloud</span>
+</div>
+<p class="font-body-small text-body-small text-on-surface-variant">
+              Rain probability triggers automated top-billing for braised entrées and hot broths on digital QR menus at 16:00 tomorrow.
+            </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="px-2.5 py-1 rounded-md bg-primary text-on-primary font-body-bold text-body-small text-[11px] hover:bg-primary-container transition-all" type="button">Approve Switch</button>
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-on-surface-variant hover:text-on-surface font-body-bold text-body-small text-[11px] transition-all" type="button">Configure</button>
+</div>
+</div>
+<!-- Action 2 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">Symphony Pre-Theater Seating Sync</span>
+<span class="material-symbols-outlined text-base text-secondary">event_seat</span>
+</div>
+<p class="font-body-small text-body-small text-on-surface-variant">
+              Auto-tag 64 ticket-holder reservations in OpenTable/Resy with "Symphony 19:30 Curtain" badge for expedited routing.
+            </p>
+<div class="flex items-center gap-2 pt-1">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container font-micro-caps text-micro-caps font-bold">
+<span class="material-symbols-outlined text-xs">done</span> Synced with Resy (Active)
+              </span>
+</div>
+</div>
+<!-- Action 3 -->
+<div class="p-space-md rounded-lg bg-surface-container-low flex flex-col gap-2">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps uppercase text-secondary font-bold">Supplier Pre-Order Volume Hedge</span>
+<span class="material-symbols-outlined text-base text-secondary">local_shipping</span>
+</div>
+<p class="font-body-small text-body-small text-on-surface-variant">
+              Advance order for Saturday proteins submitted 4 hours early to lock spot rates before weekend supplier cut-off.
+            </p>
+<div class="flex items-center gap-2 pt-1">
+<button class="px-2.5 py-1 rounded-md bg-surface-container-lowest text-primary hover:bg-surface-container font-body-bold text-body-small text-[11px] shadow-sm transition-all flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-xs">receipt_long</span>
+                View PO #894
+              </button>
+</div>
+</div>
+</div>
+</div>
+<!-- Panel 3: External Sensor & API Telemetry Health -->
+<div class="rounded-xl bg-surface-container-lowest shadow-[0_4px_18px_rgba(27,47,30,0.035)] p-space-lg flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg">hub</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Sensor & API Ingestion</h2>
+</div>
+<span class="font-micro-caps text-micro-caps text-secondary font-bold">5/5 FEEDS OK</span>
+</div>
+<div class="divide-y divide-surface-container-low font-body-small text-body-small">
+<div class="py-2 flex items-center justify-between">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              NOAA Hyper-Local Radar
+            </span>
+<span class="font-mono text-on-surface-variant text-[11px]">1.2s Latency</span>
+</div>
+<div class="py-2 flex items-center justify-between">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              City Civic Permitting Feed
+            </span>
+<span class="font-mono text-on-surface-variant text-[11px]">Sync: 12m ago</span>
+</div>
+<div class="py-2 flex items-center justify-between">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Convention Attendance API
+            </span>
+<span class="font-mono text-secondary font-bold text-[11px]">8,500 active</span>
+</div>
+<div class="py-2 flex items-center justify-between">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Transit Authority GTFS
+            </span>
+<span class="font-mono text-on-surface-variant text-[11px]">Flagged (Track)</span>
+</div>
+<div class="py-2 flex items-center justify-between">
+<span class="flex items-center gap-2 text-on-surface">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+              Seafood Exchange Terminal
+            </span>
+<span class="font-mono text-on-surface-variant text-[11px]">Sync: 8m ago</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></main></div></body></html>
