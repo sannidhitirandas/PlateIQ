@@ -4,7 +4,7 @@ import { Check, Package, Sparkles, Activity, AlertTriangle, Users, ShieldCheck, 
 import Link from 'next/link'
 import { usePlateIQ, usePlateIQMetrics } from './plateiq-state'
 import { wasteSummary } from '@/lib/waste-engine'
-import { getAnalyticsMetrics, getDishOperationalContext, getLiveOperationsMetrics, getKitchenMetrics } from '@/lib/selectors'
+import { getAnalyticsMetrics, getDishOperationalContext, getKitchenMetrics } from '@/lib/selectors'
 
 function PageFrame({title,subtitle,children}:{title:string;subtitle:string;children:React.ReactNode}){const pageClass=title.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/(^-|-$)/g,"");return <div className={`page-body stitch-workspace-page stitch-page-${pageClass}`}><div className="stitch-page-intro"><div><div className="stitch-page-kicker"><span className="stitch-live-dot"/> PLATEIQ INTELLIGENCE <span className="separator">/</span> LIVE WORKSPACE</div><h1>{title}</h1><p>{subtitle}</p></div><div className="stitch-page-status"><span className="stitch-live-dot"/> Systems operational</div></div>{children}</div>}
 function Kpi({label,value,detail}:{label:string;value:string;detail:string}){return <div className="metric-card"><div className="metric-top"><span>{label}</span><span className="metric-dot"/></div><div className="metric-value">{value}</div><div className="metric-bottom"><span>{detail}</span></div></div>}
