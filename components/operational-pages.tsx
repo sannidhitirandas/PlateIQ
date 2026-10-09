@@ -32,7 +32,7 @@ export function InventoryPage(){
  const stockLevel=(item:typeof items[number])=>Math.min(100,Math.round(item.currentStock/Math.max(item.reorderPoint*2,1)*100));
  const statusClass=(status:string)=>status==='Critical'?'inventory-status-critical':status==='Low'?'inventory-status-low':'inventory-status-healthy';
  return <PageFrame title="Inventory intelligence" subtitle="Keep ingredients ready, catch stock risks early, and track replenishment in one place.">
-  <div className="inventory-demo-banner"><span className="inventory-demo-dot"/> INVENTORY WORKSPACE <span>Changes update PlateIQ's shared local local workspace state. No supplier or POS system is connected.</span></div>
+  <div className="inventory-demo-banner"><span className="inventory-demo-dot"/> INVENTORY WORKSPACE <span>Changes update PlateIQ's shared local workspace state. No supplier or POS system is connected.</span></div>
   {notice&&<div className="inventory-notice" role="status">{notice}<button onClick={()=>setNotice('')} aria-label="Dismiss message">×</button></div>}
   <div className="metrics-grid inventory-metrics">
    <Kpi label="Ingredients tracked" value={items.length.toString()} detail="in this sample inventory"/>
@@ -87,7 +87,7 @@ export function WasteIntelligencePage(){
   const amount=Number(quantity);
   if(!dishId||!Number.isFinite(amount)||amount<=0||!cause.trim()){setNotice('Choose a dish and enter a valid quantity and cause.');return;}
   dispatch({type:'record-waste',dishId,wasteKg:amount,category:newCategory,cause:cause.trim()});
-  setNotice('Waste record added to the local local workspace state.');
+  setNotice('Waste record added to the local workspace state.');
   setQuantity('0.5');
  };
  const formatDate=(value:string)=>{const parsed=new Date(value);return Number.isNaN(parsed.getTime())?value:parsed.toLocaleString('en-IN',{day:'2-digit',month:'short',year:'numeric',hour:'2-digit',minute:'2-digit'});};
@@ -157,10 +157,10 @@ export function AnalyticsPage(){
   {type:totalWaste>0?'watch':'positive',title:totalWaste>0?'Recorded waste has a cost signal':'Start tracking waste events',body:totalWaste>0?totalWaste.toFixed(1)+' kg recorded · estimated cost ₹'+Math.round(wasteCost).toLocaleString('en-IN'):'Add waste records to surface category and dish-level patterns.',href:'/app/waste-intelligence',action:'Explore waste'},
  ];
  return <PageFrame title="Insights" subtitle="Turn forecast, preparation, inventory, and waste signals into clearer day-to-day decisions.">
-  <div className="insights-demo-banner"><span className="insights-demo-dot"/> OPERATIONAL INSIGHTS <span>Calculated from PlateIQ's current local local workspace state; historical trends and external data are not connected.</span></div>
+  <div className="insights-demo-banner"><span className="insights-demo-dot"/> OPERATIONAL INSIGHTS <span>Calculated from PlateIQ's current local workspace state; historical trends and external data are not connected.</span></div>
   {notice&&<div className="insights-notice" role="status">{notice}<button onClick={()=>setNotice('')} aria-label="Dismiss message">×</button></div>}
   <section className="insights-hero">
-   <div><span className="insights-eyebrow">OPERATIONAL PERFORMANCE</span><h2>Your kitchen, at a glance</h2><p>Live calculations from the current current forecast and recorded operations.</p></div>
+   <div><span className="insights-eyebrow">OPERATIONAL PERFORMANCE</span><h2>Your kitchen, at a glance</h2><p>Live calculations from the current forecast and recorded operations.</p></div>
    <button className="insights-export-button" onClick={exportCsv}><span>↓</span> Export report</button>
   </section>
   <div className="metrics-grid insights-metrics">
@@ -184,10 +184,10 @@ export function AnalyticsPage(){
     <div className="insights-readiness-list"><div><span><i className="insights-status-dot is-good"/>Inventory risk</span><strong>{lowStock.length===0?'No flagged items':lowStock.length+' items to review'}</strong></div><div><span><i className={'insights-status-dot '+(completedBatches>0?'is-good':'is-neutral')}/>Completed batches</span><strong>{completedBatches}</strong></div><div><span><i className={'insights-status-dot '+(state.waste.length>0?'is-watch':'is-neutral')}/>Waste records</span><strong>{state.waste.length}</strong></div><div><span><i className={'insights-status-dot '+(state.events.length>0?'is-good':'is-neutral')}/>Operational events</span><strong>{state.events.length}</strong></div></div>
    </section>
   </div>
-  <section className="insights-insight-section"><div className="insights-section-heading"><div><span className="insights-kicker">SUGGESTED NEXT STEPS</span><h2>Signals worth a look</h2><p>Practical prompts generated from current current values, not a trained AI model.</p></div><span className="insights-count-pill">{insightCards.length} signals</span></div>
+  <section className="insights-insight-section"><div className="insights-section-heading"><div><span className="insights-kicker">SUGGESTED NEXT STEPS</span><h2>Signals worth a look</h2><p>Practical prompts generated from current values, not a trained AI model.</p></div><span className="insights-count-pill">{insightCards.length} signals</span></div>
    <div className="insights-cards-grid">{insightCards.map((item,index)=><article className="panel insights-signal-card" key={item.title}><div className={'insights-signal-icon '+(item.type==='urgent'?'is-urgent':item.type==='watch'?'is-watch':'is-positive')}>{index===0?'!':index===1?'↗':'◌'}</div><span className={'insights-signal-tag '+(item.type==='urgent'?'is-urgent':item.type==='watch'?'is-watch':'is-positive')}>{item.type==='urgent'?'Priority':item.type==='watch'?'Review':'On track'}</span><h3>{item.title}</h3><p>{item.body}</p><Link href={item.href}>{item.action} <ArrowRight size={14}/></Link></article>)}</div>
   </section>
   <section className="panel insights-waste-summary"><div><span className="insights-kicker">WASTE & COST SIGNAL</span><h2>What is recorded so far</h2><p>Cost figures are estimates based on recorded waste entries, not audited savings or a historical reduction.</p></div><div className="insights-waste-stats"><div><span>Waste recorded</span><strong>{totalWaste.toFixed(1)} kg</strong></div><div><span>Estimated waste cost</span><strong>₹{Math.round(wasteCost).toLocaleString('en-IN')}</strong></div><div><span>Waste baseline</span><strong>{metrics.wasteReductionPct===null?'Not available':metrics.wasteReductionPct.toFixed(1)+'%'}</strong></div><Link href="/app/waste-intelligence">Open waste management <ArrowRight size={14}/></Link></div></section>
-  <div className="insights-footnote"><Sparkles size={15}/><span>Insights update when the local local workspace state changes. Reliable time-series trends, verified savings, and real restaurant integrations require historical records and backend data.</span></div>
+  <div className="insights-footnote"><Sparkles size={15}/><span>Insights update when the local workspace state changes. Reliable time-series trends, verified savings, and real restaurant integrations require historical records and backend data.</span></div>
  </PageFrame>
 }
